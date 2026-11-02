@@ -1,0 +1,162 @@
+{
+  "mywayhome_classical_seed0": {
+    "checkpoint": "pixel_nav_runs/classical_seed0/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 64
+      }
+    ]
+  },
+  "mywayhome_classical_seed1": {
+    "checkpoint": "pixel_nav_runs/classical_seed1/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 81
+      }
+    ]
+  },
+  "mywayhome_classical_seed2": {
+    "checkpoint": "pixel_nav_runs/classical_seed2/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 80
+      }
+    ]
+  },
+  "mywayhome_linear_seed0": {
+    "checkpoint": "pixel_nav_runs/linear_seed0/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 86
+      }
+    ]
+  },
+  "mywayhome_linear_seed1": {
+    "checkpoint": "pixel_nav_runs/linear_seed1/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 63
+      }
+    ]
+  },
+  "mywayhome_linear_seed2": {
+    "checkpoint": "pixel_nav_runs/linear_seed2/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 80
+      }
+    ]
+  },
+  "mywayhome_quantum_seed0": {
+    "checkpoint": "pixel_nav_runs/quantum_seed0/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 63
+      }
+    ]
+  },
+  "mywayhome_quantum_seed1": {
+    "checkpoint": "pixel_nav_runs/quantum_seed1/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 84
+      }
+    ]
+  },
+  "mywayhome_quantum_seed2": {
+    "checkpoint": "pixel_nav_runs/quantum_seed2/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 61
+      }
+    ]
+  },
+  "corridor_classical_seed0": {
+    "checkpoint": "pixel_corridor_runs/classical_seed0/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 79,
+        "kills": 6.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.9757649302482605
+      }
+    ]
+  },
+  "corridor_classical_seed1": {
+    "checkpoint": "pixel_corridor_runs/classical_seed1/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 102,
+        "kills": 6.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.9736083149909973
+      }
+    ]
+  },
+  "corridor_classical_seed2": {
+    "checkpoint": "pixel_corridor_runs/classical_seed2/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 83,
+        "kills": 6.0,
+        "health": 88.0,
+        "dead": false,
+        "progress": 0.972337007522583
+      }
+    ]
+  },
+  "corridor_quantum_seed0": {
+    "checkpoint": "pixel_corridor_runs/quantum_seed0/best.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 77,
+        "kills": 6.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.9716010093688965
+      }
+    ]
+  },
+  "corridor_quantum_seed0_2.8M": {
+    "checkpoint": "pixel_corridor_runs/quantum_seed0/best_2.8M.pt",
+    "episodes": [
+      {
+        "seed": 20000,
+        "success": true,
+        "steps": 84,
+        "kills": 5.0,
+        "health": 82.0,
+        "dead": false,
+        "progress": 0.9732924699783325
+      }
+    ]
+  }
+}

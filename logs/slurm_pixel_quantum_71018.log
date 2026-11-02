@@ -1,0 +1,2 @@
+model=quantum seed=0 device=cuda envs=8 steps=128 decisions=3000000 aux_coef=0.5 parameters=495110 head_parameters=74
+{"update": 10, "decisions": 10240, "episodes": 1, "successes": 0, "reward": -0.04307079128921032, "policy": -0.0019, "value": 0.0134, "entropy": 1.0977, "depth": 0.0358, "goal": 0.4247, "seconds": 67.6}

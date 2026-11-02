@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/e1m1_quantum_model.py", line 40, in forward
+    measured = torch.stack(self.circuit(obs, self.theta, self.input_scale), dim=-1).float()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/workflow/qnode.py", line 880, in __call__
+    return self._impl_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/workflow/qnode.py", line 853, in _impl_call
+    res = execute(
+          ^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/workflow/execution.py", line 239, in execute
+    results = run(tapes, device, config, inner_transform)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/workflow/run.py", line 295, in run
+    results = inner_execute(tapes)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/workflow/run.py", line 260, in inner_execute
+    results = device.execute(transformed_tapes, execution_config=execution_config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/modifiers/simulator_tracking.py", line 31, in execute
+    results = untracked_execute(self, circuits, execution_config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/modifiers/single_tape_support.py", line 33, in execute
+    results = batch_execute(self, circuits, execution_config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/logging/decorators.py", line 61, in wrapper_entry
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/default_qubit.py", line 850, in execute
+    return tuple(
+           ^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/default_qubit.py", line 851, in <genexpr>
+    _simulate_wrapper(
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/default_qubit.py", line 1216, in _simulate_wrapper
+    return simulate(circuit, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/logging/decorators.py", line 61, in wrapper_entry
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/qubit/simulate.py", line 386, in simulate
+    state, is_state_batched = get_final_state(
+                              ^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/logging/decorators.py", line 61, in wrapper_entry
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/qubit/simulate.py", line 218, in get_final_state
+    state = apply_operation(
+            ^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/functools.py", line 912, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/qubit/apply_operation.py", line 759, in apply_ry
+    return _apply_rotation_1q(op, state, is_state_batched, _ry_coeffs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/qubit/apply_operation.py", line 688, in _apply_rotation_1q
+    params, state0, state1, axis = _prepare_batched_params(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/pennylane/devices/qubit/apply_operation.py", line 146, in _prepare_batched_params
+    state0 = math.expand_dims(state0, 0) + math.zeros_like(params)
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!

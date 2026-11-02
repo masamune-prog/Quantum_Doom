@@ -1,0 +1,338 @@
+{
+  "classical seed0 (2.30M)": {
+    "update": 2250,
+    "turn_toward_enemy": 0.584,
+    "attack_centre_minus_offcentre": 0.308,
+    "attack_with_no_enemy": 0.14,
+    "bins": {
+      "left": {
+        "frames": 195,
+        "mean_prob": {
+          "FORWARD": 0.037,
+          "ATTACK": 0.038,
+          "STRAFE_LEFT": 0.007,
+          "STRAFE_RIGHT": 0.002,
+          "TURN_LEFT": 0.899,
+          "TURN_RIGHT": 0.017
+        },
+        "greedy_share": {
+          "FORWARD": 0.031,
+          "ATTACK": 0.041,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.908,
+          "TURN_RIGHT": 0.021
+        }
+      },
+      "centre": {
+        "frames": 482,
+        "mean_prob": {
+          "FORWARD": 0.321,
+          "ATTACK": 0.435,
+          "STRAFE_LEFT": 0.016,
+          "STRAFE_RIGHT": 0.011,
+          "TURN_LEFT": 0.157,
+          "TURN_RIGHT": 0.059
+        },
+        "greedy_share": {
+          "FORWARD": 0.301,
+          "ATTACK": 0.477,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.01,
+          "TURN_LEFT": 0.156,
+          "TURN_RIGHT": 0.056
+        }
+      },
+      "right": {
+        "frames": 621,
+        "mean_prob": {
+          "FORWARD": 0.254,
+          "ATTACK": 0.155,
+          "STRAFE_LEFT": 0.007,
+          "STRAFE_RIGHT": 0.072,
+          "TURN_LEFT": 0.112,
+          "TURN_RIGHT": 0.399
+        },
+        "greedy_share": {
+          "FORWARD": 0.248,
+          "ATTACK": 0.158,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.076,
+          "TURN_LEFT": 0.119,
+          "TURN_RIGHT": 0.399
+        }
+      },
+      "none": {
+        "frames": 4648,
+        "mean_prob": {
+          "FORWARD": 0.37,
+          "ATTACK": 0.14,
+          "STRAFE_LEFT": 0.016,
+          "STRAFE_RIGHT": 0.037,
+          "TURN_LEFT": 0.283,
+          "TURN_RIGHT": 0.154
+        },
+        "greedy_share": {
+          "FORWARD": 0.372,
+          "ATTACK": 0.143,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.029,
+          "TURN_LEFT": 0.305,
+          "TURN_RIGHT": 0.15
+        }
+      }
+    }
+  },
+  "quantum seed0 (2.82M)": {
+    "update": 2750,
+    "turn_toward_enemy": 0.306,
+    "attack_centre_minus_offcentre": 0.111,
+    "attack_with_no_enemy": 0.192,
+    "bins": {
+      "left": {
+        "frames": 195,
+        "mean_prob": {
+          "FORWARD": 0.055,
+          "ATTACK": 0.183,
+          "STRAFE_LEFT": 0.064,
+          "STRAFE_RIGHT": 0.042,
+          "TURN_LEFT": 0.562,
+          "TURN_RIGHT": 0.095
+        },
+        "greedy_share": {
+          "FORWARD": 0.046,
+          "ATTACK": 0.185,
+          "STRAFE_LEFT": 0.005,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.759,
+          "TURN_RIGHT": 0.005
+        }
+      },
+      "centre": {
+        "frames": 482,
+        "mean_prob": {
+          "FORWARD": 0.302,
+          "ATTACK": 0.355,
+          "STRAFE_LEFT": 0.032,
+          "STRAFE_RIGHT": 0.055,
+          "TURN_LEFT": 0.1,
+          "TURN_RIGHT": 0.156
+        },
+        "greedy_share": {
+          "FORWARD": 0.419,
+          "ATTACK": 0.434,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.002,
+          "TURN_LEFT": 0.029,
+          "TURN_RIGHT": 0.116
+        }
+      },
+      "right": {
+        "frames": 621,
+        "mean_prob": {
+          "FORWARD": 0.172,
+          "ATTACK": 0.263,
+          "STRAFE_LEFT": 0.053,
+          "STRAFE_RIGHT": 0.089,
+          "TURN_LEFT": 0.139,
+          "TURN_RIGHT": 0.284
+        },
+        "greedy_share": {
+          "FORWARD": 0.174,
+          "ATTACK": 0.388,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.008,
+          "TURN_LEFT": 0.053,
+          "TURN_RIGHT": 0.377
+        }
+      },
+      "none": {
+        "frames": 4648,
+        "mean_prob": {
+          "FORWARD": 0.395,
+          "ATTACK": 0.192,
+          "STRAFE_LEFT": 0.033,
+          "STRAFE_RIGHT": 0.087,
+          "TURN_LEFT": 0.083,
+          "TURN_RIGHT": 0.21
+        },
+        "greedy_share": {
+          "FORWARD": 0.536,
+          "ATTACK": 0.189,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.029,
+          "TURN_LEFT": 0.021,
+          "TURN_RIGHT": 0.224
+        }
+      }
+    }
+  },
+  "quantum seed0 (best, resumed)": {
+    "update": 3500,
+    "turn_toward_enemy": 0.579,
+    "attack_centre_minus_offcentre": 0.137,
+    "attack_with_no_enemy": 0.136,
+    "bins": {
+      "left": {
+        "frames": 195,
+        "mean_prob": {
+          "FORWARD": 0.063,
+          "ATTACK": 0.13,
+          "STRAFE_LEFT": 0.005,
+          "STRAFE_RIGHT": 0.002,
+          "TURN_LEFT": 0.776,
+          "TURN_RIGHT": 0.023
+        },
+        "greedy_share": {
+          "FORWARD": 0.046,
+          "ATTACK": 0.133,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.805,
+          "TURN_RIGHT": 0.015
+        }
+      },
+      "centre": {
+        "frames": 482,
+        "mean_prob": {
+          "FORWARD": 0.35,
+          "ATTACK": 0.312,
+          "STRAFE_LEFT": 0.001,
+          "STRAFE_RIGHT": 0.002,
+          "TURN_LEFT": 0.059,
+          "TURN_RIGHT": 0.276
+        },
+        "greedy_share": {
+          "FORWARD": 0.407,
+          "ATTACK": 0.282,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.044,
+          "TURN_RIGHT": 0.268
+        }
+      },
+      "right": {
+        "frames": 621,
+        "mean_prob": {
+          "FORWARD": 0.195,
+          "ATTACK": 0.189,
+          "STRAFE_LEFT": 0.001,
+          "STRAFE_RIGHT": 0.001,
+          "TURN_LEFT": 0.105,
+          "TURN_RIGHT": 0.509
+        },
+        "greedy_share": {
+          "FORWARD": 0.171,
+          "ATTACK": 0.176,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.095,
+          "TURN_RIGHT": 0.559
+        }
+      },
+      "none": {
+        "frames": 4648,
+        "mean_prob": {
+          "FORWARD": 0.486,
+          "ATTACK": 0.136,
+          "STRAFE_LEFT": 0.003,
+          "STRAFE_RIGHT": 0.003,
+          "TURN_LEFT": 0.06,
+          "TURN_RIGHT": 0.313
+        },
+        "greedy_share": {
+          "FORWARD": 0.552,
+          "ATTACK": 0.077,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.0,
+          "TURN_LEFT": 0.038,
+          "TURN_RIGHT": 0.332
+        }
+      }
+    }
+  },
+  "quantum seed0 (latest, resumed)": {
+    "update": 4000,
+    "turn_toward_enemy": 0.484,
+    "attack_centre_minus_offcentre": 0.037,
+    "attack_with_no_enemy": 0.142,
+    "bins": {
+      "left": {
+        "frames": 195,
+        "mean_prob": {
+          "FORWARD": 0.077,
+          "ATTACK": 0.113,
+          "STRAFE_LEFT": 0.016,
+          "STRAFE_RIGHT": 0.007,
+          "TURN_LEFT": 0.76,
+          "TURN_RIGHT": 0.026
+        },
+        "greedy_share": {
+          "FORWARD": 0.082,
+          "ATTACK": 0.113,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.005,
+          "TURN_LEFT": 0.785,
+          "TURN_RIGHT": 0.015
+        }
+      },
+      "centre": {
+        "frames": 482,
+        "mean_prob": {
+          "FORWARD": 0.522,
+          "ATTACK": 0.234,
+          "STRAFE_LEFT": 0.002,
+          "STRAFE_RIGHT": 0.021,
+          "TURN_LEFT": 0.084,
+          "TURN_RIGHT": 0.136
+        },
+        "greedy_share": {
+          "FORWARD": 0.595,
+          "ATTACK": 0.22,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.019,
+          "TURN_LEFT": 0.071,
+          "TURN_RIGHT": 0.095
+        }
+      },
+      "right": {
+        "frames": 621,
+        "mean_prob": {
+          "FORWARD": 0.25,
+          "ATTACK": 0.224,
+          "STRAFE_LEFT": 0.005,
+          "STRAFE_RIGHT": 0.017,
+          "TURN_LEFT": 0.135,
+          "TURN_RIGHT": 0.369
+        },
+        "greedy_share": {
+          "FORWARD": 0.246,
+          "ATTACK": 0.187,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.014,
+          "TURN_LEFT": 0.132,
+          "TURN_RIGHT": 0.42
+        }
+      },
+      "none": {
+        "frames": 4648,
+        "mean_prob": {
+          "FORWARD": 0.53,
+          "ATTACK": 0.142,
+          "STRAFE_LEFT": 0.003,
+          "STRAFE_RIGHT": 0.051,
+          "TURN_LEFT": 0.054,
+          "TURN_RIGHT": 0.22
+        },
+        "greedy_share": {
+          "FORWARD": 0.586,
+          "ATTACK": 0.132,
+          "STRAFE_LEFT": 0.0,
+          "STRAFE_RIGHT": 0.043,
+          "TURN_LEFT": 0.026,
+          "TURN_RIGHT": 0.212
+        }
+      }
+    }
+  }
+}

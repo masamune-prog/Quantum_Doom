@@ -1,0 +1,14 @@
+mywayhome_classical_seed0 {'seed': 20000, 'success': True, 'steps': 64}
+mywayhome_classical_seed1 {'seed': 20000, 'success': True, 'steps': 81}
+mywayhome_classical_seed2 {'seed': 20000, 'success': True, 'steps': 80}
+mywayhome_linear_seed0 {'seed': 20000, 'success': True, 'steps': 86}
+mywayhome_linear_seed1 {'seed': 20000, 'success': True, 'steps': 63}
+mywayhome_linear_seed2 {'seed': 20000, 'success': True, 'steps': 80}
+mywayhome_quantum_seed0 {'seed': 20000, 'success': True, 'steps': 63}
+mywayhome_quantum_seed1 {'seed': 20000, 'success': True, 'steps': 84}
+mywayhome_quantum_seed2 {'seed': 20000, 'success': True, 'steps': 61}
+corridor_classical_seed0 {'seed': 20000, 'success': True, 'steps': 79, 'kills': 6.0, 'health': 100.0, 'dead': False, 'progress': 0.9757649302482605}
+corridor_classical_seed1 {'seed': 20000, 'success': True, 'steps': 102, 'kills': 6.0, 'health': 100.0, 'dead': False, 'progress': 0.9736083149909973}
+corridor_classical_seed2 {'seed': 20000, 'success': True, 'steps': 83, 'kills': 6.0, 'health': 88.0, 'dead': False, 'progress': 0.972337007522583}
+corridor_quantum_seed0 {'seed': 20000, 'success': True, 'steps': 77, 'kills': 6.0, 'health': 100.0, 'dead': False, 'progress': 0.9716010093688965}
+corridor_quantum_seed0_2.8M {'seed': 20000, 'success': True, 'steps': 84, 'kills': 5.0, 'health': 82.0, 'dead': False, 'progress': 0.9732924699783325}

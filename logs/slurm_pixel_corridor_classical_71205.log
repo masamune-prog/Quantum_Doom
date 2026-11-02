@@ -1,0 +1,20 @@
+task=corridor model=classical seed=1 device=cuda envs=8 steps=128 decisions=3000000 aux_coef=0.5 parameters=496099 head_parameters=1063
+{"update": 10, "decisions": 10240, "episodes": 15, "successes": 0, "reward": -0.590975396335125, "policy": -0.0007, "value": 0.074, "entropy": 1.7352, "depth": 0.0198, "goal": 0.5823, "seconds": 7.8}
+{"update": 20, "decisions": 20480, "episodes": 17, "successes": 0, "reward": -0.6828701496124268, "policy": -0.001, "value": 0.0839, "entropy": 1.7097, "depth": 0.0147, "goal": 0.4736, "seconds": 14.6}
+{"update": 30, "decisions": 30720, "episodes": 12, "successes": 0, "reward": -0.4988422989845276, "policy": -0.0009, "value": 0.1029, "entropy": 1.687, "depth": 0.0178, "goal": 0.2019, "seconds": 21.3}
+{"update": 40, "decisions": 40960, "episodes": 13, "successes": 0, "reward": -0.5164570361375809, "policy": -0.0003, "value": 0.0875, "entropy": 1.6972, "depth": 0.0074, "goal": 0.1562, "seconds": 28.0}
+{"update": 50, "decisions": 51200, "episodes": 10, "successes": 0, "reward": -0.40023747831583023, "policy": -0.0017, "value": 0.08, "entropy": 1.6775, "depth": 0.006, "goal": 0.1171, "seconds": 34.6}
+{"update": 60, "decisions": 61440, "episodes": 7, "successes": 0, "reward": -0.3377678245306015, "policy": -0.0041, "value": 0.0914, "entropy": 1.7013, "depth": 0.0068, "goal": 0.0758, "seconds": 41.1}
+{"update": 70, "decisions": 71680, "episodes": 5, "successes": 0, "reward": -0.22374479100108147, "policy": -0.0029, "value": 0.0612, "entropy": 1.6519, "depth": 0.0067, "goal": 0.058, "seconds": 47.6}
+{"update": 80, "decisions": 81920, "episodes": 8, "successes": 0, "reward": -0.3839311748743057, "policy": -0.0031, "value": 0.1129, "entropy": 1.6553, "depth": 0.017, "goal": 0.1317, "seconds": 53.9}
+{"update": 90, "decisions": 92160, "episodes": 8, "successes": 0, "reward": -0.3733827918767929, "policy": -0.0052, "value": 0.1072, "entropy": 1.6725, "depth": 0.0121, "goal": 0.1059, "seconds": 60.5}
+{"update": 100, "decisions": 102400, "episodes": 4, "successes": 0, "reward": -0.1789325475692749, "policy": -0.0034, "value": 0.0877, "entropy": 1.6776, "depth": 0.0072, "goal": 0.0476, "seconds": 66.8}
+{"update": 110, "decisions": 112640, "episodes": 6, "successes": 0, "reward": -0.27755212038755417, "policy": -0.0038, "value": 0.0845, "entropy": 1.6433, "depth": 0.0067, "goal": 0.1106, "seconds": 73.0}
+{"update": 120, "decisions": 122880, "episodes": 4, "successes": 0, "reward": -0.17681915313005447, "policy": 0.0, "value": 0.0849, "entropy": 1.617, "depth": 0.0072, "goal": 0.029, "seconds": 79.2}
+{"update": 130, "decisions": 133120, "episodes": 4, "successes": 0, "reward": -0.1851443573832512, "policy": -0.0025, "value": 0.0623, "entropy": 1.5973, "depth": 0.0041, "goal": 0.0141, "seconds": 85.5}
+{"update": 140, "decisions": 143360, "episodes": 4, "successes": 0, "reward": -0.17079073935747147, "policy": 0.0019, "value": 0.0774, "entropy": 1.6607, "depth": 0.0088, "goal": 0.0534, "seconds": 91.6}
+{"update": 150, "decisions": 153600, "episodes": 4, "successes": 0, "reward": -0.1913205347955227, "policy": -0.0027, "value": 0.117, "entropy": 1.6565, "depth": 0.008, "goal": 0.1203, "seconds": 97.8}
+{"update": 160, "decisions": 163840, "episodes": 1, "successes": 0, "reward": -0.13491707853972912, "policy": -0.0011, "value": 0.0421, "entropy": 1.6363, "depth": 0.0083, "goal": 0.0758, "seconds": 103.9}
+{"update": 170, "decisions": 174080, "episodes": 5, "successes": 0, "reward": -0.23105032742023468, "policy": -0.0027, "value": 0.1272, "entropy": 1.6073, "depth": 0.009, "goal": 0.0298, "seconds": 110.2}
+{"update": 180, "decisions": 184320, "episodes": 4, "successes": 0, "reward": -0.2291679009795189, "policy": -0.005, "value": 0.125, "entropy": 1.6363, "depth": 0.0071, "goal": 0.0414, "seconds": 116.4}
+{"update": 190, "decisions": 194560, "episodes": 3, "successes": 0, "reward": -0.12289443984627724, "policy": -0.0052, "value": 0.0744, "entropy": 1.6316, "depth": 0.0067, "goal": 0.0201, "seconds": 122.6}

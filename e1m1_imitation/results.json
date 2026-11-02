@@ -1,0 +1,48 @@
+{
+  "demonstration_wins": 6,
+  "samples": 2184,
+  "training_action_accuracy": 0.5920329689979553,
+  "eval_wins": 0,
+  "evaluation": [
+    {
+      "exit_reached": false,
+      "dead": false,
+      "waypoint_idx": 2,
+      "health": 100.0,
+      "steps": 1575,
+      "return": 0.5861194729807733
+    },
+    {
+      "exit_reached": false,
+      "dead": false,
+      "waypoint_idx": 2,
+      "health": 100.0,
+      "steps": 1575,
+      "return": 0.5861194729807733
+    },
+    {
+      "exit_reached": false,
+      "dead": false,
+      "waypoint_idx": 2,
+      "health": 100.0,
+      "steps": 1575,
+      "return": 0.5861194729807733
+    },
+    {
+      "exit_reached": false,
+      "dead": false,
+      "waypoint_idx": 2,
+      "health": 100.0,
+      "steps": 1575,
+      "return": 0.5861194729807733
+    },
+    {
+      "exit_reached": false,
+      "dead": false,
+      "waypoint_idx": 2,
+      "health": 100.0,
+      "steps": 1575,
+      "return": 0.5861194729807733
+    }
+  ]
+}

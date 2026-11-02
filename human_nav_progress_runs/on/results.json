@@ -1,0 +1,458 @@
+{
+  "task": "navigation",
+  "memory": "on",
+  "completed_updates": 1000,
+  "training_decisions": 256000,
+  "best_update": 250,
+  "best_selection_score": 0.05,
+  "evaluation": {
+    "successes": 0,
+    "episodes": 20,
+    "mean_steps": 525.0,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 261,
+          "1": 264
+        },
+        "visited_cells": 1
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 254,
+          "2": 252,
+          "0": 19
+        },
+        "visited_cells": 7
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 400,
+          "1": 69,
+          "2": 56
+        },
+        "visited_cells": 21
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 252,
+          "1": 262,
+          "0": 11
+        },
+        "visited_cells": 6
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 211,
+          "0": 54,
+          "2": 260
+        },
+        "visited_cells": 14
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 40,
+          "1": 256,
+          "2": 229
+        },
+        "visited_cells": 13
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 251,
+          "0": 34,
+          "2": 240
+        },
+        "visited_cells": 15
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 256,
+          "0": 31,
+          "1": 238
+        },
+        "visited_cells": 7
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 248,
+          "0": 24,
+          "1": 253
+        },
+        "visited_cells": 9
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 52,
+          "2": 238,
+          "1": 235
+        },
+        "visited_cells": 15
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 10,
+          "1": 264,
+          "2": 251
+        },
+        "visited_cells": 5
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 520,
+          "1": 5
+        },
+        "visited_cells": 4
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 65,
+          "1": 239,
+          "2": 221
+        },
+        "visited_cells": 18
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 65,
+          "1": 244,
+          "2": 216
+        },
+        "visited_cells": 18
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 224,
+          "0": 67,
+          "1": 234
+        },
+        "visited_cells": 21
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 1,
+          "2": 263,
+          "1": 261
+        },
+        "visited_cells": 1
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 509,
+          "1": 9,
+          "2": 7
+        },
+        "visited_cells": 7
+      },
+      {
+        "seed": 20017,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 264,
+          "1": 261
+        },
+        "visited_cells": 1
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 261,
+          "0": 2,
+          "1": 262
+        },
+        "visited_cells": 2
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 264,
+          "2": 261
+        },
+        "visited_cells": 1
+      }
+    ]
+  },
+  "sampled_evaluation": {
+    "successes": 1,
+    "episodes": 20,
+    "mean_steps": 484.4,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 216,
+        "actions": {
+          "2": 79,
+          "1": 70,
+          "0": 67
+        },
+        "visited_cells": 26
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 158,
+          "0": 208,
+          "2": 159
+        },
+        "visited_cells": 45
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 186,
+          "2": 175,
+          "0": 164
+        },
+        "visited_cells": 38
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 191,
+          "1": 181,
+          "2": 153
+        },
+        "visited_cells": 52
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 175,
+          "0": 166,
+          "1": 184
+        },
+        "visited_cells": 35
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 187,
+          "0": 188,
+          "2": 150
+        },
+        "visited_cells": 32
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 158,
+          "0": 184,
+          "1": 183
+        },
+        "visited_cells": 50
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 165,
+          "2": 179,
+          "0": 181
+        },
+        "visited_cells": 19
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 203,
+          "1": 165,
+          "2": 157
+        },
+        "visited_cells": 69
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 182,
+          "2": 176,
+          "0": 167
+        },
+        "visited_cells": 21
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 163,
+          "0": 162,
+          "1": 200
+        },
+        "visited_cells": 42
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 187,
+          "2": 170,
+          "0": 168
+        },
+        "visited_cells": 14
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 175,
+          "1": 160,
+          "2": 190
+        },
+        "visited_cells": 44
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 180,
+          "0": 195,
+          "1": 150
+        },
+        "visited_cells": 48
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 172,
+          "1": 177,
+          "2": 176
+        },
+        "visited_cells": 50
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "0": 172,
+          "2": 174,
+          "1": 179
+        },
+        "visited_cells": 37
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 173,
+          "0": 173,
+          "1": 179
+        },
+        "visited_cells": 43
+      },
+      {
+        "seed": 20017,
+        "success": true,
+        "steps": 22,
+        "actions": {
+          "2": 11,
+          "0": 7,
+          "1": 4
+        },
+        "visited_cells": 4
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 191,
+          "0": 167,
+          "2": 167
+        },
+        "visited_cells": 46
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "2": 149,
+          "0": 189,
+          "1": 187
+        },
+        "visited_cells": 24
+      }
+    ]
+  }
+}

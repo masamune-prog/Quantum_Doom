@@ -1,0 +1,264 @@
+{
+  "task": "combat",
+  "best_update": 8,
+  "training_steps": 1024,
+  "results": {
+    "greedy": {
+      "policy": "greedy",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 19,
+          "return": -20.39,
+          "actions": {
+            "4": 15,
+            "5": 3,
+            "6": 1
+          },
+          "kills": 0.0,
+          "health": -2.0,
+          "damage_taken": 102.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 56,
+          "return": -16.36,
+          "actions": {
+            "4": 30,
+            "1": 2,
+            "6": 1,
+            "5": 23
+          },
+          "kills": 1.0,
+          "health": -8.0,
+          "damage_taken": 108.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.5,
+        "mean_damage": 105.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    },
+    "sampled": {
+      "policy": "sampled",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 19,
+          "return": -21.59,
+          "actions": {
+            "2": 3,
+            "4": 6,
+            "3": 2,
+            "0": 1,
+            "5": 2,
+            "6": 4,
+            "1": 1
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 26,
+          "return": -16.06,
+          "actions": {
+            "1": 3,
+            "4": 8,
+            "0": 7,
+            "3": 2,
+            "6": 3,
+            "5": 1,
+            "2": 2
+          },
+          "kills": 1.0,
+          "health": -8.0,
+          "damage_taken": 108.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.5,
+        "mean_damage": 111.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    },
+    "random": {
+      "policy": "random",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 33,
+          "return": -17.33,
+          "actions": {
+            "5": 7,
+            "3": 4,
+            "6": 3,
+            "0": 5,
+            "4": 7,
+            "1": 5,
+            "2": 2
+          },
+          "kills": 1.0,
+          "health": -20.0,
+          "damage_taken": 120.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 18,
+          "return": -21.58,
+          "actions": {
+            "4": 4,
+            "0": 3,
+            "3": 3,
+            "5": 1,
+            "6": 3,
+            "2": 3,
+            "1": 1
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.5,
+        "mean_damage": 117.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    },
+    "forward": {
+      "policy": "forward",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 18,
+          "return": -21.58,
+          "actions": {
+            "0": 18
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 13,
+          "return": -21.53,
+          "actions": {
+            "0": 13
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.0,
+        "mean_damage": 114.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    },
+    "attack": {
+      "policy": "attack",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 19,
+          "return": -20.39,
+          "actions": {
+            "1": 19
+          },
+          "kills": 0.0,
+          "health": -2.0,
+          "damage_taken": 102.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 18,
+          "return": -21.58,
+          "actions": {
+            "1": 18
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.0,
+        "mean_damage": 108.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    },
+    "forward_attack": {
+      "policy": "forward_attack",
+      "task": "combat",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 18,
+          "return": -21.58,
+          "actions": {
+            "6": 18
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        },
+        {
+          "seed": 20001,
+          "steps": 13,
+          "return": -21.53,
+          "actions": {
+            "6": 13
+          },
+          "kills": 0.0,
+          "health": -14.0,
+          "damage_taken": 114.0,
+          "dead": true,
+          "survived": false
+        }
+      ],
+      "summary": {
+        "mean_kills": 0.0,
+        "mean_damage": 114.0,
+        "survival_rate": 0.0,
+        "kill_and_survive_rate": 0.0
+      }
+    }
+  }
+}

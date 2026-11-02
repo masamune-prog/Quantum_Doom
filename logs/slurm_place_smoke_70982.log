@@ -1,0 +1,10 @@
+memory False keyframes 14 graph_edges 4 observed_memory [0.0, 0.0, 0.0, 0.0]
+memory True keyframes 14 graph_edges 4 observed_memory [0.0, 0.0, 0.0, 0.8270000219345093]
+task=navigation memory=on memory_kind=place model=classical_mlp device=cuda envs=2 steps=8 updates=1 parameters=964
+{"update": 1, "episodes": 0, "successes": 0, "reward": -0.027337160427123308, "seconds": 3.6}
+eval memory=on update=1 score=0.000
+FINAL memory=on success=0/1 sampled=0/1 best_update=1
+task=navigation memory=on memory_kind=place model=quantum_bridged device=cuda envs=2 steps=8 updates=1 parameters=106
+{"update": 1, "episodes": 0, "successes": 0, "reward": -0.023502269759774208, "seconds": 2.2}
+eval memory=on update=1 score=0.000
+FINAL memory=on success=0/1 sampled=0/1 best_update=1

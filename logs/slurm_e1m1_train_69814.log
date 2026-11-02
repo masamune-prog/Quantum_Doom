@@ -1,0 +1,11 @@
+Job 69814 on TC1N06
+Tesla V100-PCIE-32GB
+Quantum circuit GPU forward/backward OK
+skill 3 seed 0: TIMEOUT/STUCK steps 1575 return    -0.1 waypoints 2/19 health 101 kills 0
+skill 3 seed 1: TIMEOUT/STUCK steps 1575 return    -0.3 waypoints 2/19 health 101 kills 0
+skill 3 seed 2: TIMEOUT/STUCK steps 1575 return    -0.3 waypoints 2/19 health 101 kills 0
+skill 3 seed 3: TIMEOUT/STUCK steps 1575 return    -0.1 waypoints 2/19 health 101 kills 0
+skill 3 seed 4: TIMEOUT/STUCK steps 1575 return    -0.5 waypoints 2/19 health 101 kills 0
+skill 3: completed without dying 0/5
+
+Saved e1m1_route_check.json and e1m1_route_check_skill*.png

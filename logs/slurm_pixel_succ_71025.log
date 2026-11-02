@@ -1,0 +1,12 @@
+seed=20000 step=110 raw=-0.0001 total=0.9563 timeout=False dead=False dist_goal=45.5 dist_before=45.5
+seed=20001 step=58 raw=0.9996 total=0.9768 timeout=False dead=False dist_goal=47.3 dist_before=58.5
+seed=20002 step=81 raw=0.9996 total=0.9676 timeout=False dead=False dist_goal=39.3 dist_before=51.1
+seed=20003 step=47 raw=0.9997 total=0.9813 timeout=False dead=False dist_goal=45.7 dist_before=53.7
+seed=20004 step=110 raw=0.9997 total=0.9561 timeout=False dead=False dist_goal=45.4 dist_before=53.1
+seed=20005 step=50 raw=0.9996 total=0.9800 timeout=False dead=False dist_goal=35.9 dist_before=53.4
+seed=20006 step=61 raw=0.9996 total=0.9756 timeout=False dead=False dist_goal=44.9 dist_before=64.4
+seed=20007 step=119 raw=0.9998 total=0.9526 timeout=False dead=False dist_goal=31.7 dist_before=38.7
+seed=20008 step=80 raw=0.9997 total=0.9681 timeout=False dead=False dist_goal=36.8 dist_before=45.9
+seed=20009 step=102 raw=0.9996 total=0.9592 timeout=False dead=False dist_goal=47.1 dist_before=55.8
+seed=20010 step=76 raw=0.9997 total=0.9697 timeout=False dead=False dist_goal=31.5 dist_before=45.3
+seed=20011 step=74 raw=0.9998 total=0.9706 timeout=False dead=False dist_goal=35.9 dist_before=40.3

@@ -1,0 +1,1222 @@
+{
+  "task": "dodge",
+  "best_update": 150,
+  "training_steps": 262144,
+  "results": {
+    "greedy": {
+      "policy": "greedy",
+      "task": "dodge",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 56,
+          "return": -26.1,
+          "actions": {
+            "1": 14,
+            "0": 42
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20001,
+          "steps": 99,
+          "return": -17.65,
+          "actions": {
+            "1": 33,
+            "0": 66
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20002,
+          "steps": 78,
+          "return": -18.7,
+          "actions": {
+            "1": 23,
+            "0": 55
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20003,
+          "steps": 67,
+          "return": -23.45,
+          "actions": {
+            "1": 20,
+            "0": 47
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20004,
+          "steps": 57,
+          "return": -21.85,
+          "actions": {
+            "1": 25,
+            "0": 32
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20005,
+          "steps": 55,
+          "return": -21.95,
+          "actions": {
+            "1": 14,
+            "0": 41
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20006,
+          "steps": 63,
+          "return": -17.35,
+          "actions": {
+            "1": 30,
+            "0": 33
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20007,
+          "steps": 74,
+          "return": -31.5,
+          "actions": {
+            "1": 14,
+            "0": 60
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        },
+        {
+          "seed": 20008,
+          "steps": 56,
+          "return": -19.8,
+          "actions": {
+            "1": 16,
+            "0": 40
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20009,
+          "steps": 71,
+          "return": -23.25,
+          "actions": {
+            "1": 17,
+            "0": 54
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20010,
+          "steps": 103,
+          "return": -21.65,
+          "actions": {
+            "1": 33,
+            "0": 70
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20011,
+          "steps": 86,
+          "return": -22.5,
+          "actions": {
+            "1": 28,
+            "0": 58
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20012,
+          "steps": 66,
+          "return": -23.5,
+          "actions": {
+            "1": 15,
+            "0": 51
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20013,
+          "steps": 80,
+          "return": -27.0,
+          "actions": {
+            "1": 22,
+            "0": 58
+          },
+          "health": -110.0,
+          "damage_taken": 210.0,
+          "dead": true
+        },
+        {
+          "seed": 20014,
+          "steps": 75,
+          "return": -20.95,
+          "actions": {
+            "1": 19,
+            "0": 56
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20015,
+          "steps": 72,
+          "return": -16.9,
+          "actions": {
+            "1": 32,
+            "0": 40
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20016,
+          "steps": 76,
+          "return": -25.1,
+          "actions": {
+            "1": 17,
+            "0": 59
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20017,
+          "steps": 83,
+          "return": -24.75,
+          "actions": {
+            "1": 28,
+            "0": 55
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20018,
+          "steps": 76,
+          "return": -23.0,
+          "actions": {
+            "1": 22,
+            "0": 54
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20019,
+          "steps": 108,
+          "return": -29.8,
+          "actions": {
+            "1": 23,
+            "0": 85
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        }
+      ],
+      "summary": {
+        "mean_steps_alive": 75.05,
+        "mean_damage": 165.9,
+        "survival_rate": 0.0
+      }
+    },
+    "sampled": {
+      "policy": "sampled",
+      "task": "dodge",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 70,
+          "return": -25.4,
+          "actions": {
+            "1": 22,
+            "0": 48
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20001,
+          "steps": 27,
+          "return": -21.25,
+          "actions": {
+            "0": 13,
+            "1": 14
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20002,
+          "steps": 69,
+          "return": -19.15,
+          "actions": {
+            "1": 23,
+            "0": 46
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20003,
+          "steps": 31,
+          "return": -25.25,
+          "actions": {
+            "0": 15,
+            "1": 16
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20004,
+          "steps": 25,
+          "return": -23.45,
+          "actions": {
+            "0": 13,
+            "1": 12
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20005,
+          "steps": 34,
+          "return": -23.0,
+          "actions": {
+            "1": 18,
+            "0": 16
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20006,
+          "steps": 93,
+          "return": -15.85,
+          "actions": {
+            "0": 61,
+            "1": 32
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20007,
+          "steps": 45,
+          "return": -32.95,
+          "actions": {
+            "0": 33,
+            "1": 12
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        },
+        {
+          "seed": 20008,
+          "steps": 70,
+          "return": -19.1,
+          "actions": {
+            "1": 26,
+            "0": 44
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20009,
+          "steps": 60,
+          "return": -23.8,
+          "actions": {
+            "1": 19,
+            "0": 41
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20010,
+          "steps": 103,
+          "return": -21.65,
+          "actions": {
+            "1": 34,
+            "0": 69
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20011,
+          "steps": 91,
+          "return": -22.25,
+          "actions": {
+            "0": 59,
+            "1": 32
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20012,
+          "steps": 79,
+          "return": -22.85,
+          "actions": {
+            "1": 26,
+            "0": 53
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20013,
+          "steps": 98,
+          "return": -26.1,
+          "actions": {
+            "1": 30,
+            "0": 68
+          },
+          "health": -110.0,
+          "damage_taken": 210.0,
+          "dead": true
+        },
+        {
+          "seed": 20014,
+          "steps": 97,
+          "return": -19.85,
+          "actions": {
+            "1": 37,
+            "0": 60
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20015,
+          "steps": 73,
+          "return": -16.85,
+          "actions": {
+            "1": 32,
+            "0": 41
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20016,
+          "steps": 89,
+          "return": -24.45,
+          "actions": {
+            "0": 61,
+            "1": 28
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20017,
+          "steps": 81,
+          "return": -24.85,
+          "actions": {
+            "1": 24,
+            "0": 57
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20018,
+          "steps": 31,
+          "return": -25.25,
+          "actions": {
+            "0": 17,
+            "1": 14
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20019,
+          "steps": 108,
+          "return": -29.8,
+          "actions": {
+            "0": 81,
+            "1": 27
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        }
+      ],
+      "summary": {
+        "mean_steps_alive": 68.7,
+        "mean_damage": 165.9,
+        "survival_rate": 0.0
+      }
+    },
+    "random": {
+      "policy": "random",
+      "task": "dodge",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 33,
+          "return": -27.25,
+          "actions": {
+            "1": 21,
+            "0": 12
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20001,
+          "steps": 53,
+          "return": -19.95,
+          "actions": {
+            "1": 27,
+            "0": 26
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20002,
+          "steps": 123,
+          "return": -16.45,
+          "actions": {
+            "0": 73,
+            "1": 50
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20003,
+          "steps": 62,
+          "return": -23.7,
+          "actions": {
+            "0": 29,
+            "1": 33
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20004,
+          "steps": 54,
+          "return": -22.0,
+          "actions": {
+            "0": 25,
+            "1": 29
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20005,
+          "steps": 52,
+          "return": -22.1,
+          "actions": {
+            "0": 27,
+            "1": 25
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20006,
+          "steps": 45,
+          "return": -18.25,
+          "actions": {
+            "0": 26,
+            "1": 19
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20007,
+          "steps": 29,
+          "return": -33.75,
+          "actions": {
+            "0": 14,
+            "1": 15
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        },
+        {
+          "seed": 20008,
+          "steps": 25,
+          "return": -21.35,
+          "actions": {
+            "0": 12,
+            "1": 13
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20009,
+          "steps": 55,
+          "return": -24.05,
+          "actions": {
+            "0": 29,
+            "1": 26
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20010,
+          "steps": 120,
+          "return": -20.8,
+          "actions": {
+            "1": 60,
+            "0": 60
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20011,
+          "steps": 38,
+          "return": -24.9,
+          "actions": {
+            "0": 21,
+            "1": 17
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20012,
+          "steps": 124,
+          "return": -20.6,
+          "actions": {
+            "1": 58,
+            "0": 66
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20013,
+          "steps": 129,
+          "return": -24.55,
+          "actions": {
+            "0": 68,
+            "1": 61
+          },
+          "health": -110.0,
+          "damage_taken": 210.0,
+          "dead": true
+        },
+        {
+          "seed": 20014,
+          "steps": 127,
+          "return": -18.35,
+          "actions": {
+            "1": 62,
+            "0": 65
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20015,
+          "steps": 55,
+          "return": -17.75,
+          "actions": {
+            "0": 29,
+            "1": 26
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20016,
+          "steps": 93,
+          "return": -24.25,
+          "actions": {
+            "0": 51,
+            "1": 42
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20017,
+          "steps": 74,
+          "return": -25.2,
+          "actions": {
+            "0": 32,
+            "1": 42
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20018,
+          "steps": 99,
+          "return": -21.85,
+          "actions": {
+            "0": 41,
+            "1": 58
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20019,
+          "steps": 60,
+          "return": -32.2,
+          "actions": {
+            "0": 31,
+            "1": 29
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        }
+      ],
+      "summary": {
+        "mean_steps_alive": 72.5,
+        "mean_damage": 165.9,
+        "survival_rate": 0.0
+      }
+    },
+    "left": {
+      "policy": "left",
+      "task": "dodge",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 41,
+          "return": -26.85,
+          "actions": {
+            "0": 41
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20001,
+          "steps": 51,
+          "return": -20.05,
+          "actions": {
+            "0": 51
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20002,
+          "steps": 48,
+          "return": -20.2,
+          "actions": {
+            "0": 48
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20003,
+          "steps": 31,
+          "return": -25.25,
+          "actions": {
+            "0": 31
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20004,
+          "steps": 39,
+          "return": -22.75,
+          "actions": {
+            "0": 39
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20005,
+          "steps": 32,
+          "return": -23.1,
+          "actions": {
+            "0": 32
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20006,
+          "steps": 45,
+          "return": -18.25,
+          "actions": {
+            "0": 45
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20007,
+          "steps": 37,
+          "return": -33.35,
+          "actions": {
+            "0": 37
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        },
+        {
+          "seed": 20008,
+          "steps": 44,
+          "return": -20.4,
+          "actions": {
+            "0": 44
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20009,
+          "steps": 39,
+          "return": -24.85,
+          "actions": {
+            "0": 39
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20010,
+          "steps": 33,
+          "return": -25.15,
+          "actions": {
+            "0": 33
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20011,
+          "steps": 42,
+          "return": -24.7,
+          "actions": {
+            "0": 42
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20012,
+          "steps": 62,
+          "return": -23.7,
+          "actions": {
+            "0": 62
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20013,
+          "steps": 50,
+          "return": -28.5,
+          "actions": {
+            "0": 50
+          },
+          "health": -110.0,
+          "damage_taken": 210.0,
+          "dead": true
+        },
+        {
+          "seed": 20014,
+          "steps": 58,
+          "return": -21.8,
+          "actions": {
+            "0": 58
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20015,
+          "steps": 38,
+          "return": -18.6,
+          "actions": {
+            "0": 38
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20016,
+          "steps": 49,
+          "return": -26.45,
+          "actions": {
+            "0": 49
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20017,
+          "steps": 37,
+          "return": -27.05,
+          "actions": {
+            "0": 37
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20018,
+          "steps": 37,
+          "return": -24.95,
+          "actions": {
+            "0": 37
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20019,
+          "steps": 41,
+          "return": -33.15,
+          "actions": {
+            "0": 41
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        }
+      ],
+      "summary": {
+        "mean_steps_alive": 42.7,
+        "mean_damage": 165.9,
+        "survival_rate": 0.0
+      }
+    },
+    "right": {
+      "policy": "right",
+      "task": "dodge",
+      "episodes": [
+        {
+          "seed": 20000,
+          "steps": 45,
+          "return": -26.65,
+          "actions": {
+            "1": 45
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20001,
+          "steps": 59,
+          "return": -19.65,
+          "actions": {
+            "1": 59
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20002,
+          "steps": 50,
+          "return": -20.1,
+          "actions": {
+            "1": 50
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20003,
+          "steps": 29,
+          "return": -25.35,
+          "actions": {
+            "1": 29
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20004,
+          "steps": 47,
+          "return": -22.35,
+          "actions": {
+            "1": 47
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20005,
+          "steps": 30,
+          "return": -23.2,
+          "actions": {
+            "1": 30
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20006,
+          "steps": 44,
+          "return": -18.3,
+          "actions": {
+            "1": 44
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20007,
+          "steps": 33,
+          "return": -33.55,
+          "actions": {
+            "1": 33
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        },
+        {
+          "seed": 20008,
+          "steps": 34,
+          "return": -20.9,
+          "actions": {
+            "1": 34
+          },
+          "health": -26.0,
+          "damage_taken": 126.0,
+          "dead": true
+        },
+        {
+          "seed": 20009,
+          "steps": 46,
+          "return": -24.5,
+          "actions": {
+            "1": 46
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20010,
+          "steps": 40,
+          "return": -24.8,
+          "actions": {
+            "1": 40
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20011,
+          "steps": 44,
+          "return": -24.6,
+          "actions": {
+            "1": 44
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20012,
+          "steps": 61,
+          "return": -23.75,
+          "actions": {
+            "1": 61
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20013,
+          "steps": 55,
+          "return": -28.25,
+          "actions": {
+            "1": 55
+          },
+          "health": -110.0,
+          "damage_taken": 210.0,
+          "dead": true
+        },
+        {
+          "seed": 20014,
+          "steps": 58,
+          "return": -21.8,
+          "actions": {
+            "1": 58
+          },
+          "health": -47.0,
+          "damage_taken": 147.0,
+          "dead": true
+        },
+        {
+          "seed": 20015,
+          "steps": 44,
+          "return": -18.3,
+          "actions": {
+            "1": 44
+          },
+          "health": -5.0,
+          "damage_taken": 105.0,
+          "dead": true
+        },
+        {
+          "seed": 20016,
+          "steps": 40,
+          "return": -26.9,
+          "actions": {
+            "1": 40
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20017,
+          "steps": 37,
+          "return": -27.05,
+          "actions": {
+            "1": 37
+          },
+          "health": -89.0,
+          "damage_taken": 189.0,
+          "dead": true
+        },
+        {
+          "seed": 20018,
+          "steps": 27,
+          "return": -25.45,
+          "actions": {
+            "1": 27
+          },
+          "health": -68.0,
+          "damage_taken": 168.0,
+          "dead": true
+        },
+        {
+          "seed": 20019,
+          "steps": 46,
+          "return": -32.9,
+          "actions": {
+            "1": 46
+          },
+          "health": -152.0,
+          "damage_taken": 252.0,
+          "dead": true
+        }
+      ],
+      "summary": {
+        "mean_steps_alive": 43.45,
+        "mean_damage": 165.9,
+        "survival_rate": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "3": {
+    "wins": 3,
+    "episodes": 5,
+    "results": [
+      {
+        "seed": 0,
+        "steps": 441,
+        "return": 275.8,
+        "exit_reached": true,
+        "dead": false,
+        "waypoint_idx": 22,
+        "health": 33.0,
+        "kills": 1.0,
+        "truncated": false
+      },
+      {
+        "seed": 1,
+        "steps": 308,
+        "return": 95.5,
+        "exit_reached": false,
+        "dead": true,
+        "waypoint_idx": 18,
+        "health": 14.0,
+        "kills": 1.0,
+        "truncated": false
+      },
+      {
+        "seed": 2,
+        "steps": 424,
+        "return": 276.6,
+        "exit_reached": true,
+        "dead": false,
+        "waypoint_idx": 22,
+        "health": 8.0,
+        "kills": 2.0,
+        "truncated": false
+      },
+      {
+        "seed": 3,
+        "steps": 540,
+        "return": 121.0,
+        "exit_reached": false,
+        "dead": true,
+        "waypoint_idx": 21,
+        "health": 5.0,
+        "kills": 3.0,
+        "truncated": false
+      },
+      {
+        "seed": 4,
+        "steps": 355,
+        "return": 275.8,
+        "exit_reached": true,
+        "dead": false,
+        "waypoint_idx": 22,
+        "health": 17.0,
+        "kills": 1.0,
+        "truncated": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+memory=off device=cuda envs=2 steps=8 updates=1 parameters=74
+{"update": 1, "episodes": 0, "successes": 0, "reward": -0.01937500201165676, "seconds": 1.2}
+eval memory=off update=1 score=0.000
+FINAL memory=off success=0/1 best_update=1
+memory=on device=cuda envs=2 steps=8 updates=1 parameters=74
+{"update": 1, "episodes": 0, "successes": 0, "reward": -0.011875000782310963, "seconds": 0.8}
+eval memory=on update=1 score=0.000
+FINAL memory=on success=0/1 best_update=1

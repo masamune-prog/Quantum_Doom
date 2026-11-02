@@ -1,0 +1,68 @@
+task=combat device=cuda obs=10 actions=7 actor_params=259 critic_params=385 updates=256 envs=8 steps=128
+{"update": 1, "step_reward": -0.6488671898841858, "episodes": 35, "successes": 0, "episode_kills": 18.0, "seconds": 3.0}
+{"update": 10, "step_reward": -0.41371092200279236, "episodes": 25, "successes": 0, "episode_kills": 23.0, "seconds": 25.6}
+{"update": 20, "step_reward": -0.4363671541213989, "episodes": 27, "successes": 0, "episode_kills": 28.0, "seconds": 48.6}
+{"update": 30, "step_reward": -0.3533593416213989, "episodes": 22, "successes": 0, "episode_kills": 24.0, "seconds": 71.3}
+{"update": 40, "step_reward": -0.3480859398841858, "episodes": 22, "successes": 0, "episode_kills": 24.0, "seconds": 94.1}
+{"update": 50, "step_reward": -0.23597656190395355, "episodes": 16, "successes": 0, "episode_kills": 16.0, "seconds": 116.5}
+eval update=50 score=0.249 summary={'mean_kills': 1.0, 'mean_damage': 108.0, 'mean_steps_alive': 65.8, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+{"update": 60, "step_reward": -0.2512109577655792, "episodes": 16, "successes": 0, "episode_kills": 16.0, "seconds": 140.6}
+{"update": 70, "step_reward": -0.24222655594348907, "episodes": 14, "successes": 0, "episode_kills": 14.0, "seconds": 163.7}
+{"update": 80, "step_reward": -0.2006249874830246, "episodes": 11, "successes": 0, "episode_kills": 11.0, "seconds": 186.2}
+{"update": 90, "step_reward": -0.24632814526557922, "episodes": 15, "successes": 0, "episode_kills": 13.0, "seconds": 209.7}
+{"update": 100, "step_reward": -0.2146875113248825, "episodes": 12, "successes": 0, "episode_kills": 12.0, "seconds": 232.1}
+eval update=100 score=0.250 summary={'mean_kills': 1.0, 'mean_damage': 108.0, 'mean_steps_alive': 66.0, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+{"update": 110, "step_reward": -0.2810937464237213, "episodes": 17, "successes": 0, "episode_kills": 17.0, "seconds": 256.5}
+{"update": 120, "step_reward": -0.25609374046325684, "episodes": 15, "successes": 0, "episode_kills": 16.0, "seconds": 279.0}
+{"update": 130, "step_reward": -0.28382813930511475, "episodes": 18, "successes": 0, "episode_kills": 18.0, "seconds": 301.3}
+{"update": 140, "step_reward": -0.23207031190395355, "episodes": 15, "successes": 0, "episode_kills": 15.0, "seconds": 323.4}
+{"update": 150, "step_reward": -0.23949219286441803, "episodes": 14, "successes": 0, "episode_kills": 14.0, "seconds": 346.8}
+eval update=150 score=0.250 summary={'mean_kills': 1.0, 'mean_damage': 108.0, 'mean_steps_alive': 66.0, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+{"update": 160, "step_reward": -0.27464842796325684, "episodes": 17, "successes": 0, "episode_kills": 17.0, "seconds": 370.7}
+{"update": 170, "step_reward": -0.06273437291383743, "episodes": 4, "successes": 0, "episode_kills": 6.0, "seconds": 391.8}
+{"update": 180, "step_reward": -0.09496092796325684, "episodes": 8, "successes": 0, "episode_kills": 15.0, "seconds": 412.4}
+{"update": 190, "step_reward": -0.04222656786441803, "episodes": 3, "successes": 0, "episode_kills": 6.0, "seconds": 433.1}
+{"update": 200, "step_reward": -0.10687500238418579, "episodes": 8, "successes": 0, "episode_kills": 15.0, "seconds": 453.9}
+eval update=200 score=2.033 summary={'mean_kills': 2.0, 'mean_damage': 108.6, 'mean_steps_alive': 223.8, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+{"update": 210, "step_reward": -0.07132812589406967, "episodes": 5, "successes": 0, "episode_kills": 9.0, "seconds": 480.2}
+{"update": 220, "step_reward": -0.061171870678663254, "episodes": 6, "successes": 0, "episode_kills": 13.0, "seconds": 501.4}
+{"update": 230, "step_reward": -0.02894531562924385, "episodes": 2, "successes": 0, "episode_kills": 4.0, "seconds": 522.9}
+{"update": 240, "step_reward": -0.04710937291383743, "episodes": 4, "successes": 0, "episode_kills": 9.0, "seconds": 544.8}
+{"update": 250, "step_reward": -0.005507812835276127, "episodes": 2, "successes": 0, "episode_kills": 4.0, "seconds": 566.4}
+eval update=250 score=1.392 summary={'mean_kills': 1.7, 'mean_damage': 110.4, 'mean_steps_alive': 159.2, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+eval update=256 score=2.299 summary={'mean_kills': 2.1, 'mean_damage': 112.8, 'mean_steps_alive': 265.4, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
+FINAL task=combat best_update=256 summaries={"greedy": {"mean_kills": 1.95, "mean_damage": 94.8, "mean_steps_alive": 324.05, "survival_rate": 0.25, "kill_and_survive_rate": 0.25}, "sampled": {"mean_kills": 1.85, "mean_damage": 97.5, "mean_steps_alive": 269.3, "survival_rate": 0.2, "kill_and_survive_rate": 0.2}, "random": {"mean_kills": 0.45, "mean_damage": 111.3, "mean_steps_alive": 22.5, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "forward": {"mean_kills": 0.3, "mean_damage": 108.6, "mean_steps_alive": 16.3, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "attack": {"mean_kills": 0.05, "mean_damage": 113.1, "mean_steps_alive": 26.35, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "forward_attack": {"mean_kills": 0.4, "mean_damage": 111.0, "mean_steps_alive": 16.65, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}}
+task=navigation device=cuda obs=10 actions=3 actor_params=199 critic_params=385 updates=256 envs=8 steps=128
+{"update": 1, "step_reward": 0.05386718362569809, "episodes": 0, "successes": 0, "episode_kills": 0.0, "seconds": 2.1}
+{"update": 10, "step_reward": 0.23772460222244263, "episodes": 2, "successes": 2, "episode_kills": 0.0, "seconds": 16.6}
+{"update": 20, "step_reward": 0.1683984398841858, "episodes": 3, "successes": 1, "episode_kills": 0.0, "seconds": 32.7}
+{"update": 30, "step_reward": 0.14513669908046722, "episodes": 1, "successes": 1, "episode_kills": 0.0, "seconds": 48.6}
+{"update": 40, "step_reward": 0.15482422709465027, "episodes": 3, "successes": 1, "episode_kills": 0.0, "seconds": 64.8}
+{"update": 50, "step_reward": 0.26830077171325684, "episodes": 3, "successes": 2, "episode_kills": 0.0, "seconds": 81.0}
+eval update=50 score=0.500 summary={'success_rate': 0.5, 'mean_steps': 181.2}
+{"update": 60, "step_reward": 0.5940038561820984, "episodes": 5, "successes": 5, "episode_kills": 0.0, "seconds": 100.5}
+{"update": 70, "step_reward": 0.4024999737739563, "episodes": 5, "successes": 3, "episode_kills": 0.0, "seconds": 116.9}
+{"update": 80, "step_reward": 0.39729490876197815, "episodes": 7, "successes": 3, "episode_kills": 0.0, "seconds": 133.6}
+{"update": 90, "step_reward": 0.48790037631988525, "episodes": 5, "successes": 4, "episode_kills": 0.0, "seconds": 149.9}
+{"update": 100, "step_reward": 0.46038079261779785, "episodes": 7, "successes": 4, "episode_kills": 0.0, "seconds": 165.8}
+eval update=100 score=0.800 summary={'success_rate': 0.8, 'mean_steps': 144.7}
+{"update": 110, "step_reward": 0.20156247913837433, "episodes": 4, "successes": 1, "episode_kills": 0.0, "seconds": 184.2}
+{"update": 120, "step_reward": 0.2438378632068634, "episodes": 3, "successes": 2, "episode_kills": 0.0, "seconds": 200.0}
+{"update": 130, "step_reward": 0.3615820109844208, "episodes": 5, "successes": 3, "episode_kills": 0.0, "seconds": 215.9}
+{"update": 140, "step_reward": 0.27210932970046997, "episodes": 3, "successes": 2, "episode_kills": 0.0, "seconds": 231.8}
+{"update": 150, "step_reward": 0.5777246356010437, "episodes": 8, "successes": 5, "episode_kills": 0.0, "seconds": 247.8}
+eval update=150 score=0.700 summary={'success_rate': 0.7, 'mean_steps': 150.1}
+{"update": 160, "step_reward": 0.13447265326976776, "episodes": 4, "successes": 1, "episode_kills": 0.0, "seconds": 266.1}
+{"update": 170, "step_reward": 0.5577245950698853, "episodes": 5, "successes": 5, "episode_kills": 0.0, "seconds": 282.3}
+{"update": 180, "step_reward": 0.6899803876876831, "episodes": 8, "successes": 6, "episode_kills": 0.0, "seconds": 298.4}
+{"update": 190, "step_reward": 0.5657030940055847, "episodes": 7, "successes": 5, "episode_kills": 0.0, "seconds": 314.8}
+{"update": 200, "step_reward": 0.37208008766174316, "episodes": 5, "successes": 3, "episode_kills": 0.0, "seconds": 330.4}
+eval update=200 score=0.600 summary={'success_rate': 0.6, 'mean_steps': 241.7}
+{"update": 210, "step_reward": 0.5982128381729126, "episodes": 11, "successes": 5, "episode_kills": 0.0, "seconds": 349.9}
+{"update": 220, "step_reward": 0.2522948980331421, "episodes": 4, "successes": 2, "episode_kills": 0.0, "seconds": 365.6}
+{"update": 230, "step_reward": 0.3737304210662842, "episodes": 4, "successes": 3, "episode_kills": 0.0, "seconds": 381.2}
+{"update": 240, "step_reward": 0.12546873092651367, "episodes": 2, "successes": 1, "episode_kills": 0.0, "seconds": 396.8}
+{"update": 250, "step_reward": 0.29178711771965027, "episodes": 3, "successes": 2, "episode_kills": 0.0, "seconds": 413.3}
+eval update=250 score=0.600 summary={'success_rate': 0.6, 'mean_steps': 147.7}
+eval update=256 score=0.600 summary={'success_rate': 0.6, 'mean_steps': 119.5}
+FINAL task=navigation best_update=100 summaries={"greedy": {"success_rate": 0.5, "mean_steps": 215.65}, "sampled": {"success_rate": 0.45, "mean_steps": 220.35}, "random": {"success_rate": 0.05, "mean_steps": 501.5}, "forward": {"success_rate": 0.05, "mean_steps": 499.2}}

@@ -1,0 +1,16 @@
+model=classical seed=0 device=cuda envs=8 steps=128 decisions=10240 aux_coef=0.5 parameters=496000 head_parameters=964
+{"update": 1, "decisions": 1024, "episodes": 1, "successes": 1, "reward": 0.059741600416600704, "policy": 0.0007, "value": 0.3885, "entropy": 1.0816, "depth": 0.1854, "goal": 0.5176, "seconds": 3.5}
+{"update": 2, "decisions": 2048, "episodes": 0, "successes": 0, "reward": -0.03169338218867779, "policy": 0.025, "value": 0.0045, "entropy": 1.0751, "depth": 0.0055, "goal": 0.0097, "seconds": 4.1}
+{"update": 3, "decisions": 3072, "episodes": 0, "successes": 0, "reward": -0.03315884154289961, "policy": 0.0008, "value": 0.0026, "entropy": 1.0768, "depth": 0.0009, "goal": 0.0005, "seconds": 4.6}
+{"update": 4, "decisions": 4096, "episodes": 0, "successes": 0, "reward": -0.030868472531437874, "policy": -0.0018, "value": 0.0003, "entropy": 1.0822, "depth": 0.0008, "goal": 0.0, "seconds": 5.1}
+{"update": 5, "decisions": 5120, "episodes": 9, "successes": 1, "reward": 0.040878020226955414, "policy": 0.0001, "value": 0.3926, "entropy": 1.0806, "depth": 0.0015, "goal": 0.0598, "seconds": 5.7}
+{"update": 6, "decisions": 6144, "episodes": 0, "successes": 0, "reward": -0.03383328206837177, "policy": -0.0007, "value": 0.0009, "entropy": 1.0808, "depth": 0.0028, "goal": 0.02, "seconds": 6.3}
+{"update": 7, "decisions": 7168, "episodes": 0, "successes": 0, "reward": -0.033288553822785616, "policy": -0.0007, "value": 0.0006, "entropy": 1.0845, "depth": 0.0012, "goal": 0.0006, "seconds": 6.8}
+{"update": 8, "decisions": 8192, "episodes": 0, "successes": 0, "reward": -0.029997907113283873, "policy": 0.0038, "value": 0.0009, "entropy": 1.0725, "depth": 0.001, "goal": 0.0252, "seconds": 7.3}
+{"update": 9, "decisions": 9216, "episodes": 9, "successes": 1, "reward": 0.039134398102760315, "policy": -0.0009, "value": 0.3875, "entropy": 1.0742, "depth": 0.0015, "goal": 0.0586, "seconds": 7.9}
+{"update": 10, "decisions": 10240, "episodes": 0, "successes": 0, "reward": -0.04070679657161236, "policy": -0.0018, "value": 0.0013, "entropy": 1.077, "depth": 0.0014, "goal": 0.0214, "seconds": 8.5}
+eval update=10 decisions=10240 selection greedy 0/8 (excluding 20017: 0/8)
+FINAL model=classical seed=0 best_update=10 greedy 0/8 (excluding 20017: 0/8)
+FINAL model=classical seed=0 best_update=10 sampled 0/8 (excluding 20017: 0/8)
+FINAL model=classical seed=0 best_update=10 random 0/8 (excluding 20017: 0/8)
+model=quantum seed=0 device=cuda envs=8 steps=128 decisions=10240 aux_coef=0.5 parameters=495110 head_parameters=74

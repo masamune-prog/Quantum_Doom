@@ -1,0 +1,24 @@
+{
+  "memory": "off",
+  "completed_updates": 1,
+  "training_decisions": 16,
+  "best_update": 1,
+  "best_selection_score": 0.0,
+  "evaluation": {
+    "successes": 0,
+    "episodes": 1,
+    "mean_steps": 525.0,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 525,
+        "actions": {
+          "1": 264,
+          "2": 261
+        },
+        "visited_cells": 1
+      }
+    ]
+  }
+}

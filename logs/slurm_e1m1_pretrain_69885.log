@@ -1,0 +1,33 @@
+demonstrations=6/20 samples=2184 action_counts={0: 1222, 1: 126, 4: 191, 5: 340, 6: 305}
+epoch=1 weighted_ce=2.1352
+epoch=2 weighted_ce=2.0305
+epoch=3 weighted_ce=1.9683
+epoch=4 weighted_ce=1.9326
+epoch=5 weighted_ce=1.9071
+epoch=6 weighted_ce=1.8830
+epoch=7 weighted_ce=1.8656
+epoch=8 weighted_ce=1.8482
+epoch=9 weighted_ce=1.8286
+epoch=10 weighted_ce=1.8092
+epoch=11 weighted_ce=1.7944
+epoch=12 weighted_ce=1.7839
+epoch=13 weighted_ce=1.7739
+epoch=14 weighted_ce=1.7639
+epoch=15 weighted_ce=1.7560
+epoch=16 weighted_ce=1.7458
+epoch=17 weighted_ce=1.7354
+epoch=18 weighted_ce=1.7178
+epoch=19 weighted_ce=1.6970
+epoch=20 weighted_ce=1.6751
+epoch=21 weighted_ce=1.6586
+epoch=22 weighted_ce=1.6456
+epoch=23 weighted_ce=1.6337
+epoch=24 weighted_ce=1.6218
+epoch=25 weighted_ce=1.6142
+epoch=26 weighted_ce=1.6047
+epoch=27 weighted_ce=1.5958
+epoch=28 weighted_ce=1.5809
+epoch=29 weighted_ce=1.5431
+epoch=30 weighted_ce=1.4955
+training_action_accuracy=0.592
+full-start greedy wins=0/5
