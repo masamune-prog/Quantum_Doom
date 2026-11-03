@@ -1,0 +1,4 @@
+e1m1_imitation_quantum_v2_seed0 {'seed': 20000, 'success': False, 'steps': 315, 'kills': 1.0, 'health': 0.0, 'dead': True, 'start_progress': 0.0, 'progress': 0.8396977789354068}
+e1m1_imitation_quantum_v2_seed0 {'seed': 20001, 'success': False, 'steps': 295, 'kills': 0.0, 'health': 0.0, 'dead': True, 'start_progress': 0.0, 'progress': 0.8223349607538621}
+e1m1_imitation_quantum_v2_seed0 {'seed': 20002, 'success': False, 'steps': 309, 'kills': 0.0, 'health': 0.0, 'dead': True, 'start_progress': 0.0, 'progress': 0.8254084654743314}
+e1m1_imitation_quantum_v2_seed0 {'seed': 20003, 'success': True, 'steps': 320, 'kills': 2.0, 'health': 53.0, 'dead': False, 'start_progress': 0.0, 'progress': 0.9955333308029006}

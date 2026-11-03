@@ -123,6 +123,9 @@ def make_pixel_env(task="navigation", **kwargs):
     if task == "corridor":
         from pixel_corridor_env import PixelCorridorEnv
         return PixelCorridorEnv(**kwargs)
+    if task == "e1m1":
+        from pixel_e1m1_env import PixelE1M1Env
+        return PixelE1M1Env(**kwargs)
     return PixelNavigationEnv(**kwargs)
 
 
@@ -132,7 +135,7 @@ def _worker(conn, task, kwargs):
         while True:
             command, arg = conn.recv()
             if command == "reset":
-                conn.send(env.reset(seed=arg))
+                conn.send(env.reset(seed=arg[0], options=arg[1]))
             elif command == "step":
                 conn.send(env.step(arg))
             else:
@@ -157,9 +160,10 @@ class EnvPool:
             self.procs.append(proc)
         self.n = n
 
-    def reset(self, ids, seeds):
+    def reset(self, ids, seeds, options=None):
+        """``options`` (e.g. {"start_wp": 5} for E1M1) goes to every env in this call."""
         for i, seed in zip(ids, seeds):
-            self.conns[i].send(("reset", int(seed)))
+            self.conns[i].send(("reset", (int(seed), options)))
         return [self.conns[i].recv() for i in ids]
 
     def step(self, ids, actions):

@@ -1,0 +1,19 @@
+[navigation] random: random 10/100 (excluding 20017: 9/99)
+[navigation] e1m1_classical greedy 6/100 (excluding 20017: 5/99)
+[navigation] e1m1_classical sampled 11/100 (excluding 20017: 10/99)
+[navigation] e1m1_linear greedy 8/100 (excluding 20017: 7/99)
+[navigation] e1m1_linear sampled 20/100 (excluding 20017: 19/99)
+[navigation] e1m1_circuit greedy 10/100 (excluding 20017: 9/99)
+[navigation] e1m1_circuit sampled 19/100 (excluding 20017: 18/99)
+[navigation] e1m1_finetuned greedy 7/100 (excluding 20017: 6/99)
+[navigation] e1m1_finetuned sampled 13/100 (excluding 20017: 12/99)
+[corridor] random: random 0/100 (excluding 20017: 0/99) mean_kills=0.91 mean_dead=1.00 mean_progress=0.13
+[corridor] forward: forward 27/100 (excluding 20017: 27/99) mean_kills=0.49 mean_dead=0.73 mean_progress=0.79
+[corridor] e1m1_classical greedy 0/100 (excluding 20017: 0/99) mean_kills=0.41 mean_dead=0.98 mean_progress=0.21
+[corridor] e1m1_classical sampled 0/100 (excluding 20017: 0/99) mean_kills=0.65 mean_dead=0.93 mean_progress=0.18
+[corridor] e1m1_linear greedy 0/100 (excluding 20017: 0/99) mean_kills=0.23 mean_dead=1.00 mean_progress=0.26
+[corridor] e1m1_linear sampled 1/100 (excluding 20017: 1/99) mean_kills=0.23 mean_dead=0.99 mean_progress=0.22
+[corridor] e1m1_circuit greedy 0/100 (excluding 20017: 0/99) mean_kills=0.41 mean_dead=1.00 mean_progress=0.36
+[corridor] e1m1_circuit sampled 0/100 (excluding 20017: 0/99) mean_kills=0.34 mean_dead=1.00 mean_progress=0.21
+[corridor] e1m1_finetuned greedy 0/100 (excluding 20017: 0/99) mean_kills=0.37 mean_dead=0.99 mean_progress=0.24
+[corridor] e1m1_finetuned sampled 0/100 (excluding 20017: 0/99) mean_kills=0.55 mean_dead=0.98 mean_progress=0.19

@@ -1,0 +1,2 @@
+loaded encoder from pixel_corridor_runs/classical_seed0/best.pt
+imitation model=classical skill=3 envs=8 device=cuda parameters=497160

@@ -40,12 +40,12 @@ policy. A *decision* is one policy action, held for 4 game tics. One PPO update 
 | Classical MLP seed 2 | 1,063 | 2.82M | 99 | 94 | 5.78 | 1% | 85 | 31 min |
 | Linear readout seed 0 | 91 | not reached (30/32 at 3.0M) | 98 | 95 | 4.98 | 2% | 61 | 31 min |
 | Linear readout seed 1 | 91 | 2.82M | 100 | 97 | 6.00 | 0% | 98 | 30 min |
+| Linear readout seed 2 | 91 | 1.79M | 100 | 100 | 6.00 | 0% | 100 | 30 min |
 | **12-qubit circuit seed 0** | **74** | **4.35M** | **98** | **99** | **5.99** | **0%** | **96** | ~11 h |
 | Always FORWARD | — | — | 27 | — | 0.49 | 73% | — | — |
 | Random actions | — | — | 0 | — | 0.91 | 100% | — | — |
 
-In this table, Kills, Died and HP left are for greedy play. Linear seed 2 is still training
-(job 71605).
+In this table, Kills, Died and HP left are for greedy play.
 
 **What this shows so far**
 
@@ -53,17 +53,32 @@ In this table, Kills, Died and HP left are for greedy play. Linear seed 2 is sti
   from the screen alone, and matches the classical heads in final success.
 - **Learning speed:** the circuit needed more decisions to learn. On My Way Home it took
   2–3× as many as the linear readout. On the corridor it took 1.5–2.4× as many as the
-  classical seeds. The linear readout was slow there too: seed 1 first scored 32/32 at
-  2.82M, and seed 0 had not reached it by 3M. With one circuit seed, the gap cannot yet be
-  separated from seed-to-seed variation.
+  classical seeds. The 91-parameter linear readout ranged from 1.79M to beyond 3M decisions
+  across its three seeds, so the circuit's 4.35M is slower than all six classical and linear
+  runs, but with one circuit seed the gap cannot yet be separated from seed-to-seed variation.
 - **Wall-clock cost:** simulating the circuit makes training about 9–10× slower per
   decision (165 vs 1,450 decisions/s).
 - **No evidence the circuit is needed:** a linear readout does as well as the circuit on
-  My Way Home (52 parameters) and on the corridor so far (91 parameters). The CNN does the
+  My Way Home (52 parameters), on the corridor (91 parameters) and on E1M1 by imitation (91
+  parameters). The CNN does the
   perception, and any small head suffices.
 
 Gameplay videos of one successful held-out episode per checkpoint are in `videos/`; see
 [Gameplay videos](#gameplay-videos).
+
+**E1M1** (the original level, 7 actions; reach the exit switch from the real start, skill 3).
+Pure RL did not work, so these are **students distilled from a scripted teacher that reads
+private state** (see [E1M1 by imitating a scripted teacher](#e1m1-by-imitating-a-scripted-teacher));
+they see only the screen at test time:
+
+| Head (same CNN encoder) | Head params | Exits, greedy | Exits, sampled | Wall time |
+|---|---:|---:|---:|---:|
+| Classical MLP | 1,096 | 72 | 77 | ~25 min |
+| Linear readout | 91 | 77 | 72 | ~25 min |
+| **12-qubit circuit** | **74** | **73** | **70** | 1h 53m |
+| Scripted teacher (private state) | — | 84 | 84 | — |
+| Pure RL, best of three attempts | 1,096 | 0 | 0 | ~2h each |
+| Random actions | — | 0 | — | — |
 
 ## Architecture
 
@@ -195,11 +210,10 @@ Outputs: `pixel_nav_runs/{classical,linear,quantum}_seed{0,1,2}/`.
    ATTACK on 62% of steps. The resumed run scored 32/32 from 4.35M decisions onward. Its best
    checkpoint (update 4750, 4.86M decisions) reached 98/100 greedy and 99/100 sampled. The
    2.8M snapshot is kept as `best_2.8M.pt` / `results_2.8M.json`.
-5. **Linear-readout control (job 71605).** Seed 0 reached 98/100 greedy, but it was still
-   improving at the 3M-decision cap (30/32 selection) and averaged only 4.98 kills with
-   61 HP left. Seed 1 reached 100/100 with 6.00 kills. Selection scores stayed at 0–1/32
-   through 2.05M decisions (seed 1) and 2.56M (seed 0), close to where the circuit broke
-   through at 2.82M.
+5. **Linear-readout control (job 71605).** All three seeds finished at 98, 100 and 100 out of
+   100 greedy. Seed 0 was still improving at the 3M-decision cap (30/32 selection) and
+   averaged only 4.98 kills with 61 HP left. Seed 2 reached 32/32 at 1.79M decisions, the
+   fastest of any run; seed 1 took 2.82M.
 
 Outputs: `pixel_corridor_runs/{classical,linear}_seed{0,1,2}/`, `pixel_corridor_runs/quantum_seed0/`.
 
@@ -241,9 +255,313 @@ The early fire-timing gap was a stage of training, not a fixed limit of the circ
 results come from one seed and one frame distribution, and the left bin has only 195 frames.
 Results are in `aim_probe/results.json` and `aim_probe/results_final.json`.
 
+### E1M1 from the screen
+
+The next task combines the two: follow a long route like My Way Home, fight like Deadly
+Corridor, and use doors and the exit switch. `pixel_e1m1_env.py` is built and smoke-tested;
+no policy has been trained on it yet.
+
+- **Observation and actions:** the same 4 stacked 80×60 screens with HUD, and the six
+  corridor actions plus USE (7 in total; the circuit measures 8 of its 12 qubits).
+- **Rewards:** the corridor terms (−0.01 per step, +2 per kill, −0.05 per HP lost, −30 for
+  death, +100 for the exit) plus route progress with weight 30.
+- **Progress from a walking-distance field.** The route winds through rooms and doors, so
+  straight-line distance would reward walking into walls. `e1m1_distance.py` runs a reverse
+  Dijkstra from the exit over the route planner's grid, using the planner's own rules (wall
+  clearance, step height, doors passable, nukage penalised), and saves it as
+  `e1m1_distance.npz`. `field_progress_reward` pays for reducing that cost, with potential 1
+  at the exit and 0 at the real start's distance (318.6 cost units). The field is read only
+  inside the reward, like the corridor's position.
+- **Auxiliary targets:** per-sector depth and monster visibility as before, plus one value
+  for "USE would hit a door or the exit switch". That target casts rays along the heading
+  (±8°, 72 units) like Doom's own use trace.
+- **Curriculum starts:** `reset(options={"start_wp": k})` teleports to route waypoint k,
+  facing the route within ±45°. The default is the real start, which is what evaluation
+  uses. The trainer does not schedule these yet.
+- **Success:** the episode ends before the 6,300-tic timeout while the player is alive,
+  because the exit switch ends the level. Reported progress is the furthest route progress
+  reached.
+
+Smoke job 71707 checked the environment (`diagnose_pixel_e1m1.py`) and ran 16 PPO updates
+with the classical head on CPU:
+
+| Check | Result |
+|---|---|
+| Distance field | Falls monotonically along all 22 waypoints (303 → 1); 12,976 reachable cells |
+| Warp starts (waypoints 0, 6, 12, 16, 21) | Land within 0.0 units, facing the route within ±27° |
+| Scripted follower, skill 1 (uses private pose, so a test fixture, not a policy) | Exits from the real start on 3/3 seeds (601–769 decisions) and from waypoints 4, 15 and 19 |
+| Random actions, skill 3 | Never exits; progress 0.12–0.37; 1/3 died |
+| Always FORWARD, skill 3 | Never exits; stuck at progress 0.11 |
+| Speed | About 1,100–1,200 decisions/s per env process, so the classical head is as fast as on the corridor |
+
+Two findings from this smoke test:
+
+- **USE toggles doors.** Pressing USE on a door that is already opening closes it again.
+  My first scripted follower pressed USE every other step and so jammed the last door shut
+  (3 of 6 runs timed out or died there). A policy has to learn to press USE once and then
+  walk, and the follower now waits 25 decisions between presses.
+- **The first "door ahead" test was too narrow.** It compared the bearing to the door
+  line's midpoint, which fails when the player stands against a wide door. It is now the
+  ray test above.
+
+**Curriculum and warm start.** `train_pixel_nav.py --task e1m1` has three start modes
+(`--curriculum`). `reverse` starts episodes at route waypoints counted back from the exit
+(21, 19, 16, 12, 8, 4, 0): 50% at the current stage's waypoint, 30% at an earlier one and 20%
+at the real start, advancing when 80% of the last 20 episodes from the current waypoint exit.
+`uniform` starts 25% at the real start and otherwise at a random non-door waypoint, with no
+stages. Door waypoints (5, 17, 20) are never start points, because teleporting into a closed
+door sector traps the player. Evaluation always starts at the real start.
+`--init-encoder` loads only the CNN encoder from another run.
+
+**First attempt: reverse curriculum, classical head, 10M decisions (job 71710).** Warm-started
+from the corridor encoder. It did not learn to play E1M1:
+
+| Real-start result, 100 held-out seeds | Exits | Kills | Died | Progress |
+|---|---:|---:|---:|---:|
+| Classical, reverse curriculum, greedy (update 7250) | 0 | 0.00 | 1% | 0.25 |
+| Classical, reverse curriculum, sampled | 0 | 0.79 | 18% | 0.26 |
+| Random actions | 0 | 0.31 | 46% | 0.21 |
+| Always FORWARD | 0 | 0.00 | 0% | 0.11 |
+
+The curriculum passed stages 0–3 (waypoints 21, 19, 16, 12) by 1.8M decisions and advanced
+to stage 4 (waypoint 8) at 2.4M. It never passed stage 4 in the next 7M decisions. Training
+exits were about 10% of episodes throughout, and entropy only fell from 1.95 to 1.4.
+Videos of the final policy (`videos_e1m1/`) show two failures:
+
+- **Real start:** the policy never leaves the starting room. It strafes sideways against a
+  wall for the whole episode, with 1,200 strafe actions against 70 FORWARD in the evaluation.
+  Progress 0.25 is about the first door.
+- **From waypoint 8:** in the dark corridor it faces a wall and presses ATTACK while imps
+  throw fireballs from a distance, then dies. It never turns toward them.
+
+A from-scratch run (job 71711, CPU, 230 decisions/s) was at stage 2 after 2M decisions, no
+faster than the warm start, and was cancelled.
+
+**Second and third attempts: uniform starts, then route auxiliary targets (jobs 71738,
+71743).** The reverse curriculum might gate everything on its hardest stage, so job 71738
+used uniform starts (`--curriculum uniform`). At 3M decisions the mean progress gain per
+episode had fallen from 0.15 to 0.07 while entropy fell from 1.8 to 1.4, and real-start
+evaluation was still 0/32 (cancelled). Job 71743 added two training-only auxiliary targets
+from the walking-distance field: the sin and cos of the route direction relative to the
+heading, and the progress along the route (`aux_route`, regression loss). The encoder learned
+them from the screen (auxiliary route loss 0.19 → 0.05), but the policy did not use that:
+at 3M decisions the gain was flat at about 0.07–0.10 per episode and real-start evaluation
+was 0/32.
+
+Job 71743 finished all 10M decisions with the same result. Real-start evaluation was 0/100
+exits greedy and sampled (progress 0.15 and 0.22, against 0.21 for random actions and 0.11 for
+always-forward), and every selection evaluation from update 500 on scored 0/32. Progress gain
+per episode rose only from 0.09 to 0.12 over the run, entropy fell to 1.26, and the greedy
+policy collapsed to pressing USE on 93% of steps (1,471 of 1,585 actions).
+
+Videos of the sampled policy at update 3000 (`videos_e1m1_route/`) show undirected behaviour,
+not a stuck curriculum: at the real start it turns on the spot and fires ATTACK until its ammo
+runs down (47 → 10), from waypoint 12 it turns away from a zombieman while its health falls
+from 85% to 18% with no kills, and from waypoint 8 it faces a blank wall. Learning the doors
+and exit from the late waypoints worked under the reverse curriculum (stages 0–3 passed by
+1.8M decisions), but E1M1 as a whole is not learned from reward alone at this scale. Skill
+level is not a large lever: skills 1–3 all have the same two imps, and skill 3 adds two
+zombiemen. Candidate next steps: imitating a scripted route follower that reads private
+pose (a stronger use of privileged information than auxiliary targets), a higher input
+resolution, and far more decisions.
+
+### E1M1 by imitating a scripted teacher
+
+Reward-only training did not learn E1M1 in three attempts, so the next experiment is a
+different kind of result: **a screen-only student distilled from a teacher that reads
+private state**. It is reported separately from the pure-RL results above.
+
+**Teacher (`e1m1_teacher.py`).** It reads what the policy never sees: engine position and
+heading, the walking-distance field (route direction), and door and exit-switch geometry
+(the use ray). Monster positions come from the labels buffer, which matches what a player
+sees. Each decision it (1) fires if a monster at least 12 px tall is near the screen centre
+(every decision when 30 px or taller, otherwise every other one), (2) presses USE once when
+a door or the exit switch is within 40 units ahead, with a 25-decision cooldown because USE
+on an opening door closes it, (3) turns toward the route, then walks, with a short
+turn-in-place when stuck. It never turns to chase a monster. Two earlier versions failed:
+turning to face every visible monster, and standing to fire 20+ shots at an imp, both died
+in nearly every episode near waypoint 12. The final teacher exits 84/100 at skill 3 from the
+real start and 29/30 at skill 1.
+
+**Student (`train_e1m1_imitation.py`).** The same screen-only network as the RL runs,
+classical head, warm-started from the corridor encoder, with the same auxiliary targets
+(depth, monster visibility, door ahead, route direction and progress). Training is DAgger:
+
+1. Iteration 0 trains on 200K teacher-driven decisions.
+2. Each later iteration lets the student drive (teacher mix 0.3, then 0.0 afterwards) for
+   60K decisions, labels every state it visits with the teacher's action, and retrains on
+   all data so far (about 680K states at the end).
+3. Episodes start at the real start (25%) or a random non-door route waypoint, are cut at
+   600 decisions, and the loss is cross-entropy with class weights `(1/frequency)^0.75`
+   plus the auxiliary losses.
+
+Selection uses 32 real-start seeds (10000-10031) and the final comparison uses 100
+held-out seeds (20000-20099) at skill 3, with the teacher run on the same seeds.
+
+| E1M1, skill 3, real start, 100 held-out seeds | Exits | Died | Kills | Progress |
+|---|---:|---:|---:|---:|
+| **Student v2, classical head, greedy** (job 71791) | **72** | 28% | 1.36 | 0.96 |
+| Student v2, classical head, sampled | 77 | 23% | 1.14 | 0.97 |
+| Student v2, linear head (91 params), greedy (job 71794) | 77 | 23% | 1.36 | 0.97 |
+| Student v2, linear head, sampled | 72 | 27% | 1.26 | 0.94 |
+| Student v2, 12-qubit circuit head (74 params), greedy (job 71796) | 73 | 27% | 1.55 | 0.95 |
+| Student v2, circuit head, sampled | 70 | 30% | 1.23 | 0.96 |
+| Teacher v2 (reference) | 84 | 16% | 1.11 | 0.98 |
+| Student v1, greedy (job 71787) | 37 | 63% | 1.41 | 0.93 |
+| Student v1, sampled | 83 | 17% | 1.30 | 0.97 |
+| Teacher v1 (reference) | 89 | 11% | 1.14 | 0.98 |
+| Pure RL, best attempt, greedy | 0 | 0% | 0.00 | 0.15 |
+| Random actions | 0 | 46% | 0.31 | 0.21 |
+
+The three heads are indistinguishable at this sample size: greedy 72 (classical), 77 (linear)
+and 73 (circuit) exits out of 100, sampled 77, 72 and 70, against the teacher's 84. As on My Way
+Home and the corridor, the CNN encoder does the perception and a small head suffices. The
+circuit fits the teacher's labels less tightly (training accuracy 87% against 91-92%, and
+cross-entropy 0.31 against 0.24 at the end), and took 1h 53m against about 25 minutes, with
+the same 8 DAgger iterations. All three heads fail mostly at the waypoint-17 door (progress
+about 0.82). The circuit run used 2-3 epochs per iteration instead of 3-6 to fit its time
+budget, which makes the comparison slightly unfair to it.
+
+Even the first iteration, trained on teacher demonstrations only, exited on 15 of 32
+selection seeds, the first screen-only exits of E1M1 in this project. The student matches
+the teacher's action about 91% of the time on its training data and 87% on states it visits
+itself. Selection scores fluctuate between iterations (8-29 of 32 for v2), so the
+checkpoint choice matters and one seed is not enough to rank iterations.
+
+**Why v1's greedy student was so much worse than its sampled one (37 vs 83).** v1's teacher
+pressed USE once from up to 72 units away and then walked forward while the door opened,
+so a closed door in view was labelled USE about 1 time in 4 and FORWARD otherwise. The
+student's most likely action there was FORWARD, and in greedy play it never pressed USE
+(4 times in about 500 decisions); it stood at the door under fire from the imp and died, at
+progress 0.83 and 0.95, the doors at waypoints 17 and 20. Sampled play got through by
+pressing USE by chance. v2's teacher presses USE only within 40 units, and rare actions
+are weighted more in the loss, which moved greedy play from 37 to 72. Most of v2's
+remaining greedy failures (22 of 28) are again at progress 0.82-0.88, the waypoint-17 door.
+
+**What this does and does not show.** At test time the student sees only the four stacked
+screens. But it learned from a teacher with map access, so this measures how well a
+screen-only network can copy a route-and-combat expert, not whether reward alone can find
+the behaviour. The results are one seed and one teacher. Videos of a winning episode for the
+classical head (seed 20002) and the circuit head (seed 20003) are in `videos_e1m1_imitation/`.
+
+### PPO fine-tuning of the imitation student
+
+The imitation student only copies a rule-based teacher, so it never optimised the real reward
+(it kills 1.4 of the six monsters on average, and fails at the waypoint-17 door). The next
+experiment fine-tunes it with PPO on the environment reward alone, with no teacher
+(`train_pixel_nav.py --task e1m1 --init-checkpoint <imitation best.pt>`, `run_e1m1_finetune.sh`).
+Added for this: `--init-checkpoint` (load the whole model), `--value-warmup N` (first N updates
+train only the critic, with the encoder's learning rate at 0 and no policy loss),
+`--anchor-kl-coef` (KL penalty toward the starting policy), `--freeze-encoder`,
+`--kill-weight`, and `--rich-critic`. The starting policy is evaluated first and kept as
+`best.pt`, so a worse result cannot replace it. Selection uses 64 real-start seeds; episodes
+start at the real start 60% of the time and at random route waypoints otherwise. The
+starting policy scores 55/64 greedy on the selection seeds, with 1.48 kills and 14% deaths.
+
+| Attempt (classical head, from imitation v2) | What happened on the 64 selection seeds |
+|---|---|
+| Naive PPO, encoder lr 5e-5 (job 71830) | Critic-only warm-up held 55/64. As soon as the policy updated it **collapsed to 0/64 within 100 updates** (progress 0.1, like always-forward). |
+| Frozen encoder, KL anchor 1.0, head lr 5e-5 (71836) | Stable, but flat: 51-58/64, kills 1.4-1.5. KL to the start only 0.0001. |
+| Frozen encoder, KL anchor 0.1, head lr 2e-4, entropy 0.01 (71838) | Stable but wandering: 45-56/64, kills 1.3-1.5. |
+| Same, kill reward 8 instead of 2 (71841) | No change in kills (1.2-1.5); exits 43-52/64, slightly worse. |
+| Same as the 0.1 anchor, with a critic on the 256 encoder features (71846) | Critic loss 0.05-0.27 against 0.4-0.6; 47-57/64 over 3M decisions, kills 1.1-1.4, no trend. The checkpoint with the best selection score (update 1450) is evaluated below. |
+
+Findings:
+
+- **Naive PPO destroys a cloned policy.** The imitation policy is nearly deterministic (entropy
+  0.1-0.25), so its true advantages are tiny. PPO normalises them, which amplifies noise, and
+  Adam takes steps of about the learning rate regardless of gradient size.
+- **The critic on the 12-value bottleneck is poor.** Its loss stayed at 0.4-0.6 through
+  warm-up and training, because the bottleneck of an imitation-trained policy keeps what the
+  actions need, not what the value needs. A critic on the 256 encoder features reaches 0.05-0.27.
+  Better advantages alone did not make the policy improve.
+- **Fine-tuning gave at most a small gain in exits, and no gain in kills.** Four of the
+  five runs never beat the starting policy on the selection seeds, and a larger kill reward did
+  not increase kills. The last run's best-selected checkpoint (update 1450, picked from about
+  60 noisy 64-seed evaluations) scored 82/100 greedy and 83/100 sampled on seeds 20000-20099,
+  against 72 and 77 for the imitation student. Because that choice is noisy, both checkpoints
+  were rerun on 300 fresh seeds (30000-30299, `evaluate_e1m1_checkpoints.py`):
+
+  | 300 fresh seeds | Exits | Died | Kills |
+  |---|---:|---:|---:|
+  | Imitation student, greedy | 238 (79.3%) | 21% | 1.57 |
+  | PPO fine-tuned, greedy | 255 (85.0%) | 15% | 1.28 |
+  | Imitation student, sampled | 236 (78.7%) | 21% | 1.28 |
+  | PPO fine-tuned, sampled | 243 (81.0%) | 19% | 1.29 |
+
+  The greedy gap is +5.7 points (about 1.8 standard errors, unpaired) and the sampled gap is
+  +2.3 points, so this is suggestive at best. Deaths fell a little in greedy play, but kills
+  did not rise (greedy kills fell from 1.57 to 1.28).
+
+Likely reasons, not yet tested: a near-deterministic policy rarely tries a different action
+at the states where it fails, the frozen 12-value bottleneck limits what the head can change,
+and killing is not needed to finish the level, so the reward gives little reason to fight.
+
+### Zero-shot transfer of the E1M1 models
+
+As a check, the four E1M1 policies (classical, linear and circuit imitation students, and the
+PPO-fine-tuned student) were run on My Way Home and Deadly Corridor with **no retraining**
+(`evaluate_cross_task.py`, job 71870). The observation is identical. The policy's 7 E1M1
+logits are restricted to the target task's actions: My Way Home's forward, turn left and turn
+right are E1M1 actions 0, 4 and 5; the corridor's six actions are E1M1 actions 0-5, with USE
+dropped. Seeds 20000-20099.
+
+| 100 held-out seeds | Greedy | Sampled | Dedicated model for comparison |
+|---|---:|---:|---|
+| **My Way Home**, random actions | 10 | | |
+| E1M1 classical | 6 | 11 | |
+| E1M1 linear | 8 | 20 | 99-100 greedy (classical, linear, circuit) |
+| E1M1 circuit | 10 | 19 | |
+| E1M1 fine-tuned | 7 | 13 | |
+| **Deadly Corridor**, random / always-forward | 0 / 27 | | |
+| E1M1 classical | 0 (98% died) | 0 (93% died) | |
+| E1M1 linear | 0 (100% died) | 1 | 98-100 greedy |
+| E1M1 circuit | 0 (100% died) | 0 | |
+| E1M1 fine-tuned | 0 (99% died) | 0 | |
+
+The E1M1 policies do not transfer. On My Way Home, greedy play is at the random level (6-10 of
+100 against 10), and sampled play is somewhat above it for the linear and circuit heads
+(20 and 19, against 10 for random; roughly p = 0.05 for 20 against 10, and not clearly
+more than chance given these are among eight comparisons). In the corridor all four score 0-1
+exits and die in 93-100% of episodes, below always-forward (27) and no better than random;
+their mean kills (0.2-0.65) are below random's 0.91. The policies learned an E1M1-specific
+mapping from screens to actions (a long winding route, doors, nukage, those textures), which does
+not carry over to a different maze or to a corridor of enemies.
+
+### Do the two small-task specialists play E1M1?
+
+The original idea was to train specialists on the small tasks (navigation on My Way Home,
+combat on Deadly Corridor) and distill them into an E1M1 model. Distilling means labelling E1M1
+states with the specialists' actions, so it only works if they behave sensibly on E1M1 screens.
+`evaluate_specialists_on_e1m1.py` (job 71875) ran them with no retraining on E1M1, skill 3,
+real start, seeds 20000-20099: the navigation specialist's three actions map to E1M1 actions
+0, 4, 5 and the combat specialist's six to 0-5. Modes were nav only, combat only, and an
+**oracle gate** that uses the combat specialist when a monster is in the central four screen
+sectors and the navigation specialist otherwise (the gate reads the environment's private
+monster-visibility value, so it is an upper bound on composing the two skills).
+
+| E1M1, 100 seeds | Exits | Died | Kills | Progress |
+|---|---:|---:|---:|---:|
+| Classical navigation specialist, greedy / sampled | 0 / 0 | 0% / 0% | 0.00 | 0.00 / 0.03 |
+| Classical combat specialist, greedy / sampled | 0 / 0 | 0% / 2% | 0.00 | 0.02 / 0.03 |
+| Classical oracle-gated mix, greedy / sampled | 0 / 0 | 0% / 0% | 0.00 | 0.00 / 0.03 |
+| Circuit navigation specialist, greedy / sampled | 0 / 0 | 0% / 0% | 0.00 | 0.01 / 0.02 |
+| Circuit combat specialist, greedy / sampled | 0 / 0 | 1% / 13% | 0.00 | 0.06 / 0.10 |
+| Random actions / always-forward (for reference) | 0 / 0 | 46% / 0% | 0.31 / 0.00 | 0.21 / 0.11 |
+
+The specialists do not leave the starting room: they time out at 1,575 decisions with almost no
+progress and no kills. As a result no monster is ever in view, and the oracle gate fired on
+0% of decisions, so the gated mix is the same as navigation only. The circuit gated runs did
+not finish before the job's time limit; the ten completed settings are consistent. Labelling E1M1
+states with these specialists would teach nothing. The specialists were trained on screens
+of one maze and one corridor and have no route to follow in E1M1, which is the same
+failure as the reverse direction in the zero-shot table above.
+
 ### Running and next steps
 
-- **Running:** job 71605, corridor linear-readout seed 2.
+- **Next:** more seeds for all three heads, and fix the waypoint-17 door failures. Per-iteration
+  selection on 32 seeds fluctuates (linear: 22-29 of 32), so a single seed cannot rank the
+  heads or the iterations.
 - **Next:** more circuit seeds on the corridor, to tell circuit slowness apart from seed
   variance. Each needs two six-hour jobs: train, then `--resume`.
 
@@ -286,7 +604,8 @@ CPU-only jobs (videos, probes) can run alongside a GPU job.
 | `run_pixel_corridor_quantum.sh`, `..._quantum_resume.sh` | Corridor circuit head; resume toward 6M decisions |
 | `run_corridor_aim_probe.sh` | Aiming probe (CPU) |
 | `run_record_gameplay.sh` | Gameplay videos (CPU) |
-| `run_pixel_smoke.sh`, `run_pixel_corridor_smoke.sh` | Short smoke tests |
+| `run_e1m1_imitation.sh` | E1M1 imitation (`MODEL=`, `TAG=`, `EXTRA=`); `run_record_e1m1_imitation.sh` records a winning episode |
+| `run_pixel_smoke.sh`, `run_pixel_corridor_smoke.sh`, `run_pixel_e1m1_smoke.sh` | Short smoke tests (the E1M1 one runs on CPU and builds the distance field first) |
 
 Directly, for example:
 
@@ -303,6 +622,12 @@ python train_pixel_nav.py --task corridor --model quantum --seed 0 --head-lr 0.0
 |---|---|
 | `pixel_nav_env.py` | My Way Home screen-only env, auxiliary targets, subprocess `EnvPool` |
 | `pixel_corridor_env.py`, `pixel_corridor.cfg` | Deadly Corridor screen-only env (skill 3, HUD and damage flashes on) |
+| `pixel_e1m1_env.py`, `pixel_e1m1.cfg` | E1M1 screen-only env: 7 actions, walking-distance progress, warp starts |
+| `e1m1_distance.py` | Walking-distance field to the exit (`e1m1_distance.npz`) for the progress reward |
+| `diagnose_pixel_e1m1.py` | E1M1 smoke checks: field, warps, scripted follower, baselines |
+| `e1m1_teacher.py`, `test_e1m1_teacher.py` | Scripted E1M1 teacher (reads private state) and its evaluation |
+| `train_e1m1_imitation.py` | DAgger imitation of the teacher from screens, then evaluation |
+| `evaluate_e1m1_checkpoints.py`, `evaluate_cross_task.py` | Many-seed checkpoint comparison; E1M1 policies run zero-shot on the other tasks |
 | `pixel_nav_models.py` | CNN encoder, bottleneck, auxiliary head, and the three heads |
 | `e1m1_quantum_model.py` | `QuantumE1M1Policy`, the 12-qubit circuit head |
 | `human_nav_models.py` | `ClassicalNavPolicy`, the classical MLP head |

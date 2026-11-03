@@ -1,0 +1,4 @@
+imitation greedy 238/300 (excluding 20017: 238/300) mean_kills=1.57 mean_dead=0.21 mean_progress=0.96
+imitation sampled 236/300 (excluding 20017: 236/300) mean_kills=1.28 mean_dead=0.21 mean_progress=0.97
+finetuned greedy 255/300 (excluding 20017: 255/300) mean_kills=1.28 mean_dead=0.15 mean_progress=0.98
+finetuned sampled 243/300 (excluding 20017: 243/300) mean_kills=1.29 mean_dead=0.19 mean_progress=0.97

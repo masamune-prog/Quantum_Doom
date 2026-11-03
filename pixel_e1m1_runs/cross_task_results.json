@@ -1,0 +1,198 @@
+{
+  "navigation": {
+    "random": {
+      "mode": "random",
+      "successes": 10,
+      "episodes": 100,
+      "successes_without_easy_seed": 9,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 495.49
+    },
+    "e1m1_classical greedy": {
+      "mode": "greedy",
+      "successes": 6,
+      "episodes": 100,
+      "successes_without_easy_seed": 5,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 497.71
+    },
+    "e1m1_classical sampled": {
+      "mode": "sampled",
+      "successes": 11,
+      "episodes": 100,
+      "successes_without_easy_seed": 10,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 482.21
+    },
+    "e1m1_linear greedy": {
+      "mode": "greedy",
+      "successes": 8,
+      "episodes": 100,
+      "successes_without_easy_seed": 7,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 491.34
+    },
+    "e1m1_linear sampled": {
+      "mode": "sampled",
+      "successes": 20,
+      "episodes": 100,
+      "successes_without_easy_seed": 19,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 451.27
+    },
+    "e1m1_circuit greedy": {
+      "mode": "greedy",
+      "successes": 10,
+      "episodes": 100,
+      "successes_without_easy_seed": 9,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 479.12
+    },
+    "e1m1_circuit sampled": {
+      "mode": "sampled",
+      "successes": 19,
+      "episodes": 100,
+      "successes_without_easy_seed": 18,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 467.71
+    },
+    "e1m1_finetuned greedy": {
+      "mode": "greedy",
+      "successes": 7,
+      "episodes": 100,
+      "successes_without_easy_seed": 6,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 490.39
+    },
+    "e1m1_finetuned sampled": {
+      "mode": "sampled",
+      "successes": 13,
+      "episodes": 100,
+      "successes_without_easy_seed": 12,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 471.77
+    }
+  },
+  "corridor": {
+    "random": {
+      "mode": "random",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 59.29,
+      "mean_kills": 0.91,
+      "mean_health": 0.0,
+      "mean_dead": 1.0,
+      "mean_progress": 0.131033473610878
+    },
+    "forward": {
+      "mode": "forward",
+      "successes": 27,
+      "episodes": 100,
+      "successes_without_easy_seed": 27,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 35.04,
+      "mean_kills": 0.49,
+      "mean_health": 7.96,
+      "mean_dead": 0.73,
+      "mean_progress": 0.7864318722486496
+    },
+    "e1m1_classical greedy": {
+      "mode": "greedy",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 43.5,
+      "mean_kills": 0.41,
+      "mean_health": 0.44,
+      "mean_dead": 0.98,
+      "mean_progress": 0.21455210208892822
+    },
+    "e1m1_classical sampled": {
+      "mode": "sampled",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 74.65,
+      "mean_kills": 0.65,
+      "mean_health": 3.64,
+      "mean_dead": 0.93,
+      "mean_progress": 0.18049462258815765
+    },
+    "e1m1_linear greedy": {
+      "mode": "greedy",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 33.03,
+      "mean_kills": 0.23,
+      "mean_health": 0.0,
+      "mean_dead": 1.0,
+      "mean_progress": 0.2595263397693634
+    },
+    "e1m1_linear sampled": {
+      "mode": "sampled",
+      "successes": 1,
+      "episodes": 100,
+      "successes_without_easy_seed": 1,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 33.08,
+      "mean_kills": 0.23,
+      "mean_health": 0.04,
+      "mean_dead": 0.99,
+      "mean_progress": 0.22155652403831483
+    },
+    "e1m1_circuit greedy": {
+      "mode": "greedy",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 36.13,
+      "mean_kills": 0.41,
+      "mean_health": 0.0,
+      "mean_dead": 1.0,
+      "mean_progress": 0.35885435819625855
+    },
+    "e1m1_circuit sampled": {
+      "mode": "sampled",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 34.33,
+      "mean_kills": 0.34,
+      "mean_health": 0.0,
+      "mean_dead": 1.0,
+      "mean_progress": 0.20604662597179413
+    },
+    "e1m1_finetuned greedy": {
+      "mode": "greedy",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 40.19,
+      "mean_kills": 0.37,
+      "mean_health": 0.1,
+      "mean_dead": 0.99,
+      "mean_progress": 0.2431366366147995
+    },
+    "e1m1_finetuned sampled": {
+      "mode": "sampled",
+      "successes": 0,
+      "episodes": 100,
+      "successes_without_easy_seed": 0,
+      "episodes_without_easy_seed": 99,
+      "mean_steps": 54.03,
+      "mean_kills": 0.55,
+      "mean_health": 1.22,
+      "mean_dead": 0.98,
+      "mean_progress": 0.19097478330135345
+    }
+  }
+}

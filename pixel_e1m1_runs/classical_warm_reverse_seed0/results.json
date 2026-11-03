@@ -1,0 +1,6570 @@
+{
+  "task": "e1m1",
+  "model_type": "classical",
+  "seed": 0,
+  "completed_updates": 9765,
+  "training_decisions": 9999360,
+  "training_seconds": 8012.9,
+  "best_update": 7250,
+  "best_selection_score": 0.0024875184218713566,
+  "parameters": 496389,
+  "head_parameters": 1096,
+  "greedy": {
+    "mode": "greedy",
+    "successes": 0,
+    "episodes": 100,
+    "successes_without_easy_seed": 0,
+    "episodes_without_easy_seed": 99,
+    "mean_steps": 1563.51,
+    "mean_kills": 0.0,
+    "mean_health": 99.02,
+    "mean_dead": 0.01,
+    "mean_progress": 0.24795920563735785,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 94,
+          "4": 341,
+          "3": 498,
+          "1": 135,
+          "2": 472,
+          "5": 35
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.267381300184943
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 77,
+          "4": 212,
+          "3": 520,
+          "1": 127,
+          "2": 612,
+          "5": 27
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2407262382953146
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 20,
+          "4": 221,
+          "1": 184,
+          "3": 596,
+          "5": 37,
+          "2": 517
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26647117972987855
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 91,
+          "4": 149,
+          "3": 571,
+          "1": 120,
+          "2": 620,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.25966286279149553
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 39,
+          "4": 82,
+          "1": 132,
+          "3": 1143,
+          "5": 5,
+          "2": 174
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26736536951480516
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 45,
+          "1": 149,
+          "3": 1135,
+          "5": 7,
+          "2": 231
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672195872790014
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 28,
+          "4": 267,
+          "1": 178,
+          "3": 585,
+          "5": 19,
+          "2": 498
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24487507147129672
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 114,
+          "4": 480,
+          "3": 415,
+          "1": 140,
+          "2": 384,
+          "5": 42
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2586036861969446
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 17,
+          "4": 98,
+          "1": 152,
+          "3": 659,
+          "5": 8,
+          "2": 641
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2615483576136769
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 37,
+          "1": 154,
+          "3": 678,
+          "5": 15,
+          "2": 683
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20621538425111063
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 11,
+          "4": 131,
+          "1": 174,
+          "3": 639,
+          "5": 36,
+          "2": 584
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672837876185967
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 25,
+          "3": 682,
+          "1": 160,
+          "2": 697,
+          "5": 3
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.1908146532312619
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 20,
+          "4": 165,
+          "1": 184,
+          "3": 627,
+          "5": 12,
+          "2": 567
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24253525454055536
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 31,
+          "1": 154,
+          "3": 672,
+          "5": 8,
+          "2": 702
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.18919765554164247
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 53,
+          "4": 212,
+          "1": 178,
+          "3": 725,
+          "5": 36,
+          "2": 371
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672524699908977
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 21,
+          "4": 254,
+          "1": 150,
+          "3": 609,
+          "5": 9,
+          "2": 532
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.251045485382587
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 10,
+          "4": 110,
+          "1": 154,
+          "3": 1116,
+          "5": 15,
+          "2": 170
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672340025543595
+      },
+      {
+        "seed": 20017,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 61,
+          "4": 487,
+          "1": 155,
+          "3": 751,
+          "5": 4,
+          "2": 117
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26404689963845973
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 66,
+          "1": 203,
+          "3": 631,
+          "5": 38,
+          "2": 629
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.21689338753249043
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 9,
+          "4": 65,
+          "1": 158,
+          "3": 670,
+          "5": 8,
+          "2": 665
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2526855438994635
+      },
+      {
+        "seed": 20020,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 22,
+          "4": 137,
+          "1": 174,
+          "3": 591,
+          "5": 17,
+          "2": 634
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2384791392793687
+      },
+      {
+        "seed": 20021,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 16,
+          "4": 77,
+          "1": 310,
+          "3": 623,
+          "5": 15,
+          "2": 534
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26675812222163175
+      },
+      {
+        "seed": 20022,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 16,
+          "4": 49,
+          "3": 1413,
+          "1": 44,
+          "2": 49,
+          "5": 4
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.25339782230989527
+      },
+      {
+        "seed": 20023,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 18,
+          "4": 182,
+          "1": 168,
+          "3": 1017,
+          "5": 17,
+          "2": 173
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26738676147085394
+      },
+      {
+        "seed": 20024,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 35,
+          "1": 153,
+          "3": 679,
+          "5": 13,
+          "2": 687
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.18922420314395705
+      },
+      {
+        "seed": 20025,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 26,
+          "4": 91,
+          "1": 1155,
+          "3": 138,
+          "5": 9,
+          "2": 156
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2661506867352881
+      },
+      {
+        "seed": 20026,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 32,
+          "4": 204,
+          "3": 636,
+          "1": 176,
+          "2": 503,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26649599523550793
+      },
+      {
+        "seed": 20027,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 60,
+          "4": 131,
+          "3": 1161,
+          "1": 79,
+          "2": 130,
+          "5": 14
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.255875262784647
+      },
+      {
+        "seed": 20028,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 55,
+          "4": 84,
+          "3": 1286,
+          "1": 23,
+          "2": 120,
+          "5": 7
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2673992652662589
+      },
+      {
+        "seed": 20029,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "4": 234,
+          "1": 122,
+          "3": 613,
+          "5": 28,
+          "2": 538
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24019157598484409
+      },
+      {
+        "seed": 20030,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 32,
+          "4": 245,
+          "1": 156,
+          "3": 614,
+          "5": 5,
+          "2": 523
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2385711288849257
+      },
+      {
+        "seed": 20031,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 146,
+          "4": 633,
+          "3": 445,
+          "1": 116,
+          "2": 221,
+          "5": 14
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2632378465624009
+      },
+      {
+        "seed": 20032,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 39,
+          "4": 459,
+          "1": 161,
+          "3": 554,
+          "5": 14,
+          "2": 348
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2658000960281378
+      },
+      {
+        "seed": 20033,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 62,
+          "4": 274,
+          "3": 755,
+          "1": 119,
+          "2": 332,
+          "5": 33
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26693169442622044
+      },
+      {
+        "seed": 20034,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 35,
+          "4": 111,
+          "3": 616,
+          "1": 160,
+          "2": 631,
+          "5": 22
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24193353712454857
+      },
+      {
+        "seed": 20035,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 17,
+          "4": 80,
+          "1": 166,
+          "3": 630,
+          "5": 28,
+          "2": 654
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.22911773217337972
+      },
+      {
+        "seed": 20036,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 68,
+          "4": 190,
+          "3": 538,
+          "1": 120,
+          "2": 623,
+          "5": 36
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26735810716960917
+      },
+      {
+        "seed": 20037,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 23,
+          "4": 53,
+          "3": 21,
+          "1": 1430,
+          "2": 44,
+          "5": 4
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23673647399784314
+      },
+      {
+        "seed": 20038,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 120,
+          "4": 195,
+          "3": 1014,
+          "1": 20,
+          "2": 205,
+          "5": 21
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2531871134604412
+      },
+      {
+        "seed": 20039,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 33,
+          "1": 156,
+          "3": 73,
+          "5": 12,
+          "2": 1293
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2658000960281378
+      },
+      {
+        "seed": 20040,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 35,
+          "1": 153,
+          "3": 676,
+          "5": 15,
+          "2": 688
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20314545897167613
+      },
+      {
+        "seed": 20041,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 17,
+          "4": 99,
+          "3": 607,
+          "1": 162,
+          "5": 14,
+          "2": 676
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23465271360618323
+      },
+      {
+        "seed": 20042,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 15,
+          "4": 42,
+          "3": 1427,
+          "1": 46,
+          "2": 41,
+          "5": 4
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26724648296340336
+      },
+      {
+        "seed": 20043,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 28,
+          "4": 115,
+          "3": 1079,
+          "1": 148,
+          "2": 188,
+          "5": 17
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2633645126505102
+      },
+      {
+        "seed": 20044,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 61,
+          "4": 648,
+          "1": 149,
+          "3": 566,
+          "5": 7,
+          "2": 144
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26726982013977996
+      },
+      {
+        "seed": 20045,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 32,
+          "4": 408,
+          "1": 154,
+          "3": 562,
+          "5": 14,
+          "2": 405
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26736053792863623
+      },
+      {
+        "seed": 20046,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 122,
+          "4": 330,
+          "3": 796,
+          "1": 84,
+          "2": 219,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.265803550240012
+      },
+      {
+        "seed": 20047,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 15,
+          "4": 145,
+          "1": 152,
+          "3": 1195,
+          "5": 8,
+          "2": 60
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23465796771478797
+      },
+      {
+        "seed": 20048,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 78,
+          "4": 153,
+          "3": 1145,
+          "1": 51,
+          "2": 132,
+          "5": 16
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26741319544525444
+      },
+      {
+        "seed": 20049,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 41,
+          "4": 245,
+          "3": 563,
+          "1": 164,
+          "5": 30,
+          "2": 532
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26719862673818606
+      },
+      {
+        "seed": 20050,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 95,
+          "4": 225,
+          "3": 941,
+          "1": 94,
+          "2": 196,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26511643646430316
+      },
+      {
+        "seed": 20051,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 178,
+          "4": 401,
+          "3": 334,
+          "1": 218,
+          "2": 400,
+          "5": 27,
+          "6": 17
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2615664278812806
+      },
+      {
+        "seed": 20052,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 37,
+          "4": 291,
+          "3": 516,
+          "1": 171,
+          "5": 42,
+          "2": 518
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672712932130783
+      },
+      {
+        "seed": 20053,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 70,
+          "4": 354,
+          "3": 538,
+          "1": 107,
+          "2": 491,
+          "5": 15
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24267455794789028
+      },
+      {
+        "seed": 20054,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 33,
+          "4": 143,
+          "3": 575,
+          "1": 162,
+          "5": 22,
+          "2": 640
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2425592697553648
+      },
+      {
+        "seed": 20055,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 24,
+          "4": 48,
+          "3": 1385,
+          "1": 42,
+          "2": 69,
+          "5": 7
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.22658390303539966
+      },
+      {
+        "seed": 20056,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 41,
+          "1": 169,
+          "3": 657,
+          "5": 19,
+          "2": 681
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2658000960281378
+      },
+      {
+        "seed": 20057,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 36,
+          "1": 163,
+          "3": 666,
+          "5": 16,
+          "2": 686
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2404275064489747
+      },
+      {
+        "seed": 20058,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 21,
+          "4": 79,
+          "1": 163,
+          "3": 119,
+          "5": 23,
+          "2": 1170
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26606030365749866
+      },
+      {
+        "seed": 20059,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 43,
+          "1": 156,
+          "3": 1254,
+          "5": 9,
+          "2": 105
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26720803397748905
+      },
+      {
+        "seed": 20060,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 24,
+          "4": 154,
+          "1": 208,
+          "3": 167,
+          "5": 26,
+          "2": 995,
+          "6": 1
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.20023718698274096
+      },
+      {
+        "seed": 20061,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 99,
+          "4": 260,
+          "3": 515,
+          "1": 115,
+          "2": 556,
+          "5": 30
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2619531523263129
+      },
+      {
+        "seed": 20062,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 19,
+          "4": 223,
+          "1": 153,
+          "3": 1083,
+          "5": 5,
+          "2": 92
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26723043324998386
+      },
+      {
+        "seed": 20063,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 34,
+          "4": 80,
+          "3": 621,
+          "1": 160,
+          "2": 659,
+          "5": 21
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.22644335493479706
+      },
+      {
+        "seed": 20064,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 31,
+          "4": 91,
+          "3": 623,
+          "1": 167,
+          "2": 632,
+          "5": 31
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23735340813820494
+      },
+      {
+        "seed": 20065,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 99,
+          "4": 715,
+          "3": 451,
+          "1": 95,
+          "2": 191,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2612795318072739
+      },
+      {
+        "seed": 20066,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 32,
+          "3": 676,
+          "1": 163,
+          "2": 687,
+          "5": 9
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20204955017005832
+      },
+      {
+        "seed": 20067,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 75,
+          "4": 183,
+          "3": 584,
+          "1": 118,
+          "2": 595,
+          "5": 20
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26724612512854606
+      },
+      {
+        "seed": 20068,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 37,
+          "1": 154,
+          "3": 678,
+          "5": 15,
+          "2": 683
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20621538425111063
+      },
+      {
+        "seed": 20069,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 164,
+          "4": 334,
+          "3": 402,
+          "1": 113,
+          "2": 504,
+          "5": 58
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2612383379572879
+      },
+      {
+        "seed": 20070,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 39,
+          "4": 84,
+          "3": 69,
+          "1": 1291,
+          "2": 83,
+          "5": 9
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23084501851529138
+      },
+      {
+        "seed": 20071,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 12,
+          "4": 56,
+          "1": 171,
+          "3": 652,
+          "5": 18,
+          "2": 666
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26703702554197584
+      },
+      {
+        "seed": 20072,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 17,
+          "4": 64,
+          "3": 654,
+          "1": 173,
+          "2": 662,
+          "5": 5
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19365727561967438
+      },
+      {
+        "seed": 20073,
+        "success": false,
+        "steps": 426,
+        "actions": {
+          "0": 12,
+          "4": 68,
+          "1": 200,
+          "3": 32,
+          "5": 13,
+          "2": 101
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.20023718698274096
+      },
+      {
+        "seed": 20074,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 9,
+          "4": 63,
+          "1": 159,
+          "3": 680,
+          "5": 6,
+          "2": 658
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2526855438994635
+      },
+      {
+        "seed": 20075,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 132,
+          "4": 347,
+          "3": 489,
+          "1": 104,
+          "2": 481,
+          "5": 22
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26294511781809626
+      },
+      {
+        "seed": 20076,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 73,
+          "4": 111,
+          "3": 1128,
+          "1": 49,
+          "2": 189,
+          "5": 25
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2655011450396395
+      },
+      {
+        "seed": 20077,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 16,
+          "4": 130,
+          "1": 1262,
+          "3": 63,
+          "5": 24,
+          "2": 80
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2361112600256734
+      },
+      {
+        "seed": 20078,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 102,
+          "4": 202,
+          "3": 514,
+          "1": 126,
+          "2": 581,
+          "5": 50
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26625095745547533
+      },
+      {
+        "seed": 20079,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 31,
+          "4": 190,
+          "3": 606,
+          "1": 157,
+          "5": 14,
+          "2": 577
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2349066903036695
+      },
+      {
+        "seed": 20080,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 12,
+          "4": 150,
+          "1": 733,
+          "3": 305,
+          "5": 74,
+          "2": 301
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20987483288273012
+      },
+      {
+        "seed": 20081,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 58,
+          "1": 196,
+          "3": 619,
+          "5": 34,
+          "2": 660
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26254463017417784
+      },
+      {
+        "seed": 20082,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 93,
+          "3": 1278,
+          "1": 30,
+          "2": 97,
+          "5": 14
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2429642902282354
+      },
+      {
+        "seed": 20083,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 65,
+          "1": 159,
+          "3": 643,
+          "5": 15,
+          "2": 685
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.18931258739862322
+      },
+      {
+        "seed": 20084,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 9,
+          "4": 76,
+          "1": 165,
+          "3": 660,
+          "5": 19,
+          "2": 646
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2620496093240672
+      },
+      {
+        "seed": 20085,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 48,
+          "4": 133,
+          "3": 1155,
+          "1": 53,
+          "2": 154,
+          "5": 32
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26743345616875147
+      },
+      {
+        "seed": 20086,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 43,
+          "4": 283,
+          "3": 1027,
+          "1": 145,
+          "2": 68,
+          "5": 9
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23763010397102113
+      },
+      {
+        "seed": 20087,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 9,
+          "4": 78,
+          "1": 173,
+          "3": 664,
+          "5": 14,
+          "2": 637
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24747677845766936
+      },
+      {
+        "seed": 20088,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 19,
+          "4": 70,
+          "1": 165,
+          "3": 624,
+          "5": 16,
+          "2": 681
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2673464634676369
+      },
+      {
+        "seed": 20089,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 20,
+          "4": 62,
+          "3": 647,
+          "1": 175,
+          "2": 666,
+          "5": 5
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24145249162640547
+      },
+      {
+        "seed": 20090,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 33,
+          "3": 674,
+          "1": 164,
+          "2": 685,
+          "5": 11
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.21002454757635103
+      },
+      {
+        "seed": 20091,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 56,
+          "1": 171,
+          "3": 206,
+          "5": 35,
+          "2": 1099
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26281517949598454
+      },
+      {
+        "seed": 20092,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 137,
+          "4": 410,
+          "3": 462,
+          "1": 76,
+          "2": 451,
+          "5": 39
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26726709247756086
+      },
+      {
+        "seed": 20093,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 14,
+          "4": 116,
+          "1": 154,
+          "3": 661,
+          "5": 14,
+          "2": 616
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2674046723871969
+      },
+      {
+        "seed": 20094,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 62,
+          "3": 621,
+          "1": 206,
+          "2": 641,
+          "5": 37
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.22922337442389484
+      },
+      {
+        "seed": 20095,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 39,
+          "4": 150,
+          "3": 605,
+          "1": 153,
+          "2": 604,
+          "5": 24
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2665024988507211
+      },
+      {
+        "seed": 20096,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 48,
+          "4": 93,
+          "3": 1209,
+          "1": 65,
+          "2": 141,
+          "5": 19
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2623637983710445
+      },
+      {
+        "seed": 20097,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 36,
+          "1": 157,
+          "3": 670,
+          "5": 19,
+          "2": 685
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19663104642203855
+      },
+      {
+        "seed": 20098,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 8,
+          "4": 47,
+          "1": 151,
+          "3": 1250,
+          "5": 6,
+          "2": 113
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2672195872790014
+      },
+      {
+        "seed": 20099,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 70,
+          "4": 110,
+          "3": 583,
+          "1": 167,
+          "2": 628,
+          "5": 17
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2644883042501306
+      }
+    ]
+  },
+  "sampled": {
+    "mode": "sampled",
+    "successes": 0,
+    "episodes": 100,
+    "successes_without_easy_seed": 0,
+    "episodes_without_easy_seed": 99,
+    "mean_steps": 1484.18,
+    "mean_kills": 0.79,
+    "mean_health": 64.75,
+    "mean_dead": 0.18,
+    "mean_progress": 0.2613508408131475,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 52,
+          "4": 238,
+          "3": 334,
+          "1": 184,
+          "6": 129,
+          "5": 222,
+          "2": 416
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19014628005602807
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 102,
+          "4": 57,
+          "2": 14,
+          "1": 1234,
+          "5": 36,
+          "3": 88,
+          "6": 44
+        },
+        "kills": 0.0,
+        "health": 9.0,
+        "dead": false,
+        "progress": 0.06547734810978034
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 65,
+          "2": 370,
+          "4": 251,
+          "5": 236,
+          "1": 170,
+          "3": 342,
+          "6": 141
+        },
+        "kills": 2.0,
+        "health": 82.0,
+        "dead": false,
+        "progress": 0.27499399069421704
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 60,
+          "4": 261,
+          "3": 338,
+          "1": 174,
+          "6": 136,
+          "5": 192,
+          "2": 414
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2673566793552409
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 81,
+          "4": 243,
+          "1": 223,
+          "3": 327,
+          "6": 109,
+          "5": 219,
+          "2": 373
+        },
+        "kills": 2.0,
+        "health": 82.0,
+        "dead": false,
+        "progress": 0.2729918341146722
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 44,
+          "4": 259,
+          "3": 365,
+          "6": 117,
+          "1": 174,
+          "5": 233,
+          "2": 383
+        },
+        "kills": 0.0,
+        "health": 64.0,
+        "dead": false,
+        "progress": 0.2673673053280534
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 60,
+          "4": 256,
+          "1": 293,
+          "3": 259,
+          "5": 173,
+          "6": 168,
+          "2": 366
+        },
+        "kills": 2.0,
+        "health": 85.0,
+        "dead": false,
+        "progress": 0.3369051612519369
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 46,
+          "4": 244,
+          "1": 216,
+          "3": 313,
+          "6": 121,
+          "5": 217,
+          "2": 418
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.1918173011660288
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 31,
+          "4": 239,
+          "3": 316,
+          "1": 197,
+          "6": 146,
+          "2": 428,
+          "5": 218
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2056638060386209
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 1290,
+        "actions": {
+          "0": 51,
+          "4": 206,
+          "1": 152,
+          "3": 246,
+          "2": 344,
+          "5": 185,
+          "6": 106
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2673167890595205
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 61,
+          "4": 253,
+          "3": 362,
+          "5": 212,
+          "6": 138,
+          "1": 133,
+          "2": 416
+        },
+        "kills": 1.0,
+        "health": 64.0,
+        "dead": false,
+        "progress": 0.27204049435620714
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 43,
+          "4": 240,
+          "3": 298,
+          "1": 218,
+          "2": 436,
+          "6": 124,
+          "5": 216
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19372344215448078
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 851,
+        "actions": {
+          "0": 53,
+          "4": 145,
+          "1": 114,
+          "2": 155,
+          "3": 217,
+          "5": 106,
+          "6": 61
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.31911371186220827
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 1151,
+        "actions": {
+          "0": 46,
+          "2": 267,
+          "4": 173,
+          "3": 268,
+          "6": 73,
+          "1": 185,
+          "5": 139
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.27153090684577796
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 29,
+          "4": 250,
+          "1": 208,
+          "3": 336,
+          "6": 122,
+          "2": 395,
+          "5": 235
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20804039477758773
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 76,
+          "2": 369,
+          "4": 254,
+          "1": 177,
+          "6": 123,
+          "3": 337,
+          "5": 239
+        },
+        "kills": 2.0,
+        "health": 34.0,
+        "dead": false,
+        "progress": 0.2673541766262767
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 35,
+          "1": 183,
+          "2": 436,
+          "4": 247,
+          "3": 296,
+          "6": 151,
+          "5": 227
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.1816381909914504
+      },
+      {
+        "seed": 20017,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 225,
+          "5": 210,
+          "1": 161,
+          "3": 364,
+          "6": 127,
+          "2": 425
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.267378702946407
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 55,
+          "4": 218,
+          "1": 350,
+          "5": 183,
+          "6": 166,
+          "3": 177,
+          "2": 426
+        },
+        "kills": 2.0,
+        "health": 34.0,
+        "dead": false,
+        "progress": 0.3321807561072252
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 37,
+          "4": 242,
+          "3": 305,
+          "1": 218,
+          "6": 134,
+          "2": 411,
+          "5": 228
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2150424655516503
+      },
+      {
+        "seed": 20020,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 56,
+          "4": 251,
+          "1": 169,
+          "3": 391,
+          "5": 182,
+          "2": 406,
+          "6": 120
+        },
+        "kills": 1.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26804954489835287
+      },
+      {
+        "seed": 20021,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 69,
+          "4": 188,
+          "2": 731,
+          "1": 186,
+          "3": 154,
+          "5": 152,
+          "6": 95
+        },
+        "kills": 2.0,
+        "health": 34.0,
+        "dead": false,
+        "progress": 0.2938778983424286
+      },
+      {
+        "seed": 20022,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 34,
+          "4": 264,
+          "1": 204,
+          "6": 148,
+          "3": 285,
+          "5": 246,
+          "2": 394
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.18723125752463765
+      },
+      {
+        "seed": 20023,
+        "success": false,
+        "steps": 1020,
+        "actions": {
+          "0": 52,
+          "4": 161,
+          "1": 191,
+          "6": 66,
+          "3": 199,
+          "2": 206,
+          "5": 145
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.26716175039118784
+      },
+      {
+        "seed": 20024,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 242,
+          "3": 327,
+          "1": 184,
+          "5": 231,
+          "2": 403,
+          "6": 125
+        },
+        "kills": 0.0,
+        "health": 94.0,
+        "dead": false,
+        "progress": 0.26750749913089134
+      },
+      {
+        "seed": 20025,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 52,
+          "4": 222,
+          "2": 542,
+          "1": 163,
+          "5": 189,
+          "3": 247,
+          "6": 160
+        },
+        "kills": 2.0,
+        "health": 67.0,
+        "dead": false,
+        "progress": 0.29047265862319294
+      },
+      {
+        "seed": 20026,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 165,
+          "0": 44,
+          "1": 620,
+          "6": 132,
+          "3": 182,
+          "2": 272,
+          "5": 160
+        },
+        "kills": 2.0,
+        "health": 19.0,
+        "dead": false,
+        "progress": 0.34128669886674345
+      },
+      {
+        "seed": 20027,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 80,
+          "4": 290,
+          "6": 116,
+          "5": 235,
+          "3": 307,
+          "1": 217,
+          "2": 330
+        },
+        "kills": 2.0,
+        "health": 43.0,
+        "dead": false,
+        "progress": 0.2664208245154154
+      },
+      {
+        "seed": 20028,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 45,
+          "4": 232,
+          "3": 330,
+          "1": 186,
+          "6": 124,
+          "2": 457,
+          "5": 201
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23638955859404964
+      },
+      {
+        "seed": 20029,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "4": 252,
+          "6": 150,
+          "1": 157,
+          "3": 326,
+          "2": 421,
+          "5": 229
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19153166510250985
+      },
+      {
+        "seed": 20030,
+        "success": false,
+        "steps": 1556,
+        "actions": {
+          "0": 71,
+          "4": 261,
+          "6": 130,
+          "1": 219,
+          "5": 229,
+          "3": 299,
+          "2": 347
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.28144591414275444
+      },
+      {
+        "seed": 20031,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 45,
+          "2": 315,
+          "4": 276,
+          "1": 252,
+          "3": 309,
+          "6": 181,
+          "5": 197
+        },
+        "kills": 2.0,
+        "health": 91.0,
+        "dead": false,
+        "progress": 0.361834324459842
+      },
+      {
+        "seed": 20032,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 80,
+          "4": 284,
+          "3": 347,
+          "1": 191,
+          "6": 102,
+          "2": 361,
+          "5": 210
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2674138639206636
+      },
+      {
+        "seed": 20033,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 37,
+          "4": 254,
+          "3": 360,
+          "1": 192,
+          "2": 398,
+          "6": 143,
+          "5": 191
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2418517427363649
+      },
+      {
+        "seed": 20034,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 59,
+          "4": 252,
+          "3": 281,
+          "1": 278,
+          "5": 210,
+          "2": 340,
+          "6": 155
+        },
+        "kills": 2.0,
+        "health": 56.0,
+        "dead": false,
+        "progress": 0.48295585470656877
+      },
+      {
+        "seed": 20035,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "4": 256,
+          "2": 440,
+          "1": 180,
+          "3": 298,
+          "5": 242,
+          "6": 119
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20935327560777928
+      },
+      {
+        "seed": 20036,
+        "success": false,
+        "steps": 988,
+        "actions": {
+          "0": 85,
+          "4": 134,
+          "3": 124,
+          "6": 59,
+          "1": 243,
+          "5": 134,
+          "2": 209
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.27138331344894817
+      },
+      {
+        "seed": 20037,
+        "success": false,
+        "steps": 1455,
+        "actions": {
+          "0": 54,
+          "4": 257,
+          "1": 212,
+          "3": 274,
+          "6": 115,
+          "2": 343,
+          "5": 200
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.26723631310200235
+      },
+      {
+        "seed": 20038,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 51,
+          "4": 244,
+          "2": 435,
+          "3": 331,
+          "1": 186,
+          "6": 111,
+          "5": 217
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26612222034011923
+      },
+      {
+        "seed": 20039,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 72,
+          "4": 240,
+          "1": 238,
+          "3": 334,
+          "5": 230,
+          "6": 112,
+          "2": 349
+        },
+        "kills": 2.0,
+        "health": 10.0,
+        "dead": false,
+        "progress": 0.2716303781287802
+      },
+      {
+        "seed": 20040,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 56,
+          "4": 264,
+          "1": 177,
+          "3": 337,
+          "2": 439,
+          "5": 195,
+          "6": 107
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.24189248794751161
+      },
+      {
+        "seed": 20041,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 52,
+          "4": 275,
+          "3": 316,
+          "1": 157,
+          "6": 132,
+          "2": 425,
+          "5": 218
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2662082435779398
+      },
+      {
+        "seed": 20042,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 175,
+          "0": 47,
+          "2": 385,
+          "4": 253,
+          "3": 366,
+          "5": 206,
+          "6": 143
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2628914191154924
+      },
+      {
+        "seed": 20043,
+        "success": false,
+        "steps": 728,
+        "actions": {
+          "0": 31,
+          "4": 98,
+          "6": 65,
+          "3": 99,
+          "1": 177,
+          "5": 106,
+          "2": 152
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.30672446923422947
+      },
+      {
+        "seed": 20044,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 73,
+          "4": 270,
+          "1": 288,
+          "5": 249,
+          "6": 110,
+          "3": 239,
+          "2": 346
+        },
+        "kills": 2.0,
+        "health": 22.0,
+        "dead": false,
+        "progress": 0.2664717886249467
+      },
+      {
+        "seed": 20045,
+        "success": false,
+        "steps": 1421,
+        "actions": {
+          "2": 336,
+          "0": 85,
+          "4": 257,
+          "1": 183,
+          "3": 273,
+          "5": 199,
+          "6": 88
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.28069028851576494
+      },
+      {
+        "seed": 20046,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 57,
+          "4": 256,
+          "2": 361,
+          "1": 202,
+          "6": 136,
+          "3": 357,
+          "5": 206
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2633431735045494
+      },
+      {
+        "seed": 20047,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 46,
+          "4": 257,
+          "1": 204,
+          "6": 132,
+          "3": 300,
+          "5": 238,
+          "2": 398
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2665746935450275
+      },
+      {
+        "seed": 20048,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 56,
+          "4": 218,
+          "1": 512,
+          "3": 199,
+          "6": 106,
+          "5": 198,
+          "2": 286
+        },
+        "kills": 2.0,
+        "health": 25.0,
+        "dead": false,
+        "progress": 0.2673269837516926
+      },
+      {
+        "seed": 20049,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 314,
+          "0": 41,
+          "4": 283,
+          "1": 313,
+          "3": 263,
+          "6": 177,
+          "5": 184
+        },
+        "kills": 2.0,
+        "health": 82.0,
+        "dead": false,
+        "progress": 0.4361424066958748
+      },
+      {
+        "seed": 20050,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "4": 216,
+          "2": 436,
+          "6": 123,
+          "3": 366,
+          "1": 186,
+          "5": 208
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2637619828130182
+      },
+      {
+        "seed": 20051,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 58,
+          "4": 242,
+          "3": 268,
+          "1": 234,
+          "5": 215,
+          "6": 149,
+          "2": 409
+        },
+        "kills": 2.0,
+        "health": 61.0,
+        "dead": false,
+        "progress": 0.2748603848924649
+      },
+      {
+        "seed": 20052,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 67,
+          "4": 290,
+          "3": 239,
+          "1": 310,
+          "6": 149,
+          "2": 289,
+          "5": 231
+        },
+        "kills": 2.0,
+        "health": 31.0,
+        "dead": false,
+        "progress": 0.274488698893381
+      },
+      {
+        "seed": 20053,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 47,
+          "4": 242,
+          "5": 196,
+          "1": 214,
+          "3": 336,
+          "6": 134,
+          "2": 406
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23412759724235255
+      },
+      {
+        "seed": 20054,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 49,
+          "4": 259,
+          "3": 349,
+          "6": 121,
+          "1": 207,
+          "2": 393,
+          "5": 197
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26346907129288366
+      },
+      {
+        "seed": 20055,
+        "success": false,
+        "steps": 1256,
+        "actions": {
+          "0": 46,
+          "4": 205,
+          "3": 242,
+          "1": 214,
+          "6": 103,
+          "2": 270,
+          "5": 176
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.26725851528535527
+      },
+      {
+        "seed": 20056,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 87,
+          "6": 122,
+          "4": 255,
+          "3": 277,
+          "1": 306,
+          "2": 322,
+          "5": 206
+        },
+        "kills": 2.0,
+        "health": 7.0,
+        "dead": false,
+        "progress": 0.2673771368530148
+      },
+      {
+        "seed": 20057,
+        "success": false,
+        "steps": 1031,
+        "actions": {
+          "0": 91,
+          "2": 193,
+          "4": 170,
+          "5": 152,
+          "6": 73,
+          "1": 157,
+          "3": 195
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.27648735409661085
+      },
+      {
+        "seed": 20058,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 43,
+          "4": 248,
+          "6": 140,
+          "3": 359,
+          "1": 161,
+          "2": 415,
+          "5": 209
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2674308431987803
+      },
+      {
+        "seed": 20059,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 50,
+          "4": 235,
+          "3": 329,
+          "6": 123,
+          "1": 178,
+          "2": 438,
+          "5": 222
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2157708514450274
+      },
+      {
+        "seed": 20060,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 59,
+          "4": 246,
+          "6": 140,
+          "5": 220,
+          "1": 180,
+          "2": 391,
+          "3": 339
+        },
+        "kills": 2.0,
+        "health": 70.0,
+        "dead": false,
+        "progress": 0.28552957528957923
+      },
+      {
+        "seed": 20061,
+        "success": false,
+        "steps": 883,
+        "actions": {
+          "4": 132,
+          "0": 57,
+          "1": 148,
+          "3": 140,
+          "5": 120,
+          "6": 87,
+          "2": 199
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2733679337693422
+      },
+      {
+        "seed": 20062,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 31,
+          "2": 391,
+          "4": 253,
+          "6": 141,
+          "3": 302,
+          "1": 227,
+          "5": 230
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19750416970052964
+      },
+      {
+        "seed": 20063,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 49,
+          "2": 381,
+          "4": 258,
+          "3": 364,
+          "1": 183,
+          "6": 133,
+          "5": 207
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2673243262900644
+      },
+      {
+        "seed": 20064,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 252,
+          "5": 247,
+          "3": 331,
+          "1": 190,
+          "6": 125,
+          "2": 367
+        },
+        "kills": 2.0,
+        "health": 55.0,
+        "dead": false,
+        "progress": 0.2699238360552222
+      },
+      {
+        "seed": 20065,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 268,
+          "3": 327,
+          "1": 155,
+          "2": 421,
+          "5": 213,
+          "6": 128
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2533045748379239
+      },
+      {
+        "seed": 20066,
+        "success": false,
+        "steps": 855,
+        "actions": {
+          "0": 45,
+          "4": 138,
+          "2": 176,
+          "3": 150,
+          "1": 149,
+          "6": 72,
+          "5": 125
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.28659617958162886
+      },
+      {
+        "seed": 20067,
+        "success": false,
+        "steps": 1528,
+        "actions": {
+          "0": 61,
+          "4": 229,
+          "1": 202,
+          "2": 416,
+          "3": 291,
+          "6": 121,
+          "5": 208
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2803019657001916
+      },
+      {
+        "seed": 20068,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 49,
+          "2": 417,
+          "4": 276,
+          "1": 183,
+          "3": 323,
+          "6": 100,
+          "5": 227
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.26683327480938
+      },
+      {
+        "seed": 20069,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 47,
+          "2": 415,
+          "4": 235,
+          "1": 172,
+          "3": 343,
+          "5": 223,
+          "6": 140
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.225021787294447
+      },
+      {
+        "seed": 20070,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 63,
+          "4": 313,
+          "3": 256,
+          "1": 250,
+          "2": 351,
+          "6": 107,
+          "5": 235
+        },
+        "kills": 2.0,
+        "health": 40.0,
+        "dead": false,
+        "progress": 0.2779067843574238
+      },
+      {
+        "seed": 20071,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "4": 235,
+          "1": 198,
+          "6": 118,
+          "3": 308,
+          "2": 454,
+          "5": 222
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.21728681322856458
+      },
+      {
+        "seed": 20072,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 75,
+          "4": 261,
+          "1": 317,
+          "5": 245,
+          "2": 299,
+          "3": 251,
+          "6": 127
+        },
+        "kills": 2.0,
+        "health": 43.0,
+        "dead": false,
+        "progress": 0.27442197430422655
+      },
+      {
+        "seed": 20073,
+        "success": false,
+        "steps": 943,
+        "actions": {
+          "0": 65,
+          "4": 172,
+          "1": 173,
+          "3": 217,
+          "2": 150,
+          "6": 46,
+          "5": 120
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2720813981026652
+      },
+      {
+        "seed": 20074,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 38,
+          "4": 249,
+          "2": 387,
+          "1": 228,
+          "5": 223,
+          "3": 319,
+          "6": 131
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.215215563494217
+      },
+      {
+        "seed": 20075,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 77,
+          "4": 254,
+          "5": 224,
+          "1": 181,
+          "6": 151,
+          "3": 284,
+          "2": 404
+        },
+        "kills": 2.0,
+        "health": 67.0,
+        "dead": false,
+        "progress": 0.29072034595075347
+      },
+      {
+        "seed": 20076,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 122,
+          "0": 74,
+          "4": 232,
+          "3": 348,
+          "1": 182,
+          "5": 244,
+          "2": 373
+        },
+        "kills": 2.0,
+        "health": 88.0,
+        "dead": false,
+        "progress": 0.2684699140066832
+      },
+      {
+        "seed": 20077,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 43,
+          "4": 229,
+          "5": 203,
+          "1": 209,
+          "3": 313,
+          "2": 438,
+          "6": 140
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2145219478050867
+      },
+      {
+        "seed": 20078,
+        "success": false,
+        "steps": 1187,
+        "actions": {
+          "0": 56,
+          "4": 190,
+          "3": 224,
+          "1": 152,
+          "5": 170,
+          "6": 93,
+          "2": 302
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.26732494398740736
+      },
+      {
+        "seed": 20079,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 75,
+          "4": 279,
+          "6": 123,
+          "3": 310,
+          "1": 179,
+          "5": 220,
+          "2": 389
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2671003902080087
+      },
+      {
+        "seed": 20080,
+        "success": false,
+        "steps": 236,
+        "actions": {
+          "0": 8,
+          "4": 52,
+          "3": 25,
+          "1": 76,
+          "6": 16,
+          "2": 26,
+          "5": 33
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12422306553639584
+      },
+      {
+        "seed": 20081,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 33,
+          "4": 249,
+          "3": 318,
+          "1": 203,
+          "6": 142,
+          "5": 235,
+          "2": 395
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.18257241603830032
+      },
+      {
+        "seed": 20082,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 40,
+          "6": 160,
+          "4": 245,
+          "1": 217,
+          "3": 291,
+          "5": 200,
+          "2": 422
+        },
+        "kills": 1.0,
+        "health": 10.0,
+        "dead": false,
+        "progress": 0.3538051664047758
+      },
+      {
+        "seed": 20083,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 71,
+          "4": 266,
+          "1": 186,
+          "3": 318,
+          "6": 128,
+          "2": 357,
+          "5": 249
+        },
+        "kills": 1.0,
+        "health": 73.0,
+        "dead": false,
+        "progress": 0.27267603824294295
+      },
+      {
+        "seed": 20084,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 179,
+          "0": 71,
+          "4": 229,
+          "6": 110,
+          "2": 413,
+          "3": 355,
+          "5": 218
+        },
+        "kills": 0.0,
+        "health": 64.0,
+        "dead": false,
+        "progress": 0.26734327524276524
+      },
+      {
+        "seed": 20085,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 35,
+          "4": 245,
+          "1": 196,
+          "6": 143,
+          "3": 347,
+          "5": 213,
+          "2": 396
+        },
+        "kills": 2.0,
+        "health": 73.0,
+        "dead": false,
+        "progress": 0.26722647335881733
+      },
+      {
+        "seed": 20086,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 47,
+          "4": 250,
+          "1": 212,
+          "3": 330,
+          "6": 109,
+          "2": 400,
+          "5": 227
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2170989073667241
+      },
+      {
+        "seed": 20087,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 50,
+          "4": 244,
+          "6": 127,
+          "3": 352,
+          "1": 162,
+          "2": 431,
+          "5": 209
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.21842489353738026
+      },
+      {
+        "seed": 20088,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 101,
+          "4": 274,
+          "3": 351,
+          "6": 122,
+          "1": 188,
+          "5": 206,
+          "2": 333
+        },
+        "kills": 1.0,
+        "health": 58.0,
+        "dead": false,
+        "progress": 0.28202773017911786
+      },
+      {
+        "seed": 20089,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 68,
+          "1": 296,
+          "4": 226,
+          "2": 310,
+          "3": 322,
+          "6": 122,
+          "5": 231
+        },
+        "kills": 2.0,
+        "health": 22.0,
+        "dead": false,
+        "progress": 0.27611430509196333
+      },
+      {
+        "seed": 20090,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 44,
+          "4": 273,
+          "3": 255,
+          "5": 192,
+          "1": 274,
+          "6": 204,
+          "2": 333
+        },
+        "kills": 2.0,
+        "health": 79.0,
+        "dead": false,
+        "progress": 0.32455817726803515
+      },
+      {
+        "seed": 20091,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 36,
+          "4": 237,
+          "3": 367,
+          "1": 197,
+          "6": 118,
+          "5": 208,
+          "2": 412
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.20860423981176868
+      },
+      {
+        "seed": 20092,
+        "success": false,
+        "steps": 889,
+        "actions": {
+          "0": 57,
+          "4": 152,
+          "5": 138,
+          "3": 147,
+          "6": 56,
+          "1": 126,
+          "2": 213
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2674449211848402
+      },
+      {
+        "seed": 20093,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 37,
+          "2": 467,
+          "4": 241,
+          "5": 182,
+          "3": 205,
+          "1": 263,
+          "6": 180
+        },
+        "kills": 2.0,
+        "health": 70.0,
+        "dead": false,
+        "progress": 0.36296619855956935
+      },
+      {
+        "seed": 20094,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 44,
+          "2": 433,
+          "4": 225,
+          "1": 190,
+          "6": 144,
+          "3": 332,
+          "5": 207
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.19335685565281568
+      },
+      {
+        "seed": 20095,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 426,
+          "0": 47,
+          "4": 225,
+          "6": 172,
+          "1": 239,
+          "3": 274,
+          "5": 192
+        },
+        "kills": 2.0,
+        "health": 79.0,
+        "dead": false,
+        "progress": 0.2919212606406104
+      },
+      {
+        "seed": 20096,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 49,
+          "2": 429,
+          "4": 261,
+          "3": 298,
+          "1": 200,
+          "6": 134,
+          "5": 204
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2229665952698484
+      },
+      {
+        "seed": 20097,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 56,
+          "4": 270,
+          "2": 420,
+          "3": 330,
+          "6": 118,
+          "1": 163,
+          "5": 218
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.23185836303358165
+      },
+      {
+        "seed": 20098,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 68,
+          "4": 248,
+          "3": 328,
+          "6": 116,
+          "5": 219,
+          "1": 186,
+          "2": 410
+        },
+        "kills": 2.0,
+        "health": 88.0,
+        "dead": false,
+        "progress": 0.2692420616212787
+      },
+      {
+        "seed": 20099,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 62,
+          "4": 256,
+          "5": 235,
+          "1": 182,
+          "3": 317,
+          "2": 413,
+          "6": 110
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2673607539973555
+      }
+    ]
+  },
+  "random": {
+    "mode": "random",
+    "successes": 0,
+    "episodes": 100,
+    "successes_without_easy_seed": 0,
+    "episodes_without_easy_seed": 99,
+    "mean_steps": 1229.38,
+    "mean_kills": 0.31,
+    "mean_health": 48.06,
+    "mean_dead": 0.46,
+    "mean_progress": 0.20545148477542063,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 212,
+          "3": 211,
+          "6": 223,
+          "0": 233,
+          "4": 238,
+          "1": 231,
+          "2": 227
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.12066669620767889
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 144,
+        "actions": {
+          "4": 26,
+          "0": 27,
+          "3": 25,
+          "5": 18,
+          "6": 19,
+          "2": 15,
+          "1": 14
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.14484765610446948
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 875,
+        "actions": {
+          "3": 104,
+          "5": 125,
+          "2": 143,
+          "0": 138,
+          "6": 122,
+          "4": 108,
+          "1": 135
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.44856672378001194
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 88,
+        "actions": {
+          "3": 13,
+          "2": 13,
+          "6": 15,
+          "4": 13,
+          "1": 14,
+          "0": 13,
+          "5": 7
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.036859420508671414
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 1387,
+        "actions": {
+          "2": 214,
+          "4": 201,
+          "5": 191,
+          "0": 194,
+          "3": 187,
+          "1": 227,
+          "6": 173
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2917155878710709
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 806,
+        "actions": {
+          "1": 128,
+          "2": 111,
+          "6": 101,
+          "3": 120,
+          "4": 106,
+          "0": 124,
+          "5": 116
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.40725887554830653
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 242,
+          "2": 231,
+          "0": 215,
+          "6": 233,
+          "3": 215,
+          "5": 222,
+          "4": 217
+        },
+        "kills": 0.0,
+        "health": 59.0,
+        "dead": false,
+        "progress": 0.26731631500143016
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 599,
+        "actions": {
+          "3": 81,
+          "5": 83,
+          "0": 90,
+          "1": 84,
+          "6": 86,
+          "4": 84,
+          "2": 91
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.29822811735107735
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 1473,
+        "actions": {
+          "1": 214,
+          "6": 188,
+          "4": 207,
+          "5": 214,
+          "2": 223,
+          "3": 214,
+          "0": 213
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.35437762033444375
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 215,
+          "2": 221,
+          "6": 225,
+          "4": 225,
+          "3": 220,
+          "1": 226,
+          "5": 243
+        },
+        "kills": 2.0,
+        "health": 70.0,
+        "dead": false,
+        "progress": 0.35313282686070824
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 242,
+          "4": 232,
+          "1": 227,
+          "0": 208,
+          "5": 213,
+          "3": 243,
+          "2": 210
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.1361396839685215
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 203,
+          "0": 228,
+          "5": 234,
+          "1": 230,
+          "2": 202,
+          "6": 252,
+          "4": 226
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.03592616538247506
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 232,
+          "0": 232,
+          "6": 222,
+          "2": 231,
+          "5": 207,
+          "3": 221,
+          "1": 230
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.11330293785144141
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 214,
+        "actions": {
+          "3": 30,
+          "5": 41,
+          "1": 29,
+          "0": 35,
+          "2": 27,
+          "4": 27,
+          "6": 25
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12569644653832335
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 1167,
+        "actions": {
+          "4": 163,
+          "5": 179,
+          "6": 190,
+          "2": 174,
+          "1": 146,
+          "0": 167,
+          "3": 148
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3527098985970112
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 233,
+          "4": 214,
+          "2": 241,
+          "5": 248,
+          "3": 206,
+          "1": 219,
+          "6": 214
+        },
+        "kills": 0.0,
+        "health": 104.0,
+        "dead": false,
+        "progress": 0.07643211872804723
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 224,
+          "3": 240,
+          "1": 225,
+          "0": 242,
+          "5": 212,
+          "6": 196,
+          "4": 236
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.13539847207196487
+      },
+      {
+        "seed": 20017,
+        "success": false,
+        "steps": 585,
+        "actions": {
+          "1": 76,
+          "3": 68,
+          "0": 74,
+          "4": 90,
+          "2": 92,
+          "6": 93,
+          "5": 92
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12802319947847196
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 215,
+          "2": 237,
+          "3": 228,
+          "5": 239,
+          "4": 206,
+          "1": 213,
+          "6": 237
+        },
+        "kills": 0.0,
+        "health": 103.0,
+        "dead": false,
+        "progress": 0.12647421223024535
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 820,
+        "actions": {
+          "0": 119,
+          "2": 121,
+          "5": 124,
+          "3": 115,
+          "4": 112,
+          "1": 113,
+          "6": 116
+        },
+        "kills": 2.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.5652818510922775
+      },
+      {
+        "seed": 20020,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 214,
+          "2": 231,
+          "1": 225,
+          "3": 225,
+          "5": 228,
+          "0": 248,
+          "4": 204
+        },
+        "kills": 0.0,
+        "health": 16.0,
+        "dead": false,
+        "progress": 0.21151564590397953
+      },
+      {
+        "seed": 20021,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 217,
+          "1": 223,
+          "6": 252,
+          "2": 204,
+          "5": 241,
+          "3": 241,
+          "4": 197
+        },
+        "kills": 0.0,
+        "health": 1.0,
+        "dead": false,
+        "progress": 0.26274058878897444
+      },
+      {
+        "seed": 20022,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 217,
+          "0": 224,
+          "5": 231,
+          "4": 198,
+          "1": 237,
+          "2": 230,
+          "6": 238
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.10670930488331865
+      },
+      {
+        "seed": 20023,
+        "success": false,
+        "steps": 633,
+        "actions": {
+          "3": 100,
+          "5": 97,
+          "0": 90,
+          "1": 95,
+          "4": 99,
+          "6": 81,
+          "2": 71
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2674290651837272
+      },
+      {
+        "seed": 20024,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 220,
+          "6": 231,
+          "5": 256,
+          "1": 205,
+          "3": 220,
+          "4": 227,
+          "2": 216
+        },
+        "kills": 0.0,
+        "health": 103.0,
+        "dead": false,
+        "progress": 0.08016135363324306
+      },
+      {
+        "seed": 20025,
+        "success": false,
+        "steps": 1015,
+        "actions": {
+          "6": 155,
+          "3": 147,
+          "5": 149,
+          "0": 139,
+          "2": 144,
+          "4": 150,
+          "1": 131
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12376418194299665
+      },
+      {
+        "seed": 20026,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 224,
+          "2": 224,
+          "5": 230,
+          "4": 243,
+          "0": 238,
+          "6": 210,
+          "3": 206
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.03814010136673973
+      },
+      {
+        "seed": 20027,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 241,
+          "4": 226,
+          "2": 233,
+          "1": 227,
+          "6": 224,
+          "0": 221,
+          "5": 203
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.07712008592497277
+      },
+      {
+        "seed": 20028,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 216,
+          "1": 204,
+          "6": 241,
+          "4": 249,
+          "3": 222,
+          "0": 236,
+          "5": 207
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.26084292971679124
+      },
+      {
+        "seed": 20029,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 213,
+          "0": 226,
+          "5": 223,
+          "4": 222,
+          "6": 204,
+          "3": 231,
+          "2": 256
+        },
+        "kills": 1.0,
+        "health": 98.0,
+        "dead": false,
+        "progress": 0.3431875319448795
+      },
+      {
+        "seed": 20030,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 238,
+          "2": 234,
+          "3": 205,
+          "5": 205,
+          "4": 225,
+          "0": 232,
+          "1": 236
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.08338712008864402
+      },
+      {
+        "seed": 20031,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 218,
+          "5": 234,
+          "1": 214,
+          "0": 233,
+          "6": 229,
+          "3": 228,
+          "2": 219
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.10474327941420813
+      },
+      {
+        "seed": 20032,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 229,
+          "2": 246,
+          "3": 220,
+          "1": 246,
+          "4": 229,
+          "6": 202,
+          "5": 203
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.06482161886863969
+      },
+      {
+        "seed": 20033,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 226,
+          "4": 219,
+          "1": 204,
+          "6": 233,
+          "0": 214,
+          "2": 231,
+          "3": 248
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.05888530713404727
+      },
+      {
+        "seed": 20034,
+        "success": false,
+        "steps": 517,
+        "actions": {
+          "6": 78,
+          "0": 66,
+          "3": 74,
+          "2": 67,
+          "1": 76,
+          "4": 75,
+          "5": 81
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.1644466516259835
+      },
+      {
+        "seed": 20035,
+        "success": false,
+        "steps": 1483,
+        "actions": {
+          "4": 194,
+          "1": 215,
+          "0": 230,
+          "6": 180,
+          "2": 227,
+          "5": 238,
+          "3": 199
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3209471381204736
+      },
+      {
+        "seed": 20036,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 256,
+          "2": 202,
+          "6": 249,
+          "3": 219,
+          "0": 214,
+          "1": 202,
+          "4": 233
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.09205734325209491
+      },
+      {
+        "seed": 20037,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 223,
+          "6": 202,
+          "2": 229,
+          "4": 227,
+          "5": 254,
+          "0": 221,
+          "1": 219
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.10459160653317068
+      },
+      {
+        "seed": 20038,
+        "success": false,
+        "steps": 480,
+        "actions": {
+          "5": 82,
+          "6": 74,
+          "0": 71,
+          "4": 62,
+          "1": 52,
+          "3": 65,
+          "2": 74
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3848021237030973
+      },
+      {
+        "seed": 20039,
+        "success": false,
+        "steps": 957,
+        "actions": {
+          "0": 125,
+          "5": 172,
+          "1": 151,
+          "3": 134,
+          "4": 127,
+          "2": 120,
+          "6": 128
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.32632797962448146
+      },
+      {
+        "seed": 20040,
+        "success": false,
+        "steps": 152,
+        "actions": {
+          "3": 24,
+          "6": 22,
+          "4": 20,
+          "0": 25,
+          "5": 16,
+          "1": 31,
+          "2": 14
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.1328678346415474
+      },
+      {
+        "seed": 20041,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 225,
+          "6": 219,
+          "3": 236,
+          "5": 229,
+          "1": 242,
+          "4": 210,
+          "0": 214
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.07651009881699
+      },
+      {
+        "seed": 20042,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 221,
+          "5": 219,
+          "1": 220,
+          "3": 202,
+          "2": 222,
+          "4": 249,
+          "6": 242
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.22115244318592264
+      },
+      {
+        "seed": 20043,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 212,
+          "4": 227,
+          "5": 217,
+          "3": 231,
+          "1": 246,
+          "2": 222,
+          "0": 220
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.13113214609184443
+      },
+      {
+        "seed": 20044,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 230,
+          "3": 205,
+          "6": 234,
+          "1": 218,
+          "5": 238,
+          "2": 228,
+          "0": 222
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.21296565234953713
+      },
+      {
+        "seed": 20045,
+        "success": false,
+        "steps": 1362,
+        "actions": {
+          "6": 205,
+          "0": 176,
+          "5": 174,
+          "1": 213,
+          "2": 216,
+          "4": 194,
+          "3": 184
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.267333893846989
+      },
+      {
+        "seed": 20046,
+        "success": false,
+        "steps": 801,
+        "actions": {
+          "4": 106,
+          "1": 134,
+          "5": 119,
+          "0": 123,
+          "3": 113,
+          "2": 108,
+          "6": 98
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.2963560861206813
+      },
+      {
+        "seed": 20047,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 204,
+          "6": 212,
+          "0": 245,
+          "5": 258,
+          "1": 205,
+          "4": 238,
+          "3": 213
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.07643116074169654
+      },
+      {
+        "seed": 20048,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 213,
+          "4": 251,
+          "6": 243,
+          "1": 213,
+          "2": 201,
+          "0": 250,
+          "5": 204
+        },
+        "kills": 0.0,
+        "health": 44.0,
+        "dead": false,
+        "progress": 0.25226010665659304
+      },
+      {
+        "seed": 20049,
+        "success": false,
+        "steps": 914,
+        "actions": {
+          "3": 137,
+          "0": 129,
+          "4": 124,
+          "1": 133,
+          "6": 133,
+          "2": 121,
+          "5": 137
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3474372735072351
+      },
+      {
+        "seed": 20050,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 229,
+          "5": 230,
+          "4": 237,
+          "0": 234,
+          "6": 201,
+          "2": 208,
+          "1": 236
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.09814679127456394
+      },
+      {
+        "seed": 20051,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 224,
+          "0": 218,
+          "5": 233,
+          "6": 212,
+          "3": 219,
+          "1": 237,
+          "2": 232
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.2804590348307202
+      },
+      {
+        "seed": 20052,
+        "success": false,
+        "steps": 599,
+        "actions": {
+          "0": 83,
+          "5": 86,
+          "1": 78,
+          "4": 82,
+          "6": 101,
+          "2": 76,
+          "3": 93
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.29310887141630815
+      },
+      {
+        "seed": 20053,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 240,
+          "6": 258,
+          "0": 221,
+          "1": 223,
+          "5": 225,
+          "2": 211,
+          "3": 197
+        },
+        "kills": 0.0,
+        "health": 103.0,
+        "dead": false,
+        "progress": 0.02016550481727608
+      },
+      {
+        "seed": 20054,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 241,
+          "6": 230,
+          "4": 230,
+          "5": 200,
+          "3": 238,
+          "0": 212,
+          "1": 224
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.09348419900135929
+      },
+      {
+        "seed": 20055,
+        "success": false,
+        "steps": 1245,
+        "actions": {
+          "5": 190,
+          "2": 178,
+          "0": 182,
+          "3": 161,
+          "1": 165,
+          "4": 177,
+          "6": 192
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.4570174921431728
+      },
+      {
+        "seed": 20056,
+        "success": false,
+        "steps": 338,
+        "actions": {
+          "2": 48,
+          "3": 54,
+          "5": 48,
+          "1": 44,
+          "0": 66,
+          "6": 39,
+          "4": 39
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3526302056160219
+      },
+      {
+        "seed": 20057,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 227,
+          "4": 234,
+          "3": 232,
+          "5": 223,
+          "6": 215,
+          "1": 222,
+          "0": 222
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.09113677443395829
+      },
+      {
+        "seed": 20058,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 206,
+          "3": 233,
+          "1": 205,
+          "5": 239,
+          "6": 232,
+          "4": 216,
+          "0": 244
+        },
+        "kills": 0.0,
+        "health": 104.0,
+        "dead": false,
+        "progress": 0.06422405040866697
+      },
+      {
+        "seed": 20059,
+        "success": false,
+        "steps": 992,
+        "actions": {
+          "6": 147,
+          "1": 136,
+          "3": 135,
+          "0": 138,
+          "5": 155,
+          "4": 140,
+          "2": 141
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3381504876385669
+      },
+      {
+        "seed": 20060,
+        "success": false,
+        "steps": 380,
+        "actions": {
+          "5": 54,
+          "4": 53,
+          "0": 60,
+          "6": 66,
+          "1": 58,
+          "2": 52,
+          "3": 37
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.0846413329581771
+      },
+      {
+        "seed": 20061,
+        "success": false,
+        "steps": 437,
+        "actions": {
+          "4": 58,
+          "3": 54,
+          "2": 73,
+          "5": 66,
+          "1": 62,
+          "6": 56,
+          "0": 68
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.13169542533424494
+      },
+      {
+        "seed": 20062,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 201,
+          "2": 228,
+          "1": 234,
+          "6": 234,
+          "4": 227,
+          "0": 220,
+          "5": 231
+        },
+        "kills": 0.0,
+        "health": 103.0,
+        "dead": false,
+        "progress": 0.08922287110528426
+      },
+      {
+        "seed": 20063,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 211,
+          "6": 225,
+          "2": 227,
+          "3": 220,
+          "5": 210,
+          "1": 236,
+          "4": 246
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.07680152790722672
+      },
+      {
+        "seed": 20064,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 255,
+          "2": 254,
+          "1": 201,
+          "5": 236,
+          "0": 221,
+          "6": 200,
+          "3": 208
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.08521420905062571
+      },
+      {
+        "seed": 20065,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 214,
+          "4": 224,
+          "5": 216,
+          "0": 248,
+          "1": 210,
+          "2": 230,
+          "3": 233
+        },
+        "kills": 1.0,
+        "health": 24.0,
+        "dead": false,
+        "progress": 0.313186093957731
+      },
+      {
+        "seed": 20066,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 231,
+          "5": 211,
+          "3": 211,
+          "6": 244,
+          "4": 230,
+          "0": 239,
+          "2": 209
+        },
+        "kills": 0.0,
+        "health": 58.0,
+        "dead": false,
+        "progress": 0.24982774578350408
+      },
+      {
+        "seed": 20067,
+        "success": false,
+        "steps": 692,
+        "actions": {
+          "6": 108,
+          "2": 82,
+          "5": 104,
+          "1": 111,
+          "0": 92,
+          "3": 109,
+          "4": 86
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.13274404068494983
+      },
+      {
+        "seed": 20068,
+        "success": false,
+        "steps": 1180,
+        "actions": {
+          "2": 176,
+          "5": 181,
+          "1": 161,
+          "0": 173,
+          "3": 154,
+          "6": 169,
+          "4": 166
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.38140788143223836
+      },
+      {
+        "seed": 20069,
+        "success": false,
+        "steps": 905,
+        "actions": {
+          "3": 109,
+          "2": 145,
+          "5": 119,
+          "4": 121,
+          "1": 130,
+          "0": 134,
+          "6": 147
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.30247693840825685
+      },
+      {
+        "seed": 20070,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 240,
+          "6": 216,
+          "4": 236,
+          "5": 202,
+          "0": 218,
+          "2": 222,
+          "3": 241
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.24327392691048888
+      },
+      {
+        "seed": 20071,
+        "success": false,
+        "steps": 1202,
+        "actions": {
+          "1": 166,
+          "6": 168,
+          "4": 167,
+          "0": 181,
+          "2": 161,
+          "5": 191,
+          "3": 168
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3722769127627633
+      },
+      {
+        "seed": 20072,
+        "success": false,
+        "steps": 1137,
+        "actions": {
+          "4": 163,
+          "5": 182,
+          "1": 156,
+          "3": 152,
+          "2": 167,
+          "6": 136,
+          "0": 181
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.35835766757210763
+      },
+      {
+        "seed": 20073,
+        "success": false,
+        "steps": 940,
+        "actions": {
+          "5": 151,
+          "1": 118,
+          "4": 138,
+          "2": 129,
+          "0": 137,
+          "6": 128,
+          "3": 139
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.29422902080218905
+      },
+      {
+        "seed": 20074,
+        "success": false,
+        "steps": 342,
+        "actions": {
+          "1": 48,
+          "0": 56,
+          "2": 48,
+          "3": 51,
+          "4": 46,
+          "6": 46,
+          "5": 47
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12633556958586756
+      },
+      {
+        "seed": 20075,
+        "success": false,
+        "steps": 485,
+        "actions": {
+          "2": 70,
+          "3": 79,
+          "4": 51,
+          "0": 72,
+          "1": 83,
+          "6": 69,
+          "5": 61
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.29635733506363104
+      },
+      {
+        "seed": 20076,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "3": 226,
+          "5": 212,
+          "2": 253,
+          "0": 205,
+          "6": 235,
+          "4": 215,
+          "1": 229
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.060254674016336995
+      },
+      {
+        "seed": 20077,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 235,
+          "3": 225,
+          "2": 235,
+          "6": 223,
+          "0": 216,
+          "4": 242,
+          "1": 199
+        },
+        "kills": 1.0,
+        "health": 93.0,
+        "dead": false,
+        "progress": 0.30505306149888933
+      },
+      {
+        "seed": 20078,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 226,
+          "6": 245,
+          "3": 218,
+          "4": 232,
+          "2": 226,
+          "0": 220,
+          "5": 208
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.03654782552865343
+      },
+      {
+        "seed": 20079,
+        "success": false,
+        "steps": 595,
+        "actions": {
+          "2": 80,
+          "6": 92,
+          "4": 74,
+          "0": 92,
+          "3": 85,
+          "5": 84,
+          "1": 88
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.14044869442236663
+      },
+      {
+        "seed": 20080,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 251,
+          "4": 252,
+          "3": 227,
+          "2": 189,
+          "5": 224,
+          "1": 228,
+          "0": 204
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.26642591519679704
+      },
+      {
+        "seed": 20081,
+        "success": false,
+        "steps": 473,
+        "actions": {
+          "6": 74,
+          "5": 64,
+          "2": 65,
+          "0": 67,
+          "3": 60,
+          "4": 79,
+          "1": 64
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.19803001998597713
+      },
+      {
+        "seed": 20082,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "1": 222,
+          "5": 214,
+          "2": 242,
+          "4": 218,
+          "3": 197,
+          "6": 235,
+          "0": 247
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.04122127748302051
+      },
+      {
+        "seed": 20083,
+        "success": false,
+        "steps": 534,
+        "actions": {
+          "1": 72,
+          "2": 88,
+          "0": 71,
+          "5": 82,
+          "4": 67,
+          "6": 81,
+          "3": 73
+        },
+        "kills": 2.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.49025435536289486
+      },
+      {
+        "seed": 20084,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 208,
+          "6": 217,
+          "1": 254,
+          "0": 215,
+          "3": 233,
+          "2": 207,
+          "4": 241
+        },
+        "kills": 0.0,
+        "health": 104.0,
+        "dead": false,
+        "progress": 0.10383852395473214
+      },
+      {
+        "seed": 20085,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "5": 231,
+          "0": 222,
+          "3": 219,
+          "6": 228,
+          "4": 243,
+          "2": 219,
+          "1": 213
+        },
+        "kills": 0.0,
+        "health": 101.0,
+        "dead": false,
+        "progress": 0.09674724686953895
+      },
+      {
+        "seed": 20086,
+        "success": false,
+        "steps": 1274,
+        "actions": {
+          "2": 189,
+          "4": 194,
+          "1": 197,
+          "5": 180,
+          "6": 189,
+          "3": 165,
+          "0": 160
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.39573689196420825
+      },
+      {
+        "seed": 20087,
+        "success": false,
+        "steps": 1546,
+        "actions": {
+          "6": 221,
+          "4": 232,
+          "1": 224,
+          "5": 202,
+          "2": 247,
+          "3": 209,
+          "0": 211
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.27501269742649204
+      },
+      {
+        "seed": 20088,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 219,
+          "0": 262,
+          "4": 226,
+          "5": 222,
+          "1": 200,
+          "3": 215,
+          "6": 231
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.12593894664836158
+      },
+      {
+        "seed": 20089,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "2": 234,
+          "5": 231,
+          "4": 200,
+          "6": 229,
+          "0": 237,
+          "3": 217,
+          "1": 227
+        },
+        "kills": 0.0,
+        "health": 104.0,
+        "dead": false,
+        "progress": 0.09209670542292325
+      },
+      {
+        "seed": 20090,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 226,
+          "0": 199,
+          "2": 225,
+          "3": 230,
+          "5": 226,
+          "1": 238,
+          "6": 231
+        },
+        "kills": 0.0,
+        "health": 44.0,
+        "dead": false,
+        "progress": 0.18581902970590447
+      },
+      {
+        "seed": 20091,
+        "success": false,
+        "steps": 815,
+        "actions": {
+          "2": 98,
+          "3": 123,
+          "0": 128,
+          "6": 131,
+          "4": 106,
+          "5": 120,
+          "1": 109
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.36868734396175273
+      },
+      {
+        "seed": 20092,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 233,
+          "4": 213,
+          "1": 225,
+          "0": 219,
+          "3": 217,
+          "2": 223,
+          "5": 245
+        },
+        "kills": 0.0,
+        "health": 15.0,
+        "dead": false,
+        "progress": 0.21365763395358273
+      },
+      {
+        "seed": 20093,
+        "success": false,
+        "steps": 1387,
+        "actions": {
+          "1": 173,
+          "0": 209,
+          "6": 194,
+          "4": 206,
+          "2": 215,
+          "5": 216,
+          "3": 174
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3415064157753295
+      },
+      {
+        "seed": 20094,
+        "success": false,
+        "steps": 921,
+        "actions": {
+          "3": 163,
+          "1": 138,
+          "5": 109,
+          "0": 136,
+          "4": 113,
+          "2": 133,
+          "6": 129
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.28509881964747585
+      },
+      {
+        "seed": 20095,
+        "success": false,
+        "steps": 1071,
+        "actions": {
+          "4": 156,
+          "5": 163,
+          "0": 158,
+          "1": 148,
+          "3": 162,
+          "6": 138,
+          "2": 146
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.12542513745257045
+      },
+      {
+        "seed": 20096,
+        "success": false,
+        "steps": 1370,
+        "actions": {
+          "2": 190,
+          "5": 185,
+          "1": 203,
+          "4": 190,
+          "3": 191,
+          "6": 188,
+          "0": 223
+        },
+        "kills": 0.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.19718771732982865
+      },
+      {
+        "seed": 20097,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "6": 210,
+          "1": 235,
+          "4": 241,
+          "2": 260,
+          "3": 206,
+          "5": 199,
+          "0": 224
+        },
+        "kills": 0.0,
+        "health": 102.0,
+        "dead": false,
+        "progress": 0.12303586292784141
+      },
+      {
+        "seed": 20098,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "4": 222,
+          "6": 243,
+          "2": 226,
+          "5": 216,
+          "0": 238,
+          "1": 206,
+          "3": 224
+        },
+        "kills": 0.0,
+        "health": 7.0,
+        "dead": false,
+        "progress": 0.10313418668306995
+      },
+      {
+        "seed": 20099,
+        "success": false,
+        "steps": 556,
+        "actions": {
+          "3": 86,
+          "2": 83,
+          "0": 79,
+          "6": 80,
+          "4": 66,
+          "1": 85,
+          "5": 77
+        },
+        "kills": 1.0,
+        "health": 0.0,
+        "dead": true,
+        "progress": 0.3379951043034627
+      }
+    ]
+  },
+  "forward": {
+    "mode": "forward",
+    "successes": 0,
+    "episodes": 100,
+    "successes_without_easy_seed": 0,
+    "episodes_without_easy_seed": 99,
+    "mean_steps": 1575.0,
+    "mean_kills": 0.0,
+    "mean_health": 100.0,
+    "mean_dead": 0.0,
+    "mean_progress": 0.11134552782198412,
+    "rows": [
+      {
+        "seed": 20000,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20001,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20002,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20003,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20004,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20005,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20006,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20007,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20008,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20009,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20010,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20011,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20012,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20013,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20014,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20015,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20016,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20017,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20018,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20019,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20020,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20021,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20022,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20023,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20024,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20025,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20026,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20027,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20028,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20029,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20030,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20031,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20032,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20033,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20034,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20035,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20036,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20037,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20038,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20039,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20040,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20041,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20042,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20043,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20044,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20045,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20046,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20047,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20048,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20049,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20050,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20051,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20052,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20053,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20054,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20055,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20056,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20057,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20058,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20059,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20060,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20061,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20062,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20063,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20064,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20065,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20066,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20067,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20068,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20069,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20070,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20071,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20072,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20073,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20074,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20075,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20076,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20077,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20078,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20079,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20080,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20081,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20082,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20083,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20084,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20085,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20086,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20087,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20088,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20089,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20090,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20091,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20092,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20093,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20094,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20095,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20096,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20097,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20098,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      },
+      {
+        "seed": 20099,
+        "success": false,
+        "steps": 1575,
+        "actions": {
+          "0": 1575
+        },
+        "kills": 0.0,
+        "health": 100.0,
+        "dead": false,
+        "progress": 0.11134552782198415
+      }
+    ]
+  }
+}

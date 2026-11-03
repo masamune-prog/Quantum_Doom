@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/tc1home/UG/zgoh033/quantum_doom/record_gameplay.py", line 161, in <module>
+    main()
+  File "/tc1home/UG/zgoh033/quantum_doom/record_gameplay.py", line 153, in main
+    results[name] = {"checkpoint": path, "episodes": record(
+                                                     ^^^^^^^
+  File "/tc1home/UG/zgoh033/quantum_doom/record_gameplay.py", line 66, in record
+    model.load_state_dict(checkpoint["model"])
+  File "/tc1home/UG/zgoh033/quantum_doom/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2643, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for PixelNavPolicy:
+	size mismatch for aux.weight: copying a param with shape torch.Size([17, 256]) from checkpoint, the shape in current model is torch.Size([16, 256]).
+	size mismatch for aux.bias: copying a param with shape torch.Size([17]) from checkpoint, the shape in current model is torch.Size([16]).

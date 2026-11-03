@@ -1,0 +1,10 @@
+classical nav greedy {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.0, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+classical nav sampled {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.03, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+classical combat greedy {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.021, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+classical combat sampled {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.02, 'mean_progress': 0.032, 'mean_steps': 1561.53, 'mean_fighting': 0.0}
+classical gated greedy {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.0, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+classical gated sampled {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.03, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+quantum nav greedy {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.013, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+quantum nav sampled {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.0, 'mean_progress': 0.016, 'mean_steps': 1575.0, 'mean_fighting': 0.0}
+quantum combat greedy {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.01, 'mean_progress': 0.061, 'mean_steps': 1574.07, 'mean_fighting': 0.0}
+quantum combat sampled {'exits': 0, 'episodes': 100, 'mean_kills': 0.0, 'mean_dead': 0.13, 'mean_progress': 0.101, 'mean_steps': 1393.99, 'mean_fighting': 0.0}

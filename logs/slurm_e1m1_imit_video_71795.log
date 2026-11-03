@@ -1,0 +1,3 @@
+e1m1_imitation_classical_v2_seed0 {'seed': 20000, 'success': False, 'steps': 336, 'kills': 1.0, 'health': 0.0, 'dead': True, 'start_progress': 0.0, 'progress': 0.8349436039818097}
+e1m1_imitation_classical_v2_seed0 {'seed': 20001, 'success': False, 'steps': 317, 'kills': 1.0, 'health': 0.0, 'dead': True, 'start_progress': 0.0, 'progress': 0.8988420344678727}
+e1m1_imitation_classical_v2_seed0 {'seed': 20002, 'success': True, 'steps': 347, 'kills': 1.0, 'health': 5.0, 'dead': False, 'start_progress': 0.0, 'progress': 0.9957292564342374}

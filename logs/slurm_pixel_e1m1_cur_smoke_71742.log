@@ -1,0 +1,43 @@
+[warp] real start pos [ 1056. -3616.] angle 90 cost 319.3
+[warp] wp 21: off by    0.0 units, heading error   -22 deg, cost     0.7, health 100, obs (12, 60, 80) aux (20,)
+[warp]        route target: direction  -112 deg (waypoint heading error above), progress 1.00
+[warp] wp 16: off by    0.0 units, heading error    -8 deg, cost    66.3, health 100, obs (12, 60, 80) aux (20,)
+[warp]        route target: direction   -30 deg (waypoint heading error above), progress 0.79
+[warp] wp 12: off by    0.0 units, heading error   +25 deg, cost   120.5, health 100, obs (12, 60, 80) aux (20,)
+[warp]        route target: direction   +37 deg (waypoint heading error above), progress 0.62
+[warp] wp  6: off by    0.0 units, heading error    -4 deg, cost   215.9, health 100, obs (12, 60, 80) aux (20,)
+[warp]        route target: direction    -7 deg (waypoint heading error above), progress 0.32
+[warp] wp  0: off by    0.0 units, heading error   -11 deg, cost   302.6, health 100, obs (12, 60, 80) aux (20,)
+[warp]        route target: direction   -33 deg (waypoint heading error above), progress 0.05
+stage 0 sample: {-1: 1047, 21: 3953}
+advanced: True stage 1
+stage 1 sample: {-1: 1002, 19: 2504, 21: 1494}
+loaded 8 encoder tensors from pixel_corridor_runs/classical_seed0/best.pt
+task=e1m1 model=classical seed=0 device=cpu envs=4 steps=128 decisions=12288 aux_coef=0.5 parameters=497160 head_parameters=1096
+{"update": 2, "decisions": 1024, "episodes": 1, "successes": 0, "reward": -0.2261659875512123, "policy": -0.0026, "value": 0.1225, "entropy": 1.8715, "depth": 0.0974, "goal": 0.5494, "route": 0.3108, "stage": 0, "gain": 0.123, "seconds": 4.5}
+{"update": 4, "decisions": 2048, "episodes": 2, "successes": 0, "reward": -0.3156193345785141, "policy": -0.0024, "value": 0.4114, "entropy": 1.8832, "depth": 0.0662, "goal": 0.4472, "route": 0.3163, "stage": 0, "gain": 0.057, "seconds": 9.0}
+{"update": 6, "decisions": 3072, "episodes": 1, "successes": 0, "reward": -0.12967467308044434, "policy": -0.0022, "value": 0.0994, "entropy": 1.8133, "depth": 0.0761, "goal": 0.1064, "route": 0.364, "stage": 0, "gain": 0.1, "seconds": 13.4}
+eval update=6 decisions=3072 selection greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+{"update": 8, "decisions": 4096, "episodes": 0, "successes": 0, "reward": -0.13757222332060337, "policy": 0.001, "value": 0.0431, "entropy": 1.8664, "depth": 0.0847, "goal": 0.0618, "route": 0.416, "stage": 0, "seconds": 23.0}
+{"update": 10, "decisions": 5120, "episodes": 0, "successes": 0, "reward": -0.03645472228527069, "policy": -0.0042, "value": 0.0059, "entropy": 1.842, "depth": 0.0366, "goal": 0.1056, "route": 0.1986, "stage": 0, "seconds": 27.4}
+{"update": 12, "decisions": 6144, "episodes": 1, "successes": 0, "reward": -0.15958542004227638, "policy": -0.0021, "value": 0.1104, "entropy": 1.8359, "depth": 0.0237, "goal": 0.0237, "route": 0.3099, "stage": 0, "gain": 0.204, "seconds": 31.8}
+eval update=12 decisions=6144 selection greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+{"update": 14, "decisions": 7168, "episodes": 3, "successes": 0, "reward": -0.49089107662439346, "policy": -0.0002, "value": 0.4365, "entropy": 1.8953, "depth": 0.0493, "goal": 0.6667, "route": 0.2566, "stage": 0, "gain": 0.02, "seconds": 42.1}
+{"update": 16, "decisions": 8192, "episodes": 2, "successes": 0, "reward": -0.3420848399400711, "policy": -0.002, "value": 0.1593, "entropy": 1.8826, "depth": 0.0587, "goal": 0.3522, "route": 0.3521, "stage": 0, "gain": 0.129, "seconds": 46.7}
+{"update": 18, "decisions": 9216, "episodes": 1, "successes": 0, "reward": -0.15056682750582695, "policy": -0.0008, "value": 0.0862, "entropy": 1.8333, "depth": 0.0267, "goal": 0.2484, "route": 0.2818, "stage": 0, "gain": 0.0, "seconds": 51.0}
+eval update=18 decisions=9216 selection greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+{"update": 20, "decisions": 10240, "episodes": 1, "successes": 0, "reward": -0.19899342209100723, "policy": -0.0025, "value": 0.0652, "entropy": 1.8358, "depth": 0.0851, "goal": 0.1074, "route": 0.2997, "stage": 0, "gain": 0.083, "seconds": 60.6}
+{"update": 22, "decisions": 11264, "episodes": 1, "successes": 0, "reward": -0.21781567484140396, "policy": -0.0023, "value": 0.1157, "entropy": 1.7984, "depth": 0.0517, "goal": 0.0404, "route": 0.1841, "stage": 0, "gain": 0.13, "seconds": 64.9}
+{"update": 24, "decisions": 12288, "episodes": 0, "successes": 0, "reward": -0.05290980916470289, "policy": -0.003, "value": 0.0147, "entropy": 1.8033, "depth": 0.0339, "goal": 0.1024, "route": 0.2061, "stage": 0, "seconds": 69.1}
+eval update=24 decisions=12288 selection greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+FINAL model=classical seed=0 best_update=24 greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+FINAL model=classical seed=0 best_update=24 sampled 0/4 (excluding 20017: 0/4) mean_kills=0.50 mean_dead=0.75 mean_progress=0.21
+task=e1m1 model=classical seed=0 device=cpu envs=4 steps=128 decisions=16384 aux_coef=0.5 parameters=497160 head_parameters=1096
+resumed update=24 best_update=24 best_score=0.000
+{"update": 26, "decisions": 13312, "episodes": 1, "successes": 0, "reward": -0.20501794293522835, "policy": -0.0009, "value": 0.0509, "entropy": 1.8171, "depth": 0.0344, "goal": 0.1724, "route": 0.2787, "stage": 0, "gain": 0.096, "seconds": 4.4}
+{"update": 28, "decisions": 14336, "episodes": 2, "successes": 0, "reward": -0.2648116648197174, "policy": -0.0013, "value": 0.1821, "entropy": 1.8346, "depth": 0.0428, "goal": 0.4252, "route": 0.3203, "stage": 0, "gain": 0.213, "seconds": 8.8}
+{"update": 30, "decisions": 15360, "episodes": 2, "successes": 0, "reward": -0.35780850797891617, "policy": -0.0022, "value": 0.1582, "entropy": 1.7917, "depth": 0.0382, "goal": 0.2469, "route": 0.3455, "stage": 0, "gain": 0.295, "seconds": 13.2}
+{"update": 32, "decisions": 16384, "episodes": 1, "successes": 0, "reward": -0.15147197991609573, "policy": -0.0035, "value": 0.0864, "entropy": 1.739, "depth": 0.0324, "goal": 0.0309, "route": 0.2238, "stage": 0, "gain": 0.184, "seconds": 17.5}
+eval update=32 decisions=16384 selection greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+FINAL model=classical seed=0 best_update=32 greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.03
+FINAL model=classical seed=0 best_update=32 sampled 0/4 (excluding 20017: 0/4) mean_kills=0.50 mean_dead=0.50 mean_progress=0.28

@@ -1,0 +1,54 @@
+{
+  "imitation": {
+    "greedy": {
+      "mode": "greedy",
+      "successes": 238,
+      "episodes": 300,
+      "successes_without_easy_seed": 238,
+      "episodes_without_easy_seed": 300,
+      "mean_steps": 342.69666666666666,
+      "mean_kills": 1.57,
+      "mean_health": 30.866666666666667,
+      "mean_dead": 0.20666666666666667,
+      "mean_progress": 0.9644827815398683
+    },
+    "sampled": {
+      "mode": "sampled",
+      "successes": 236,
+      "episodes": 300,
+      "successes_without_easy_seed": 236,
+      "episodes_without_easy_seed": 300,
+      "mean_steps": 326.24,
+      "mean_kills": 1.2766666666666666,
+      "mean_health": 31.743333333333332,
+      "mean_dead": 0.21333333333333335,
+      "mean_progress": 0.9667716215083707
+    }
+  },
+  "finetuned": {
+    "greedy": {
+      "mode": "greedy",
+      "successes": 255,
+      "episodes": 300,
+      "successes_without_easy_seed": 255,
+      "episodes_without_easy_seed": 300,
+      "mean_steps": 324.12333333333333,
+      "mean_kills": 1.2833333333333334,
+      "mean_health": 34.85333333333333,
+      "mean_dead": 0.15,
+      "mean_progress": 0.9760897643008934
+    },
+    "sampled": {
+      "mode": "sampled",
+      "successes": 243,
+      "episodes": 300,
+      "successes_without_easy_seed": 243,
+      "episodes_without_easy_seed": 300,
+      "mean_steps": 319.64,
+      "mean_kills": 1.2866666666666666,
+      "mean_health": 32.763333333333335,
+      "mean_dead": 0.19,
+      "mean_progress": 0.9743306260715
+    }
+  }
+}
