@@ -53,9 +53,16 @@ class PixelNavPolicy(nn.Module):
             self.head = ClassicalNavPolicy(n_inputs=bottleneck, n_actions=n_actions)
         elif head == "linear":
             self.head = LinearNavHead(bottleneck, n_actions)
-        else:
+        elif head in ("quantum", "quantum_noent", "quantum_frozen"):
+            # quantum_noent: CNOT ring removed. quantum_frozen: rotation angles and input scales
+            # frozen at their random initial values (only the two output gains still train).
             self.head = QuantumE1M1Policy(n_qubits=bottleneck, n_layers=layers,
-                                          n_actions=n_actions)
+                                          n_actions=n_actions, entangle=head != "quantum_noent")
+            if head == "quantum_frozen":
+                self.head.theta.requires_grad_(False)
+                self.head.input_scale.requires_grad_(False)
+        else:
+            raise ValueError(f"unknown head {head!r}")
 
     def encode(self, obs):
         features = self.encoder(obs.float() / 255.0)

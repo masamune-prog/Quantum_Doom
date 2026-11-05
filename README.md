@@ -12,7 +12,7 @@ nothing runs on quantum hardware.
 including the HUD. A classical CNN compresses the last four frames to 12 numbers, and a small
 head turns those into action probabilities and a value estimate. The head is either a
 12-qubit circuit (74 parameters), a classical MLP (~1k parameters) or a single linear layer
-(52–91 parameters). Privileged game information such as position, depth, object labels and
+(52–104 parameters). Privileged game information such as position, depth, object labels and
 kills is used only for the training reward and auxiliary losses, never as policy input.
 
 ## Results at a glance
@@ -59,7 +59,7 @@ In this table, Kills, Died and HP left are for greedy play.
 - **Wall-clock cost:** simulating the circuit makes training about 9–10× slower per
   decision (165 vs 1,450 decisions/s).
 - **No evidence the circuit is needed:** a linear readout does as well as the circuit on
-  My Way Home (52 parameters), on the corridor (91 parameters) and on E1M1 by imitation (91
+  My Way Home (52 parameters), on the corridor (91 parameters) and on E1M1 by imitation (104
   parameters). The CNN does the
   perception, and any small head suffices.
 
@@ -74,7 +74,7 @@ they see only the screen at test time:
 | Head (same CNN encoder) | Head params | Exits, greedy | Exits, sampled | Wall time |
 |---|---:|---:|---:|---:|
 | Classical MLP | 1,096 | 72 | 77 | ~25 min |
-| Linear readout | 91 | 77 | 72 | ~25 min |
+| Linear readout | 104 | 77 | 72 | ~25 min |
 | **12-qubit circuit** | **74** | **73** | **70** | 1h 53m |
 | Scripted teacher (private state) | — | 84 | 84 | — |
 | Pure RL, best of three attempts | 1,096 | 0 | 0 | ~2h each |
@@ -113,11 +113,11 @@ The encoder is a Nature-DQN-style CNN. Its 256 features are squashed to 12 value
 
 ### Heads
 
-| Head | Structure | Parameters (3 / 6 actions) |
+| Head | Structure | Parameters (3 / 6 / 7 actions) |
 |---|---|---:|
-| `classical` (`ClassicalNavPolicy`) | Separate actor 12→32→A and critic 12→32→1, tanh hidden layers | 964 / 1,063 |
-| `linear` (`LinearNavHead`) | One affine map 12 → A + 1 | 52 / 91 |
-| `quantum` (`QuantumE1M1Policy`) | 12 qubits, 2 layers. Each layer applies RY(zᵢ·sᵢ), RZ(θ), RX(θ) to every qubit, then a ring of CNOTs. ⟨Z⟩ on qubits 0…A-1 gives the action logits and ⟨Z⟩ on qubit A gives the value, each times a learned gain. | 74 / 74 |
+| `classical` (`ClassicalNavPolicy`) | Separate actor 12→32→A and critic 12→32→1, tanh hidden layers | 964 / 1,063 / 1,096 |
+| `linear` (`LinearNavHead`) | One affine map 12 → A + 1 | 52 / 91 / 104 |
+| `quantum` (`QuantumE1M1Policy`) | 12 qubits, 2 layers. Each layer applies RY(zᵢ·sᵢ), RZ(θ), RX(θ) to every qubit, then a ring of CNOTs. ⟨Z⟩ on qubits 0…A-1 gives the action logits and ⟨Z⟩ on qubit A gives the value, each times a learned gain. | 74 / 74 / 74 |
 
 The circuit's 74 parameters are 48 rotation angles, 24 input scales, a logit gain and a value
 gain. It is simulated with PennyLane `default.qubit` with torch backprop on the GPU.
@@ -402,7 +402,7 @@ held-out seeds (20000-20099) at skill 3, with the teacher run on the same seeds.
 |---|---:|---:|---:|---:|
 | **Student v2, classical head, greedy** (job 71791) | **72** | 28% | 1.36 | 0.96 |
 | Student v2, classical head, sampled | 77 | 23% | 1.14 | 0.97 |
-| Student v2, linear head (91 params), greedy (job 71794) | 77 | 23% | 1.36 | 0.97 |
+| Student v2, linear head (104 params), greedy (job 71794) | 77 | 23% | 1.36 | 0.97 |
 | Student v2, linear head, sampled | 72 | 27% | 1.26 | 0.94 |
 | Student v2, 12-qubit circuit head (74 params), greedy (job 71796) | 73 | 27% | 1.55 | 0.95 |
 | Student v2, circuit head, sampled | 70 | 30% | 1.23 | 0.96 |
@@ -427,6 +427,24 @@ selection seeds, the first screen-only exits of E1M1 in this project. The studen
 the teacher's action about 91% of the time on its training data and 87% on states it visits
 itself. Selection scores fluctuate between iterations (8-29 of 32 for v2), so the
 checkpoint choice matters and one seed is not enough to rank iterations.
+
+**Is DAgger needed? Behaviour cloning alone also clears E1M1.** Two ablations train the classical
+head on teacher-driven demonstrations only (`--iterations 0`: the same teacher v2, loss, warm
+start and 100-seed evaluation, no student rollouts):
+
+| Classical head, 100 held-out seeds | Exits, greedy | Exits, sampled | Died, greedy | Kills, greedy |
+|---|---:|---:|---:|---:|
+| Behaviour cloning, 200K teacher states (job 71927) | 48 | 63 | 52% | 1.48 |
+| Behaviour cloning, 680K teacher states (job 71928) | 58 | 78 | 42% | 1.30 |
+| DAgger, 680K states in total (job 71791) | 72 | 77 | 28% | 1.36 |
+| Scripted teacher | 84 | 84 | 16% | 1.11 |
+
+So a screen-only classical network clears E1M1 on 48-58% of unseen seeds in greedy play, and
+63-78% in sampled play, from teacher demonstrations alone. More demonstrations help (200K to
+680K: +10 greedy, +15 sampled). At the same 680K-state budget DAgger improves greedy play
+(72 against 58, a gap of about 2 standard errors) but not sampled play (77 against 78), so its
+benefit here is modest and, with one seed each, not firmly established. Pure RL without any
+teacher still scores 0.
 
 **Why v1's greedy student was so much worse than its sampled one (37 vs 83).** v1's teacher
 pressed USE once from up to 72 units away and then walked forward while the door opened,
@@ -496,6 +514,79 @@ Findings:
 Likely reasons, not yet tested: a near-deterministic policy rarely tries a different action
 at the states where it fails, the frozen 12-value bottleneck limits what the head can change,
 and killing is not needed to finish the level, so the reward gives little reason to fight.
+
+### Is the E1M1 student memorising the level? Perturbation tests
+
+E1M1 is one fixed level, and held-out seeds change only monster behaviour, so held-out success
+cannot show whether the student follows what it sees or recalls a memorised route.
+`evaluate_e1m1_robustness.py` (job 72275) perturbs the student's input or start state with no
+retraining. 100 episodes per cell (seeds 40000-40099), cut at 800 decisions, skill 3, greedy
+play (the sampled numbers are similar in the log):
+
+| Exits out of 100 (greedy) | Classical | Linear | Circuit | Scripted teacher |
+|---|---:|---:|---:|---:|
+| Unmodified screens, real start | 76 | 82 | 73 | 82 |
+| **HUD masked** (bottom 10 of 60 rows set to 0) | **0** | **0** | **0** | |
+| Four stacked frames replaced by the newest | 66 | 0 | 47 | |
+| Brightness x0.6 | 68 | 79 | **0** | |
+| Brightness x1.4 | 75 | 72 | 58 | |
+| Gaussian noise (std 25 of 255) | 77 | 73 | 65 | |
+| **Random off-route start** (random reachable position and heading) | **25** | **30** | **30** | **92** |
+
+- **Off-route starts:** all three students fall from about 75-82 to 25-30 exits when started at
+  a random reachable position with a random heading, while the teacher gets 92 from the same
+  starts. Only 21-29% of those episodes end in death; the rest wander until the cut-off. The
+  students were trained only on the real start, 19 waypoint starts with a heading within
+  45 degrees of the route, and their own trajectories, so they are lost anywhere else. The
+  teacher follows the distance field and does not care where it starts.
+- **HUD:** blanking the status bar takes every student from about 75 to exactly 0 exits, and
+  they stop making progress instead of dying. Brightness and noise barely move the classical
+  student (68-77), so this is not general fragility to a changed picture. The HUD (health, ammo,
+  face) probably acts as a progress clock that correlates with where the player is on the route.
+  The test cannot separate "uses the HUD digits" from "breaks on a black bar", and a human also
+  sees the HUD, but it is a shortcut that will not carry to another level.
+- **Motion cues and appearance:** the classical student barely needs the frame history (66 with
+  one repeated frame). The circuit student is much more sensitive to appearance: at brightness
+  x0.6 it makes 0 exits (8 when sampling), against 68 for the classical one. These are single
+  seeds.
+- **Reading:** the E1M1 students recognise places along one route, helped by the HUD, and
+  fail away from it. That fits the failure to transfer to other tasks. It does not show
+  that they use no visual information: the classical student tolerates noise and brightness.
+  Candidate fixes inside E1M1 are DAgger with random off-route starts (the teacher can label
+  any state, and scores 92 there) and HUD dropout during training.
+
+### Does the circuit matter? Two ablations on E1M1
+
+Two ablations use the circuit student's setup (teacher v2, the DAgger schedule, seed 0, 3 epochs in
+round 0 and 2 per round after, head lr 3e-3) and the same 100 held-out seeds. `quantum_noent`
+(job 72389) removes the CNOT ring, so each action's logit depends on one bottleneck value only
+(checked in `test_circuit_ablations.py`: changing one input moves one logit). `quantum_frozen`
+(job 72405) freezes the rotation angles and input scales at their random initial values, so
+only the encoder, bottleneck and the two output gains train (2 trainable head parameters).
+
+| E1M1, 100 held-out seeds | Trainable head params | Exits, greedy | Exits, sampled | Died, greedy | Kills, greedy | Final train. accuracy | Wall time |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Full 12-qubit circuit (job 71796) | 74 | 73 | 70 | 27% | 1.55 | 87% | 1 h 53 min |
+| **No CNOTs** (72389) | 74 | 68 | 67 | 32% | 1.36 | 87% | ~1 h 50 min |
+| **Frozen random circuit** (72405) | 2 | 52 | 66 | 48% | 1.88 | 83% | ~2 h |
+| Classical MLP head | 1,096 | 72 | 77 | 28% | 1.36 | 91% | ~25 min |
+| Linear head | 104 | 77 | 72 | 23% | 1.36 | 92% | ~25 min |
+| Scripted teacher | -- | 84 | 84 | 16% | 1.11 | -- | -- |
+
+- **Entanglement is not needed.** Without the CNOT ring the circuit scores 68 and 67 exits against 73
+  and 70, with the same training accuracy (87%). A gap of 3-5 exits is inside the noise for 100 seeds
+  (about 4-5 standard errors per cell). The encoder adapts to its head, so it can put the evidence for
+  each action into that action's own qubit.
+- **A random circuit nearly suffices.** With every angle frozen at random values, the student still
+  clears E1M1 on 52 greedy and 66 sampled seeds. Training the angles adds about 16-21 greedy
+  exits (52 to 68-73, roughly 3-4 standard errors) but nothing clear in sampled play (66 against
+  67-70), and the fit improves from 83% to 87% accuracy (cross-entropy 0.43 against 0.30). So the
+  trained angles help somewhat; most of the policy comes from the CNN encoder.
+- **Caveats.** One seed each, and selection scores swing a lot between rounds (no-CNOT: 9-24 of 32;
+  frozen: 0-17). The three circuit runs used 2-3 epochs per round against the classical heads'
+  3-6, so the comparison is slightly unfair to the circuits. These tests show that neither entanglement nor
+  trained angles is essential here; they do not rule out a benefit in a setting where the head has
+  harder work to do.
 
 ### Zero-shot transfer of the E1M1 models
 

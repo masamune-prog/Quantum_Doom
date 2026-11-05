@@ -148,11 +148,14 @@ class PixelE1M1Env(PixelCorridorEnv):
     def _warp_to(self, index, rng):
         """Teleport to waypoint ``index`` facing roughly along the route (±45 degrees)."""
         x, y = self.waypoints[index]
+        ahead = self.waypoints[index + 1] if index + 1 < len(self.waypoints) else self.exit_mid
+        self._warp_xy(x, y, np.arctan2(ahead[1] - y, ahead[0] - x)
+                      + rng.uniform(-np.pi / 4, np.pi / 4))
+
+    def _warp_xy(self, x, y, desired):
+        """Teleport to (x, y) and turn to the absolute heading ``desired`` (radians)."""
         self.game.send_game_command(f"warp {x} {y}")
         self.game.advance_action(1)
-        ahead = self.waypoints[index + 1] if index + 1 < len(self.waypoints) else self.exit_mid
-        desired = (np.arctan2(ahead[1] - y, ahead[0] - x)
-                   + rng.uniform(-np.pi / 4, np.pi / 4))
         for _ in range(120):
             error = _wrap_angle(desired - self._pose()[1])
             if abs(error) < np.deg2rad(4) or self.game.is_episode_finished():
@@ -165,7 +168,10 @@ class PixelE1M1Env(PixelCorridorEnv):
             self.game.set_seed(int(seed))
         self.game.new_episode()
         start_wp = (options or {}).get("start_wp")
-        if start_wp is not None and start_wp >= 0:
+        start_xy = (options or {}).get("start_xy")  # robustness tests: any position + heading
+        if start_xy is not None:
+            self._warp_xy(start_xy[0], start_xy[1], (options or {})["start_heading"])
+        elif start_wp is not None and start_wp >= 0:
             self._warp_to(int(start_wp), np.random.default_rng(seed))
         state = self.game.get_state()
         position, _ = self._pose()

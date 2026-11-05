@@ -1,0 +1,45 @@
+10590 candidate off-route start cells
+teacher none: {'exits': 82, 'episodes': 100, 'died': 18}
+teacher offroute: {'exits': 92, 'episodes': 100, 'died': 7}
+classical none greedy {'exits': 76, 'episodes': 100, 'died': 24}
+classical none sampled {'exits': 81, 'episodes': 100, 'died': 19}
+classical hud_masked greedy {'exits': 0, 'episodes': 100, 'died': 0}
+classical hud_masked sampled {'exits': 0, 'episodes': 100, 'died': 2}
+classical static_frame greedy {'exits': 66, 'episodes': 100, 'died': 34}
+classical static_frame sampled {'exits': 72, 'episodes': 100, 'died': 25}
+classical bright_0.6 greedy {'exits': 68, 'episodes': 100, 'died': 32}
+classical bright_0.6 sampled {'exits': 72, 'episodes': 100, 'died': 25}
+classical bright_1.4 greedy {'exits': 75, 'episodes': 100, 'died': 25}
+classical bright_1.4 sampled {'exits': 79, 'episodes': 100, 'died': 21}
+classical noise greedy {'exits': 77, 'episodes': 100, 'died': 21}
+classical noise sampled {'exits': 73, 'episodes': 100, 'died': 25}
+classical offroute greedy {'exits': 25, 'episodes': 100, 'died': 24}
+classical offroute sampled {'exits': 34, 'episodes': 100, 'died': 29}
+linear none greedy {'exits': 82, 'episodes': 100, 'died': 18}
+linear none sampled {'exits': 75, 'episodes': 100, 'died': 22}
+linear hud_masked greedy {'exits': 0, 'episodes': 100, 'died': 0}
+linear hud_masked sampled {'exits': 0, 'episodes': 100, 'died': 4}
+linear static_frame greedy {'exits': 0, 'episodes': 100, 'died': 0}
+linear static_frame sampled {'exits': 71, 'episodes': 100, 'died': 25}
+linear bright_0.6 greedy {'exits': 79, 'episodes': 100, 'died': 21}
+linear bright_0.6 sampled {'exits': 60, 'episodes': 100, 'died': 34}
+linear bright_1.4 greedy {'exits': 72, 'episodes': 100, 'died': 28}
+linear bright_1.4 sampled {'exits': 70, 'episodes': 100, 'died': 29}
+linear noise greedy {'exits': 73, 'episodes': 100, 'died': 27}
+linear noise sampled {'exits': 69, 'episodes': 100, 'died': 30}
+linear offroute greedy {'exits': 30, 'episodes': 100, 'died': 29}
+linear offroute sampled {'exits': 32, 'episodes': 100, 'died': 28}
+circuit none greedy {'exits': 73, 'episodes': 100, 'died': 26}
+circuit none sampled {'exits': 78, 'episodes': 100, 'died': 22}
+circuit hud_masked greedy {'exits': 0, 'episodes': 100, 'died': 0}
+circuit hud_masked sampled {'exits': 0, 'episodes': 100, 'died': 13}
+circuit static_frame greedy {'exits': 47, 'episodes': 100, 'died': 52}
+circuit static_frame sampled {'exits': 55, 'episodes': 100, 'died': 43}
+circuit bright_0.6 greedy {'exits': 0, 'episodes': 100, 'died': 0}
+circuit bright_0.6 sampled {'exits': 8, 'episodes': 100, 'died': 82}
+circuit bright_1.4 greedy {'exits': 58, 'episodes': 100, 'died': 42}
+circuit bright_1.4 sampled {'exits': 68, 'episodes': 100, 'died': 32}
+circuit noise greedy {'exits': 65, 'episodes': 100, 'died': 34}
+circuit noise sampled {'exits': 77, 'episodes': 100, 'died': 23}
+circuit offroute greedy {'exits': 30, 'episodes': 100, 'died': 21}
+circuit offroute sampled {'exits': 37, 'episodes': 100, 'died': 20}

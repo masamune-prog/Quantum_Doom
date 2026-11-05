@@ -245,7 +245,8 @@ def main(args):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--model", choices=("classical", "linear", "quantum"), default="classical")
+    p.add_argument("--model", default="classical",
+                   choices=("classical", "linear", "quantum", "quantum_noent", "quantum_frozen"))
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--skill", type=int, default=3)
     p.add_argument("--num-envs", type=int, default=8)

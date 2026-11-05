@@ -12,8 +12,10 @@ from torch.distributions import Categorical
 
 
 class QuantumE1M1Policy(nn.Module):
-    def __init__(self, n_qubits=12, n_layers=2, n_actions=7, memory_bridges=False):
+    def __init__(self, n_qubits=12, n_layers=2, n_actions=7, memory_bridges=False,
+                 entangle=True):
         super().__init__()
+        self.entangle = entangle  # False removes the CNOT ring (ablation): outputs depend on one input each
         self.n_qubits = n_qubits
         self.n_layers = n_layers
         self.n_actions = n_actions
@@ -37,9 +39,10 @@ class QuantumE1M1Policy(nn.Module):
                     qml.RY(x[..., wire] * input_scale[layer, wire], wires=wire)
                     qml.RZ(theta[layer, wire, 0], wires=wire)
                     qml.RX(theta[layer, wire, 1], wires=wire)
-                for wire in range(n_qubits - 1):
-                    qml.CNOT(wires=[wire, wire + 1])
-                qml.CNOT(wires=[n_qubits - 1, 0])
+                if entangle:
+                    for wire in range(n_qubits - 1):
+                        qml.CNOT(wires=[wire, wire + 1])
+                    qml.CNOT(wires=[n_qubits - 1, 0])
                 if memory_bridges:
                     for memory_wire in range(8, 12):
                         for output_wire in range(n_actions + 1):

@@ -1,38 +1,38 @@
-# Graph Report - quantum_doom  (2026-11-02)
+# Graph Report - quantum_doom  (2026-11-05)
 
 ## Corpus Check
-- 168 files · ~219,607 words
+- 179 files · ~235,537 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 325 file(s) not represented in the graph (top: .pt 136, .log 93, .err 85)
+- Unclassified: 344 file(s) not represented in the graph (top: .pt 140, .log 99, .err 91)
 
 ## Summary
-- 796 nodes · 1571 edges · 65 communities (59 shown, 6 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 169 edges (avg confidence: 0.74)
+- 831 nodes · 1647 edges · 62 communities (58 shown, 4 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 178 edges (avg confidence: 0.74)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `243fdc4f`
+- Built from commit: `f6f060ae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- evaluate_cross_task.py
+- train_pixel_nav.py
 - run_human_nav_eval.sh
 - numpy
-- run_dodge_baseline.sh
+- train_subtask_baseline.py
 - HumanNavigationEnv
 - E1M1 Map Geometry
 - Navigation Env (My Way Home)
 - run_pixel_corridor_linear.sh
-- pixel_e1m1_env.py
-- train_e1m1_imitation.py
+- diagnose_pixel_e1m1.py
+- run_e1m1_train.sh
 - Data Re-uploading PQC
 - E1M1 Map Figure
 - run_pixel_corridor_quantum.sh
 - Route Check Skill 3
 - E1M1 Reference Route
 - My Way Home Curve
-- train_pixel_nav.py
+- Learned screen encoder (CNN to 12-value bottleneck)
 - Entanglement Ablation Curve
 - Route Check Skill 1
 - run_reward_smoke.sh
@@ -43,39 +43,36 @@
 - Radar Encoding Sanity Check
 - venv_bin_activate
 - run_pixel_e1m1_classical.sh
-- Screen-only navigation memory experiment
+- run_corridor_aim_probe.sh
 - run_e1m1_finetune.sh
 - PixelNavigationEnv
 - Pixel Classical Job
 - Pixel Corridor Classical Job
-- PixelNavPolicy
+- run_e1m1_robustness.sh
 - Pixel Linear Job
 - Pixel Quantum Job
 - Pixel Smoke Job
-- QuantumE1M1Env
+- e1m1_env.py
 - ClassicalNavPolicy
 - run_e1m1_compare.sh
 - run_e1m1_finetune_smoke.sh
 - E1M1 Pretrain Job
-- UniformStarts
+- run_e1m1_route_check.sh
 - train_human_nav.py
 - run_e1m1_imitation.sh
 - run_pixel_corridor_smoke.sh
-- QuantumE1M1Policy
+- run_e1m1_starts.sh
 - run_e1m1_reward_smoke.sh
 - run_place_smoke.sh
-- train
+- run_e1m1_unstick_check.sh
 - run_e1m1_imitation_smoke.sh
-- run_dodge_baseline_smoke.sh
-- run_subtask_baseline_smoke.sh
-- run_subtask_baselines.sh
+- run_specialists_on_e1m1.sh
+- CLAUDE.md
+- .claude/CLAUDE.md
 - run_human_nav.sh
 - run_human_nav_progress.sh
 - run_human_nav_smoke.sh
 - run_place_comparison.sh
-- run_subtask_baselines_extended.sh
-- run_subtask_baselines_extended_smoke.sh
-- Restricted
 - run_corridor.sh
 - run_e1m1_benchmark.sh
 - run_e1m1_cross_task.sh
@@ -83,28 +80,28 @@
 - run_navigation.sh
 
 ## God Nodes (most connected - your core abstractions)
-1. `HumanNavigationEnv` - 27 edges
-2. `DoomMap` - 25 edges
-3. `PixelNavPolicy` - 22 edges
+1. `DoomMap` - 28 edges
+2. `HumanNavigationEnv` - 27 edges
+3. `PixelNavPolicy` - 27 edges
 4. `QuantumE1M1Env` - 21 edges
-5. `QuantumDoomEnv` - 19 edges
-6. `PixelE1M1Env` - 19 edges
-7. `RoutePlanner` - 17 edges
-8. `QuantumE1M1Policy` - 17 edges
-9. `DoomActorCritic` - 17 edges
-10. `PixelNavigationEnv` - 17 edges
+5. `PixelE1M1Env` - 20 edges
+6. `QuantumDoomEnv` - 19 edges
+7. `EnvPool` - 18 edges
+8. `RoutePlanner` - 17 edges
+9. `QuantumE1M1Policy` - 17 edges
+10. `DoomActorCritic` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `12-qubit circuit head result (96/100)` --references--> `QuantumE1M1Policy`  [INFERRED]
   README.md → e1m1_quantum_model.py
 - `Memory bridges (controlled rotations)` --references--> `QuantumE1M1Policy`  [INFERRED]
   README.md → e1m1_quantum_model.py
-- `Success-detection bug` --references--> `HumanNavigationEnv`  [EXTRACTED]
+- `Private progress and kill rewards` --references--> `HumanNavigationEnv`  [EXTRACTED]
   README.md → human_nav_env.py
 - `Quantum Doom` --references--> `DoomActorCritic`  [EXTRACTED]
   README.md → models.py
-- `PixelE1M1Env` --uses--> `DistanceField`  [INFERRED]
-  pixel_e1m1_env.py → e1m1_distance.py
+- `Success-detection bug` --references--> `PixelNavigationEnv`  [EXTRACTED]
+  README.md → pixel_nav_env.py
 
 ## Import Cycles
 - None detected.
@@ -123,31 +120,31 @@
 - **8-qubit PQC trained with PPO on Deadly Corridor** — corridor_training_curve_quantum_entangled_pqc, corridor_training_curve_ppo, corridor_training_curve_deadly_corridor [INFERRED 0.95]
 - **Frame-to-Qubit Preprocessing Pipeline** — sanity_check_raw_rgb_frame, sanity_check_label_buffer, sanity_check_qubit_input_angles [INFERRED 0.95]
 
-## Communities (65 total, 6 thin omitted)
+## Communities (62 total, 4 thin omitted)
 
-### Community 0 - "evaluate_cross_task.py"
-Cohesion: 0.20
-Nodes (6): load(), main(), main(), EnvPool, evaluate(), summary()
+### Community 0 - "train_pixel_nav.py"
+Cohesion: 0.05
+Nodes (25): load(), main(), Restricted, main(), main(), perturb(), run(), load() (+17 more)
 
 ### Community 1 - "run_human_nav_eval.sh"
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_human_nav_eval.sh script
 
 ### Community 2 - "numpy"
-Cohesion: 0.06
-Nodes (22): QuantumDoomEnv, main(), DoomActorCritic, Classical subtask baselines, Deadly Corridor scenario, My Way Home scenario, Take Cover dodging task, record_episodes() (+14 more)
+Cohesion: 0.05
+Nodes (21): QuantumDoomEnv, DoomActorCritic, Classical subtask baselines, Deadly Corridor scenario, My Way Home scenario, Take Cover dodging task, record_episodes(), render_radar_overlay() (+13 more)
 
-### Community 3 - "run_dodge_baseline.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_dodge_baseline.sh script
+### Community 3 - "train_subtask_baseline.py"
+Cohesion: 0.06
+Nodes (27): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_dodge_baseline.sh script, MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_dodge_baseline_smoke.sh script (+19 more)
 
 ### Community 4 - "HumanNavigationEnv"
-Cohesion: 0.06
-Nodes (11): run(), HumanE1M1Env, HumanNavigationEnv, VisualPlaceMemory, VisualTravelMap, Potential-based reward shaping, Private progress and kill rewards, goal_potential() (+3 more)
+Cohesion: 0.12
+Nodes (6): run(), HumanE1M1Env, HumanNavigationEnv, VisualPlaceMemory, VisualTravelMap, Success-detection bug
 
 ### Community 5 - "E1M1 Map Geometry"
 Cohesion: 0.08
-Nodes (12): build_field(), main(), DoomMap, skill_flag(), main(), point_segment_distances(), RoutePlanner, MKL_NUM_THREADS (+4 more)
+Nodes (9): build_field(), DistanceField, main(), DoomMap, skill_flag(), main(), point_segment_distances(), RoutePlanner (+1 more)
 
 ### Community 6 - "Navigation Env (My Way Home)"
 Cohesion: 0.12
@@ -157,13 +154,13 @@ Nodes (7): QuantumNavigationEnv, _convert_h264_if_available(), record_nav_episod
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_pixel_corridor_linear.sh script
 
-### Community 8 - "pixel_e1m1_env.py"
-Cohesion: 0.06
-Nodes (19): baseline(), check_field(), check_warps(), follow(), main(), DistanceField, _wrap_angle(), RouteTeacher (+11 more)
+### Community 8 - "diagnose_pixel_e1m1.py"
+Cohesion: 0.13
+Nodes (14): baseline(), check_field(), check_warps(), follow(), main(), MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED (+6 more)
 
-### Community 9 - "train_e1m1_imitation.py"
-Cohesion: 0.17
-Nodes (4): collect(), Dataset, main(), teacher_eval()
+### Community 9 - "run_e1m1_train.sh"
+Cohesion: 0.40
+Nodes (4): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED
 
 ### Community 10 - "Data Re-uploading PQC"
 Cohesion: 0.08
@@ -189,9 +186,9 @@ Nodes (9): Doors on Route (orange), E1M1 Map (skill 3), Exit Switch (green), E1M
 Cohesion: 0.22
 Nodes (8): 7-Action Space (Corridor + USE), My Way Home 10-Qubit Quantum Agent Training Curve, Goal Success Rate (%), Mean Step Reward, My Way Home Scenario, PPO Update, Quantum PQC Agent (10 qubits, 4 layers, 7 actions), Smoothed Reward (window=5)
 
-### Community 16 - "train_pixel_nav.py"
-Cohesion: 0.16
-Nodes (6): Auxiliary depth and goal-visibility losses, 12-qubit circuit head result (96/100), Freinberger et al. 2024 (hybrid Atari), Lample & Chaplot 2017, Learned screen encoder (CNN to 12-value bottleneck), Mirowski et al. 2016 (auxiliary-task navigation)
+### Community 16 - "Learned screen encoder (CNN to 12-value bottleneck)"
+Cohesion: 0.14
+Nodes (13): Action-based travel map, Auxiliary depth and goal-visibility losses, 12-qubit circuit head result (96/100), Freinberger et al. 2024 (hybrid Atari), Lample & Chaplot 2017, Learned screen encoder (CNN to 12-value bottleneck), Matched classical vs bridged-quantum comparison, Memory bridges (controlled rotations) (+5 more)
 
 ### Community 17 - "Entanglement Ablation Curve"
 Cohesion: 0.31
@@ -222,24 +219,24 @@ Cohesion: 0.38
 Nodes (5): Sanity Check Figure (Frame -> Label Buffer -> 8-Qubit Angles), FOV Sector to Qubit Mapping (Sectors 0-7), Native ViZDoom Label Buffer (Zero CNN), 8-Qubit Input Angles (FOV Sector Encoding), Raw ViZDoom RGB Frame
 
 ### Community 25 - "venv_bin_activate"
-Cohesion: 0.14
-Nodes (9): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_corridor_aim_probe.sh script, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_sanity.sh script, OMP_NUM_THREADS, run_human_nav_diagnostic.sh script (+1 more)
+Cohesion: 0.13
+Nodes (9): run_circuit_ablation_test.sh script, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_sanity.sh script, PYTHONUNBUFFERED, run_e1m1_teacher_test.sh script, OMP_NUM_THREADS, run_human_nav_diagnostic.sh script (+1 more)
 
 ### Community 26 - "run_pixel_e1m1_classical.sh"
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_pixel_e1m1_classical.sh script
 
-### Community 27 - "Screen-only navigation memory experiment"
-Cohesion: 0.40
-Nodes (5): Action-based travel map, Matched classical vs bridged-quantum comparison, Memory bridges (controlled rotations), RGB place memory (VisualPlaceMemory), Screen-only navigation memory experiment
+### Community 27 - "run_corridor_aim_probe.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_corridor_aim_probe.sh script
 
 ### Community 28 - "run_e1m1_finetune.sh"
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_finetune.sh script
 
 ### Community 29 - "PixelNavigationEnv"
-Cohesion: 0.10
-Nodes (9): PixelCorridorEnv, PixelE1M1Env, make_pixel_env(), PixelNavigationEnv, _worker(), collect(), enemy_bin(), Success-detection bug (+1 more)
+Cohesion: 0.11
+Nodes (6): PixelCorridorEnv, PixelE1M1Env, PixelNavigationEnv, collect(), enemy_bin(), run_pixel_aux_check.sh script
 
 ### Community 30 - "Pixel Classical Job"
 Cohesion: 0.33
@@ -248,6 +245,10 @@ Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run
 ### Community 31 - "Pixel Corridor Classical Job"
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_pixel_corridor_classical.sh script
+
+### Community 32 - "run_e1m1_robustness.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_robustness.sh script
 
 ### Community 33 - "Pixel Linear Job"
 Cohesion: 0.33
@@ -261,9 +262,9 @@ Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_pixel_smoke.sh script
 
-### Community 36 - "QuantumE1M1Env"
-Cohesion: 0.07
-Nodes (27): main(), _point_segment_distance(), QuantumE1M1Env, collect(), main(), OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_route_check.sh script (+19 more)
+### Community 36 - "e1m1_env.py"
+Cohesion: 0.06
+Nodes (23): main(), _point_segment_distance(), QuantumE1M1Env, _wrap_angle(), QuantumE1M1Policy, circuit(), RouteTeacher, main() (+15 more)
 
 ### Community 38 - "run_e1m1_compare.sh"
 Cohesion: 0.50
@@ -277,6 +278,10 @@ Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_finetune_smoke.sh script
 Cohesion: 0.40
 Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_pretrain.sh script
 
+### Community 41 - "run_e1m1_route_check.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_route_check.sh script
+
 ### Community 42 - "train_human_nav.py"
 Cohesion: 0.53
 Nodes (3): evaluate(), make_env(), train()
@@ -286,8 +291,12 @@ Cohesion: 0.40
 Nodes (4): MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_imitation.sh script
 
 ### Community 44 - "run_pixel_corridor_smoke.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED
+Cohesion: 0.33
+Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_pixel_corridor_smoke.sh script
+
+### Community 45 - "run_e1m1_starts.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_starts.sh script
 
 ### Community 46 - "run_e1m1_reward_smoke.sh"
 Cohesion: 0.33
@@ -297,25 +306,17 @@ Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run
 Cohesion: 0.25
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_place_smoke.sh script
 
-### Community 48 - "train"
-Cohesion: 0.60
-Nodes (4): train(), reset_all(), reset_env(), train_seed()
+### Community 48 - "run_e1m1_unstick_check.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_unstick_check.sh script
 
 ### Community 49 - "run_e1m1_imitation_smoke.sh"
 Cohesion: 0.50
 Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_imitation_smoke.sh script
 
-### Community 50 - "run_dodge_baseline_smoke.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_dodge_baseline_smoke.sh script
-
-### Community 51 - "run_subtask_baseline_smoke.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_subtask_baseline_smoke.sh script
-
-### Community 52 - "run_subtask_baselines.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_subtask_baselines.sh script
+### Community 50 - "run_specialists_on_e1m1.sh"
+Cohesion: 0.50
+Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_specialists_on_e1m1.sh script
 
 ### Community 53 - "run_human_nav.sh"
 Cohesion: 0.33
@@ -333,14 +334,6 @@ Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run
 Cohesion: 0.33
 Nodes (5): MKL_NUM_THREADS, MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_place_comparison.sh script
 
-### Community 57 - "run_subtask_baselines_extended.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_subtask_baselines_extended.sh script
-
-### Community 58 - "run_subtask_baselines_extended_smoke.sh"
-Cohesion: 0.40
-Nodes (4): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED, run_subtask_baselines_extended_smoke.sh script
-
 ### Community 60 - "run_corridor.sh"
 Cohesion: 0.50
 Nodes (3): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED
@@ -354,8 +347,8 @@ Cohesion: 0.50
 Nodes (3): OMP_NUM_THREADS, PYTHONUNBUFFERED, run_e1m1_cross_task.sh script
 
 ### Community 63 - "record_gameplay.py"
-Cohesion: 0.09
-Nodes (16): caption(), default_targets(), describe(), main(), record(), MPLCONFIGDIR, OMP_NUM_THREADS, PYTHONUNBUFFERED (+8 more)
+Cohesion: 0.08
+Nodes (18): make_pixel_env(), _worker(), caption(), default_targets(), describe(), main(), record(), MPLCONFIGDIR (+10 more)
 
 ### Community 64 - "run_navigation.sh"
 Cohesion: 0.50
@@ -370,23 +363,23 @@ Nodes (3): MKL_NUM_THREADS, OMP_NUM_THREADS, PYTHONUNBUFFERED
   e1m1_sanity.png · relation: rationale_for
 
 ## Knowledge Gaps
-- **178 isolated node(s):** `PYTHONUNBUFFERED`, `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `PYTHONUNBUFFERED`, `OMP_NUM_THREADS` (+173 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 330 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **182 isolated node(s):** `PYTHONUNBUFFERED`, `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `PYTHONUNBUFFERED`, `OMP_NUM_THREADS` (+177 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 347 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `HumanNavigationEnv` connect `HumanNavigationEnv` to `numpy`, `train_human_nav.py`, `PixelNavigationEnv`, `run_place_smoke.sh`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `HumanNavigationEnv` (e.g. with `PixelCorridorEnv` and `PixelNavigationEnv`) actually correct?**
-  _`HumanNavigationEnv` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `DoomMap` connect `E1M1 Map Geometry` to `train_pixel_nav.py`, `numpy`, `e1m1_env.py`, `HumanNavigationEnv`, `PixelNavigationEnv`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+- **Are the 5 inferred relationships involving `DoomMap` (e.g. with `QuantumE1M1Env` and `RoutePlanner`) actually correct?**
+  _`DoomMap` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `PYTHONUNBUFFERED`, `OMP_NUM_THREADS`, `MKL_NUM_THREADS` to the rest of the system?**
-  _178 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `numpy` be split into smaller, more focused modules?**
-  _Cohesion score 0.059370725034199726 - nodes in this community are weakly interconnected._
-- **Why does `DoomMap` connect `E1M1 Map Geometry` to `pixel_e1m1_env.py`, `PixelNavigationEnv`, `QuantumE1M1Env`, `HumanNavigationEnv`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+  _182 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `train_pixel_nav.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.050980392156862744 - nodes in this community are weakly interconnected._
+- **Why does `PixelE1M1Env` connect `PixelNavigationEnv` to `numpy`, `e1m1_env.py`, `E1M1 Map Geometry`, `diagnose_pixel_e1m1.py`, `record_gameplay.py`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 
 ### Low-confidence Hints
 _AMBIGUOUS edges — the extractor was unsure. Verify before acting on these._

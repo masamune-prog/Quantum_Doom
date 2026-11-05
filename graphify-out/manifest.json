@@ -96,10 +96,10 @@
     "semantic_hash": "c396a77a0408379065e6e321701af451"
   },
   "e1m1_quantum_model.py": {
-    "mtime": 1793428859.5107067,
-    "seen": 1793496946.0721147,
-    "ast_hash": "defa7f9a11afc013070a0bf21e942380",
-    "semantic_hash": "defa7f9a11afc013070a0bf21e942380"
+    "mtime": 1793861853.5339854,
+    "seen": 1793861928.9991906,
+    "ast_hash": "1112c877f73a49bd24741995cebca54a",
+    "semantic_hash": ""
   },
   "e1m1_reward_smoke/results.json": {
     "mtime": 1793411202.5860891,
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "pixel_nav_models.py": {
-    "mtime": 1793627067.1703067,
-    "seen": 1793630429.6403596,
-    "ast_hash": "bd2259740ea9d25f99fd26bbd33865ba",
+    "mtime": 1793861853.539988,
+    "seen": 1793861928.9992957,
+    "ast_hash": "b705af1df76d88bb00d426024bbebd97",
     "semantic_hash": ""
   },
   "pixel_nav_runs/classical_seed0/results.json": {
@@ -684,9 +684,9 @@
     "semantic_hash": "c28d902be746997ee1696d0c186c6ee0"
   },
   "README.md": {
-    "mtime": 1793632627.8455844,
-    "seen": 1793632631.5859048,
-    "ast_hash": "5d3de8e34de4a8f0595c5209a0fc8c6e",
+    "mtime": 1793858809.3610954,
+    "seen": 1793861928.9994597,
+    "ast_hash": "7c9d400dde3938bf2b99be093de13d65",
     "semantic_hash": ""
   },
   "ablation_curve.png": {
@@ -984,9 +984,9 @@
     "semantic_hash": ""
   },
   "pixel_e1m1_env.py": {
-    "mtime": 1793626295.0415783,
-    "seen": 1793630429.6403432,
-    "ast_hash": "9be0727b193bed54b0e85cf9b30fabd2",
+    "mtime": 1793801952.7111986,
+    "seen": 1793861928.9992704,
+    "ast_hash": "8f220ba6beec5027582af6d031db6011",
     "semantic_hash": ""
   },
   "run_pixel_e1m1_smoke.sh": {
@@ -1104,9 +1104,9 @@
     "semantic_hash": ""
   },
   "train_e1m1_imitation.py": {
-    "mtime": 1793614947.0224893,
-    "seen": 1793614950.5511062,
-    "ast_hash": "0f7dfccc623ed790895f6a98510e7cde",
+    "mtime": 1793861853.5489953,
+    "seen": 1793861928.999441,
+    "ast_hash": "cb3dd96e2d888727035104c62cd99563",
     "semantic_hash": ""
   },
   "pixel_e1m1_runs/imitation_classical_v1_seed0/results.json": {
@@ -1209,6 +1209,78 @@
     "mtime": 1793631930.6395757,
     "seen": 1793632631.5857751,
     "ast_hash": "ffa18cfac0acffb49eb6f1108aa88153",
+    "semantic_hash": ""
+  },
+  "evaluate_e1m1_robustness.py": {
+    "mtime": 1793801972.4198053,
+    "seen": 1793861928.9992108,
+    "ast_hash": "cb55a7c85649f56f337e877fb672aaf3",
+    "semantic_hash": ""
+  },
+  "evaluate_specialists_on_e1m1.py": {
+    "mtime": 1793632974.1469116,
+    "seen": 1793861928.9992146,
+    "ast_hash": "57dac1464c06974dcbb21b95e3799956",
+    "semantic_hash": ""
+  },
+  "pixel_e1m1_runs/imitation_classical_bc200k_seed0/results.json": {
+    "mtime": 1793664776.3786507,
+    "seen": 1793861928.999281,
+    "ast_hash": "3ee90ab4efc533b6c099221cd7be6849",
+    "semantic_hash": ""
+  },
+  "pixel_e1m1_runs/imitation_classical_bc680k_seed0/results.json": {
+    "mtime": 1793665336.7194564,
+    "seen": 1793861928.9992824,
+    "ast_hash": "183900df8abffb5222429806cce61e6f",
+    "semantic_hash": ""
+  },
+  "pixel_e1m1_runs/robustness_results.json": {
+    "mtime": 1793806281.642088,
+    "seen": 1793861928.999292,
+    "ast_hash": "1cb40b54cd2c718a131ecaa10d4b6490",
+    "semantic_hash": ""
+  },
+  "run_circuit_ablation_test.sh": {
+    "mtime": 1793861853.5660093,
+    "seen": 1793861928.999329,
+    "ast_hash": "5cdab93d931befbe03483222abd3d5ed",
+    "semantic_hash": ""
+  },
+  "run_e1m1_robustness.sh": {
+    "mtime": 1793801972.4331324,
+    "seen": 1793861928.9993515,
+    "ast_hash": "5132986c7c582af8caa0614dc1b3ab58",
+    "semantic_hash": ""
+  },
+  "run_specialists_on_e1m1.sh": {
+    "mtime": 1793632974.224553,
+    "seen": 1793861928.9994054,
+    "ast_hash": "790ad8a84c180f988f24329ee342bdfd",
+    "semantic_hash": ""
+  },
+  "test_circuit_ablations.py": {
+    "mtime": 1793861853.5600042,
+    "seen": 1793861928.9994335,
+    "ast_hash": "a351824612c91b60c100da2bbcf093a6",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1793496605.2920663,
+    "seen": 1793861928.9994571,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1793496605.298071,
+    "seen": 1793861928.9994583,
+    "ast_hash": "67d88e9d0760c3ba54c75dfd9551c1c5",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1793859441.5710328,
+    "seen": 1793861928.999461,
+    "ast_hash": "2985c44f3c137cdfb9dae9874b2e1e10",
     "semantic_hash": ""
   }
 }

@@ -1,0 +1,532 @@
+\documentclass[10pt, a4paper]{article}
+
+% --- NeurIPS-inspired Compact Geometry & Typography ---
+\usepackage[a4paper, top=2.0cm, bottom=2.0cm, left=2.2cm, right=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext, newtxmath} % Times-like font used in NeurIPS
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[font=small, labelfont=bf, skip=4pt]{caption}
+\usepackage[
+    backend=biber,
+    style=numeric-comp, % Compact NeurIPS-style brackets: [1, 2-4]
+    sorting=none,       % Orders by appearance (use 'nty' for alphabetical)
+    url=false,          % Hides long Zotero capture URLs unless it's an @online entry
+    doi=true,
+    maxbibnames=10
+]{biblatex}
+\setlength{\bibitemsep}{2pt plus 0.3ex} % Compact NeurIPS spacing between entries
+\renewcommand*{\bibfont}{\small}        % Slightly smaller bibliography font
+\addbibresource{references.bib}         % MUST include the .bib extension here
+% --- Paragraph & Float Spacing ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+% --- Compact List Spacing ---
+\setlist[itemize]{leftmargin=1.5em, itemsep=1pt, topsep=2pt, parsep=1pt, partopsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=1pt, topsep=2pt, parsep=1pt, partopsep=0pt}
+
+% --- Compact Section Headings (NeurIPS Style) ---
+\titleformat{\section}{\large\bfseries}{\thesection}{0.8em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.1ex}
+
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.8em}{}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.5ex plus 0.1ex}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% --- NeurIPS-style Title Block ---
+\makeatletter
+\renewcommand{\maketitle}{%
+  \vbox{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \vskip 0.05in
+    \hrule height 2.5pt
+    \vskip 0.15in
+    \begin{center}
+      {\LARGE\bfseries \@title \par}
+    \end{center}
+    \vskip 0.15in
+    \hrule height 1pt
+    \vskip 0.15in
+    \begin{center}
+      {\normalsize \@author \par}
+      \vskip 0.05in
+      {\small \@date \par}
+    \end{center}
+    \vskip 0.1in
+  }%
+}
+\makeatother
+
+\title{SC4055: Introduction to Quantum Computing\\[0.2em] \Large Project Title: Training Quantum Neural Networks to play Doom}
+
+\author{
+    \textbf{Goh Zhen Rong} (U2320219A) -- \texttt{zgoh033@e.ntu.edu.sg} \\
+    \textbf{Vannes Wijaya} (U2320201J) -- \texttt{VWIJAYA002@e.ntu.edu.sg} \\
+    \textbf{Borowski Michal} (N2601357D) -- \texttt{N2601357D@e.ntu.edu.sg} \\
+    \textbf{Jayaraman Vijayaraghavan} (U2323763F) -- \texttt{vijayara002@e.ntu.edu.sg}
+}
+
+\date{Academic Year 2026/2027 -- Semester 1}
+
+\begin{document}
+
+% Tighten equation spacing
+\setlength{\abovedisplayskip}{5pt plus 1pt minus 2pt}
+\setlength{\belowdisplayskip}{5pt plus 1pt minus 2pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt minus 1pt}
+
+\maketitle
+
+\vspace{-0.5em}
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{0.98\textwidth}{lX}
+\toprule
+\textbf{Deliverable Item} & \textbf{Submission Link / Access URL} \\
+\midrule
+\textbf{Recorded Presentation (15 Mins):} & \texttt{[Insert Google Drive or YouTube URL]} \\
+\textbf{Source Code Repository:} & \texttt{[Insert GitHub repository URL]} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\vspace{0.2em}
+
+\begin{abstract}
+Games serve as valuable testbeds for developing and evaluating algorithms and machine learning models, offering controlled environments in which their capabilities can be demonstrated and benchmarked. In 2024, Freinberger et al.\ showed that a hybrid model combining a parametrised quantum circuit with classical encoding and post-processing layers can solve Atari Pong and reach scores comparable to a classical reference on Breakout \cite{freinberger_quantum_2024}. Building upon this work, we extend the application of quantum machine learning to a more challenging environment by training a Quantum Neural Network (QNN) to play DOOM, a considerably more complex game that demands greater perception, decision-making, and control capabilities.
+We train a hybrid agent in which a classical CNN compresses four stacked screen frames into 12 angles that drive a 12-qubit, two-layer data-re-uploading circuit with 74 trainable parameters; Pauli-$Z$ expectations give the action logits and the value estimate. We compare it with a classical MLP head and a linear readout on an identical encoder. On the ViZDoom scenarios My Way Home and Deadly Corridor, trained with PPO, the circuit reaches the same final success as both classical heads (96--99\% and 98\% on held-out seeds) but needs roughly two to three times more decisions and about ten times more wall-clock time, and a linear readout of 52--91 parameters does equally well. On the original level E1M1, pure PPO did not find the route in three attempts (two run to 10M decisions), whereas students that imitate a scripted teacher with access to private game state exit on 70--77\% of held-out seeds (circuit: 73\% greedy, 70\% sampled). Perturbation tests show that these students rely on level-specific cues and the on-screen HUD, and they do not transfer to the other tasks. We find no evidence that the circuit contributes anything beyond a small linear readout.
+\noindent
+% % In the world where doom is conquered by classical ANNs, qnns are dramatically underrepresented. Alarmed by this grave injustice and the marginalization of quantum systems, we were compelled to act on this injustice. In spite of qnns inherent disadvantage in almost every facet imaginable, as progressive open minded students of quantum mechanics we could not stand the stigmatization and ostracization of qnns particularly in agentic gameplay as one of the most pivotal emerging industries.
+
+% It is therefore with grave shame that we grudgingly admit that the first half of our pipeline does in fact rely on classical machine learning models :(
+\end{abstract}
+
+\section{Application Problem and Motivation (15\% Weight)}
+\label{sec:problem_motivation}
+
+\subsection{Background and Domain Context}
+Recent research has demonstrated the potential of hybrid quantum-classical reinforcement learning models in game-playing tasks, including Atari games such as Pong and Breakout \cite{freinberger_quantum_2024}. Building on these findings, this project investigates the application of Quantum Neural Networks (QNNs) to more complex and dynamic environments, using the first-person shooter game Doom through the ViZDoom platform \cite{kempka_vizdoom_2016} as a benchmark.
+
+The target problem falls under reinforcement learning (RL), specifically visual, sequential decision-making under partial observability. Unlike simpler game environments, Doom requires an agent to interpret high-dimensional visual observations, navigate complex environments, and make real-time decisions in response to rapidly changing conditions. These challenges are relevant to real-world applications such as autonomous robotics, self-driving vehicles, and intelligent control systems, where agents must continuously process sensory information and adapt their actions to uncertain environments.
+
+This project explores whether QNNs, through their parameterised quantum circuits and quantum feature representations, can offer an alternative approach to learning effective decision-making policies. Parametrised circuits have been used as policies and Q-functions on small RL benchmarks \cite{chen_vqc_drl_2020,jerbi_pqp_2021,skolik_gym_2022}, and careful comparison against classical baselines is essential when judging such models \cite{bowles_benchmark_2024}. Specifically, we aim to train a QNN-based agent to process visual observations and select appropriate actions in ViZDoom, while evaluating its learning performance, sample efficiency, and computational requirements against classical reinforcement learning baselines. The objective is not to assume a quantum advantage, but to investigate whether QNN-based architectures offer practical benefits or introduce additional limitations in complex visual reinforcement learning tasks.
+
+\subsection{Problem Formulation}
+
+Each DOOM task (My Way Home, Deadly Corridor and E1M1; Table~\ref{tab:tasks}) is modeled as a partially
+observable Markov decision process (POMDP)
+$\mathcal{M}=(\mathcal{S},\mathcal{A},P,R,\Omega,O,\gamma)$.
+The objective is to learn a policy that maximizes
+expected cumulative reward from visual observations.
+We compare quantum and classical policy architectures
+under a common training framework.
+
+\begin{itemize}
+    \item \textbf{Input:}
+    The environment produces RGB frames of resolution
+    $160\times120$ with the heads-up display (HUD) visible, which are downsampled to $80\times60$.
+    Four consecutive frames are stacked to form
+    $o_t\in\mathbb{R}^{12\times60\times80}$.
+    A shared CNN encoder $f_{\eta}$ (three convolutional layers in the style of \cite{mnih_dqn_2015}) extracts a
+    256-dimensional feature representation, followed
+    by a 12-dimensional bottleneck:
+    \begin{equation}
+        \mathbf{z}_t =
+        \pi\tanh(W_b f_{\eta}(o_t)+\mathbf{b}_b)
+        \in[-\pi,\pi]^{12}.
+    \end{equation}
+    The bottleneck representation is provided to one
+    of three actor--critic architectures:
+    \begin{enumerate}
+        \item Classical MLP: nonlinear actor and critic (hidden width 32).
+        \item Linear: a single affine map giving the policy logits and the value.
+        \item Quantum: a 12-qubit variational actor--critic
+        with two data-re-uploading layers; the action logits and the value
+        estimate are both Pauli-$Z$ expectation values of the circuit (there is no classical critic).
+    \end{enumerate}
+    Each actor outputs logits over
+    $A=|\mathcal{A}|$ discrete actions, defining
+    $\pi(a_t|\mathbf{z}_t)$ through softmax.
+    Position, depth, object labels and the kill counter are read from the engine only to compute
+    the reward and auxiliary training targets; they are never inputs to the policy.
+
+    \item \textbf{Objective / Cost Metric:}
+    The reinforcement learning objective maximizes
+    expected discounted return:
+    \begin{equation}
+        J=\mathbb{E}_{\pi}
+        \left[\sum_{t=0}^{T-1}\gamma^t r_t\right].
+    \end{equation}
+    On My Way Home and Deadly Corridor all architectures are optimized using PPO.
+    The clipped policy loss is
+    \begin{equation}
+        \mathcal{L}_{\mathrm{policy}} =
+        -\mathbb{E}_t\left[
+        \min\left(
+        \rho_t\hat{A}_t,
+        \operatorname{clip}(\rho_t,1-\epsilon,1+\epsilon)
+        \hat{A}_t\right)\right],
+    \end{equation}
+    where
+    \begin{equation}
+        \rho_t =
+        \frac{\pi(a_t|\mathbf{z}_t)}
+        {\pi_{\mathrm{old}}(a_t|\mathbf{z}_t)}
+    \end{equation}
+    and $\hat{A}_t$ is the advantage estimated using
+    Generalized Advantage Estimation (GAE) \cite{schulman_gae_2016}:
+    \begin{equation}
+        \delta_t=r_t+\gamma(1-d_t)V(\mathbf{z}_{t+1})
+        -V(\mathbf{z}_t),
+    \end{equation}
+    \begin{equation}
+        \hat{A}_t=\delta_t+
+        \gamma\lambda(1-d_t)\hat{A}_{t+1},
+    \end{equation}
+    where $d_t$ indicates episode termination.
+    Advantages are normalized within each minibatch.
+
+    The critic (the MLP critic, the linear value readout, or the circuit's value qubit) minimizes the value loss:
+    \begin{equation}
+        \mathcal{L}_{\mathrm{value}}=
+        \frac{1}{2}\mathbb{E}_t
+        \left[(V(\mathbf{z}_t)-\hat{G}_t)^2\right],
+    \end{equation}
+    with $\hat{G}_t=\hat{A}_t+V_{\mathrm{old}}
+    (\mathbf{z}_t)$.
+
+    The complete PPO training objective \cite{schulman_ppo_2017} is
+    \begin{equation}
+        \boxed{
+        \mathcal{L}=
+        \mathcal{L}_{\mathrm{policy}}
+        +c_v\mathcal{L}_{\mathrm{value}}
+        -c_e\mathcal{H}(\pi)
+        +c_a\mathcal{L}_{\mathrm{aux}}
+        }
+    \end{equation}
+    where $\mathcal{L}_{\mathrm{aux}}$ comprises
+    auxiliary losses used to train the shared visual representation:
+    mean-squared error on per-sector depth, binary cross-entropy on whether the goal (or a monster)
+    is visible in each of eight screen sectors, and, on E1M1, mean-squared error on the direction
+    and progress along the route. They are used only during training \cite{mirowski_navigate_2017,lample_fps_2017}.
+
+    \textbf{E1M1 imitation objective.} PPO from scratch did not learn E1M1 (Section~\ref{sec:results_analysis}),
+    so the E1M1 policies are trained by DAgger imitation \cite{ross_dagger_2011} of a scripted teacher
+    $\pi_T$ that reads private game state. With teacher action $a^\star_t=\pi_T(s_t)$ on the states $o_t$ visited by
+    the current student, the loss is
+    \begin{equation}
+        \mathcal{L}_{\mathrm{BC}}=-\mathbb{E}_{o_t\sim\mathcal{D}}\!\left[w_{a^\star_t}\log\pi(a^\star_t|\mathbf{z}_t)\right]
+        +c_a\mathcal{L}_{\mathrm{aux}},\qquad w_a\propto f_a^{-0.75},
+    \end{equation}
+    where $f_a$ is the frequency of action $a$ in the aggregated dataset $\mathcal{D}$ (so that rare actions such
+    as USE are not ignored). After each round the student drives, the teacher labels the visited states,
+    and they are added to $\mathcal{D}$.
+
+    \item \textbf{Reward:}
+    The environment reward is
+    \begin{equation}
+        r_t=-0.01+100\,\mathbf{1}[\text{goal}]-c_d\,\mathbf{1}[\text{death}]-0.05\,\Delta\mathrm{HP}^{-}_t+w_k\,\Delta\mathrm{kills}_t
+        +w_p\big(\gamma\Phi(s_{t+1})-\Phi(s_t)\big),
+    \end{equation}
+    with the potential-based progress term $\Phi(s)=\max(0,1-d(s)/D_0)$ and $\Phi=0$ at episode end.
+    On My Way Home there are no combat terms and $w_p=5$, $D_0=1024$, with $d$ the straight-line
+    distance to the goal. On Deadly Corridor $c_d=30$, $w_k=2$, $w_p=30$, $D_0=1500$. On E1M1 the combat terms are the same,
+    and $d(s)$ is the walking cost to the exit from a path-planner field, since the route winds through rooms and doors.
+
+    \item \textbf{Scope and Constraints:}
+    Experiments use discrete-action DOOM scenarios
+    with bounded episode lengths (Table~\ref{tab:tasks}).
+    All three architectures share the same CNN
+    structure, 12-dimensional bottleneck, and training
+    procedure. The quantum model uses
+    12 simulated qubits and two data-re-uploading
+    layers implemented in PennyLane, while the
+    classical components use PyTorch.
+
+    Classical simulation limits quantum circuit
+    complexity and training throughput. Performance
+    is assessed using task success rate, navigation
+    progress, kills and training efficiency on held-out
+    environment seeds.
+\end{itemize}
+
+\section{Quantum Method and Technical Correctness (25\% Weight)}
+\label{sec:quantum_method}
+
+\subsection{Quantum Algorithm / Model Architecture}
+
+We use a variational quantum circuit as the policy and value readout of the agent. It combines angle encoding, data re-uploading \cite{perez_salinas_reuploading_2020} and an ansatz in the hardware-efficient style, namely single-qubit rotations with a CNOT ring \cite{kandala_hea_2017}. The circuit has $n=12$ qubits and $L=2$ layers, reads the bottleneck $\mathbf{z}\in[-\pi,\pi]^{12}$ and has $74$ trainable parameters.
+
+\begin{enumerate}
+    \item \textbf{State Preparation / Feature Map:} Each bottleneck value $z_i$ is encoded as the angle of an $R_Y$ rotation on its own qubit, scaled by a learned factor $s_{\ell,i}$ (initialised to 1), starting from $|0\rangle^{\otimes12}$. The same $\mathbf{z}$ is re-uploaded in every layer, with separate scales per layer, so the first-layer feature map $U_{\Phi}(\mathbf{z})=\bigotimes_i R_Y(s_{1,i}z_i)$ gives the product state $\bigotimes_i\big(\cos\tfrac{s_{1,i}z_i}{2}|0\rangle+\sin\tfrac{s_{1,i}z_i}{2}|1\rangle\big)$.
+    \item \textbf{Parameterized Quantum Circuit (Ansatz):} Layer $\ell\in\{1,2\}$ applies a trainable single-qubit block followed by a ring of CNOT gates,
+    \begin{align}
+        V_\ell(\mathbf{z}) &= \bigotimes_{i=0}^{11} R_X(\beta_{\ell,i})\,R_Z(\alpha_{\ell,i})\,R_Y(s_{\ell,i}z_i),\\
+        E &= \mathrm{CNOT}_{11\to0}\,\mathrm{CNOT}_{10\to11}\cdots\mathrm{CNOT}_{1\to2}\,\mathrm{CNOT}_{0\to1},\\
+        |\psi(\mathbf{z};\boldsymbol{\theta})\rangle &= E\,V_2(\mathbf{z})\,E\,V_1(\mathbf{z})\,|0\rangle^{\otimes12}.
+    \end{align}
+    The trainable parameters are $\boldsymbol{\theta}=\{\alpha,\beta,s\}$ (each $2\times12$, so $48$ angles and $24$ scales) and two scalar output gains $g_\pi,g_v$, giving $74$ in total. Angles are initialised as $0.05\,\mathcal{N}(0,1)$, with $g_\pi=2$ and $g_v=5$.
+    \item \textbf{Measurement Observable:} Single-qubit Pauli-$Z$ observables $\hat M_k=Z_k$ are measured on the first $A+1$ qubits ($A=3,6,7$ actions, so $4$, $7$ or $8$ qubits are read out):
+    \begin{equation}
+        \ell_k=g_\pi\langle\psi|Z_k|\psi\rangle\quad(k=0,\dots,A-1),\qquad V=g_v\langle\psi|Z_A|\psi\rangle .
+    \end{equation}
+    The $\ell_k$ are the softmax logits and $V$ is the value estimate. All observables commute, so one circuit execution in the computational basis provides all of them. There is no learned classical layer after the circuit; the gains only set the output scale.
+\end{enumerate}
+
+\subsection{Theoretical Correctness and Complexity}
+\begin{itemize}
+    \item \textbf{Gradients.} Every parametrised gate has the form $R_P(\varphi)=e^{-i\varphi P/2}$ with $P\in\{X,Y,Z\}$, so the parameter-shift rule is exact:
+    \begin{equation}
+        \frac{\partial \langle \hat{M} \rangle}{\partial \theta_j} = \frac{\langle \hat{M} \rangle_{\theta_j + \frac{\pi}{2}} - \langle \hat{M} \rangle_{\theta_j - \frac{\pi}{2}}}{2}.
+    \end{equation}
+    For an encoded input gate $R_Y(\varphi_{\ell,i})$ with $\varphi_{\ell,i}=s_{\ell,i}z_i$, the chain rule gives $\partial/\partial s_{\ell,i}=z_i\,\partial/\partial\varphi_{\ell,i}$ and $\partial/\partial z_i=\sum_\ell s_{\ell,i}\,\partial/\partial\varphi_{\ell,i}$, so the same shifted circuits also give the gradient passed back into the CNN encoder.
+    In our experiments the circuit is simulated exactly and differentiated by reverse-mode automatic differentiation (backpropagation) in PyTorch, which gives the same gradients; parameter-shift would be needed on hardware.
+    \item \textbf{Expressivity.} With the scales fixed, $L$ re-uploading layers make each output a Fourier series of degree at most $L$ in each input $z_i$ \cite{schuld_expressive_2021}, so with $L=2$ the circuit represents only low-frequency functions of the 12 bottleneck values. The outputs lie in $[-1,1]$ before the gains; the trained logit gain grows from $2$ to $16.7$ in our E1M1 circuit student, since confident choices need large logits.
+    \item \textbf{Resources} (Table~\ref{tab:resources}). The qubit count equals the bottleneck width, and at least $A+1$ qubits are measured. The CNOT ring is a serial chain, so its depth is 12 per layer. Gradients by parameter shift need $2\times72=144$ circuit evaluations per sample: $72$ rotation gates carry the $48$ angle and $24$ scale parameters, and the two output gains need none.
+    \item \textbf{Trainability.} The circuit is shallow ($L=2$) and acts on 12 qubits, so the exponentially vanishing gradients of deep random circuits \cite{mcclean_barren_2018} are not expected; we did not measure gradient variances.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Resources of the 12-qubit, two-layer circuit.}
+\label{tab:resources}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+Qubits $n$ (measured) & 12 (4 / 7 / 8 measured for 3 / 6 / 7 actions) \\
+Single-qubit gates / two-qubit gates & 72 / 24 CNOT (12 per layer) \\
+Circuit depth & about 30 (3 rotation layers plus a depth-12 CNOT chain, twice) \\
+Trainable parameters & 74 = 48 angles + 24 input scales + 2 output gains \\
+Statevector size (classical simulation) & $2^{12}=4096$ amplitudes \\
+Circuit evaluations per gradient (parameter shift) & 144 per sample, each estimating all measured $\langle Z_k\rangle$ \\
+Share of the full model's parameters & $74$ of $496{,}138$ (0.015\%); the CNN encoder holds $487{,}840$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Implementation and Experimental Design (25\% Weight)}
+\label{sec:implementation_design}
+
+\subsection{Software Environment and Simulation Setup}
+\begin{itemize}
+    \item \textbf{Software Stack:}
+    The implementation is developed in Python 3.12 using PyTorch 2.14.1 for
+    classical neural network components, PennyLane 0.45.1 \cite{bergholm_pennylane_2018} for quantum
+    circuit simulation, and ViZDoom 1.3.2 with Gymnasium 1.4.0 for the environments. PennyLane integrates with PyTorch to enable
+    end-to-end training of the hybrid quantum-classical neural network. Training uses a Slurm GPU cluster (NVIDIA V100); one ViZDoom process
+    per environment (8 in parallel) runs on the CPU cores.
+
+    \item \textbf{Backend Configuration:}
+    Quantum circuits are simulated using PennyLane's
+    \texttt{default.qubit} simulator with the PyTorch interface and \texttt{backprop} differentiation, assuming ideal,
+    noiseless quantum operations. Exact statevector simulation
+    is used during training and evaluation, without finite-shot sampling
+    or hardware noise models.
+\end{itemize}
+
+\subsection{Experimental Design and Baselines}
+We test the quantum agent on three ViZDoom tasks of increasing difficulty (Table~\ref{tab:tasks}), with the original level E1M1 as the final benchmark. Each task compares three policy heads that sit on an identical CNN encoder and 12-value bottleneck: the 12-qubit circuit (74 parameters), a classical MLP actor--critic (964--1,096 parameters; the main classical baseline), and a linear readout (52--104 parameters; a smaller classical control). Random actions and, on the corridor, always walking forward are the trivial baselines; on E1M1 a scripted teacher that reads private state provides an upper reference.
+
+We use task completion as the main metric: the fraction of episodes that reach the goal on 100 held-out spawn seeds (20000--20099) that are not used in training or checkpoint selection, with greedy action selection and with actions sampled from the policy. Best checkpoints are chosen on 32 separate selection seeds (10000--10031) by success rate plus $0.01\times$mean progress. As secondary metrics we report kills, deaths and route progress (which enter the training reward), the number of decisions needed to pass a success threshold on the selection seeds, and wall-clock time.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{The three tasks. A \emph{decision} is one policy action, held for 4 game tics.}
+\label{tab:tasks}
+\begin{tabularx}{\textwidth}{lXXl}
+\toprule
+\textbf{Task} & \textbf{Actions} & \textbf{Goal and reward terms} & \textbf{Training} \\
+\midrule
+My Way Home & 3: forward, turn left, turn right & Reach the vest: $+100$, progress $w_p=5$, step cost $-0.01$ & PPO \\
+Deadly Corridor (skill 3) & 6: forward, attack, strafe left/right, turn left/right & Reach the vest past 6 enemies: $+100$, kills $+2$, damage $-0.05$/HP, death $-30$, progress $w_p=30$ & PPO \\
+E1M1 (skill 3) & 7: the corridor actions plus USE & Press the exit switch (doors need USE): same terms as the corridor, with route progress & DAgger imitation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Experimental configuration. All heads use the same encoder, optimiser settings and seeds, except where noted.}
+\label{tab:experimental_setup}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+\textbf{Configuration Parameter} & \textbf{Quantum Setup} & \textbf{Classical Baselines} \\
+\midrule
+Policy head & 12-qubit circuit, 2 layers, 74 parameters & MLP 12$\to$32$\to A$ (+ critic): 964--1,096; linear: 52--104 \\
+Shared encoder & \multicolumn{2}{p{0.74\textwidth}}{3 conv layers (32, 64, 64 filters) + linear 1536$\to$256 + bottleneck 256$\to$12: 490{,}924 parameters} \\
+Framework / Backend & PennyLane \texttt{default.qubit}, exact statevector & PyTorch \\
+Optimiser (PPO tasks) & Adam, encoder lr $2.5\times10^{-4}$, circuit lr $3\times10^{-3}$ & Adam, lr $2.5\times10^{-4}$ \\
+PPO settings & \multicolumn{2}{p{0.74\textwidth}}{8 envs $\times$ 128 steps per update, 4 epochs, minibatch 256, $\gamma=0.99$, $\lambda=0.95$, clip 0.1, $c_e=0.01$, $c_a=0.5$} \\
+Imitation (E1M1) & \multicolumn{2}{p{0.74\textwidth}}{DAgger: 200K teacher states, then 8 rounds of 60K student states; Adam, encoder lr $3\times10^{-4}$, circuit lr $3\times10^{-3}$} \\
+Training budget & up to 3M decisions (circuit: 19{,}500\,s cap, up to 6M for the corridor) & up to 3M decisions \\
+Measurement sampling & Statevector (exact), no shots & Deterministic network \\
+Evaluation metrics & \multicolumn{2}{p{0.74\textwidth}}{Exits/successes on 100 held-out seeds (greedy and sampled), kills, deaths, progress, decisions to threshold, wall-clock time} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Reproducibility and Codebase Architecture}
+The repository is organised around the screen-only pipeline. \texttt{pixel\_nav\_env.py}, \texttt{pixel\_corridor\_env.py} and \texttt{pixel\_e1m1\_env.py} wrap ViZDoom for the three tasks (observations, rewards and auxiliary targets); \texttt{pixel\_nav\_models.py} defines the shared encoder and the three heads; \texttt{e1m1\_quantum\_model.py} is the circuit; \texttt{train\_pixel\_nav.py} runs PPO, checkpoint selection and held-out evaluation; \texttt{e1m1\_teacher.py} and \texttt{train\_e1m1\_imitation.py} implement the scripted teacher and DAgger; and the \texttt{evaluate\_*.py}, \texttt{probe\_corridor\_aim.py} and \texttt{record\_gameplay.py} scripts produce the analyses and gameplay videos. Every experiment has a Slurm script (\texttt{run\_*.sh}); results are written as JSON under \texttt{pixel\_nav\_runs/}, \texttt{pixel\_corridor\_runs/} and \texttt{pixel\_e1m1\_runs/}. The pinned environment is in \texttt{requirements.txt} (PyTorch from the CUDA 12.6 wheel index), and the \texttt{README.md} gives the commands and a dated log of all runs, including negative results. All seeds are fixed; training, selection and held-out evaluation seeds are disjoint. The repository has no automated test suite; the \texttt{diagnose\_*.py} and smoke-test scripts check the environments.
+
+\section{Results and Critical Analysis (20\% Weight)}
+\label{sec:results_analysis}
+
+\subsection{Quantitative Experimental Results}
+Tables~\ref{tab:mwh}--\ref{tab:e1m1} give exits (successes) out of 100 held-out seeds. My Way Home and Deadly Corridor use three training seeds per head, except the corridor circuit, which has one.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{My Way Home (PPO). Per-seed results are listed in the order seed 0/1/2.}
+\label{tab:mwh}
+\begin{tabularx}{\textwidth}{Xrlllr}
+\toprule
+\textbf{Head} & \textbf{Params} & \textbf{Greedy} & \textbf{Sampled} & \textbf{Decisions to $\geq$28/32} & \textbf{Wall time} \\
+\midrule
+Classical MLP & 964 & 99/100/100 & 100/100/100 & 1.28M/0.77M/1.28M & $\sim$31 min \\
+Linear readout & 52 & 99/98/96 & 100/100/100 & 0.77M/0.77M/0.77M & $\sim$31 min \\
+12-qubit circuit & 74 & 96/99/97 & 100/100/100 & 1.79M/2.56M/1.79M & 5 h 25 min$^{\dagger}$ \\
+Random actions & -- & 10 & -- & -- & -- \\
+\bottomrule
+\multicolumn{6}{l}{\scriptsize $^{\dagger}$Stopped by the 19{,}500\,s budget just short of 3M decisions.}
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Deadly Corridor, skill 3 (PPO). Kills out of 6 enemies are for greedy play.}
+\label{tab:corridor}
+\begin{tabularx}{\textwidth}{Xrllllr}
+\toprule
+\textbf{Head} & \textbf{Params} & \textbf{Greedy} & \textbf{Sampled} & \textbf{Kills} & \textbf{Decisions to 32/32} & \textbf{Wall time} \\
+\midrule
+Classical MLP (3 seeds) & 1,063 & 99/99/99 & 98/93/94 & 5.99/5.91/5.78 & 2.56M/1.79M/2.82M & $\sim$31 min \\
+Linear readout (3 seeds) & 91 & 98/100/100 & 95/97/100 & 4.98/6.00/6.00 & $>$3M/2.82M/1.79M & $\sim$30 min \\
+12-qubit circuit (1 seed) & 74 & 98 & 99 & 5.99 & 4.35M & $\sim$11 h \\
+Always forward & -- & 27 & -- & 0.49 & -- & -- \\
+Random actions & -- & 0 & -- & 0.91 & -- & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{E1M1, skill 3, real start, 100 held-out seeds (classical heads unless noted; one training seed each).}
+\label{tab:e1m1}
+\begin{tabularx}{\textwidth}{Xrrrr}
+\toprule
+\textbf{Method} & \textbf{Head params} & \textbf{Exits, greedy} & \textbf{Exits, sampled} & \textbf{Died, greedy} \\
+\midrule
+PPO from scratch (best of 3 attempts) & 1,096 & 0 & 0 & 0\% \\
+Behaviour cloning only, 200K teacher states & 1,096 & 48 & 63 & 52\% \\
+Behaviour cloning only, 680K teacher states & 1,096 & 58 & 78 & 42\% \\
+DAgger, classical MLP head & 1,096 & 72 & 77 & 28\% \\
+DAgger, linear head & 104 & 77 & 72 & 23\% \\
+DAgger, 12-qubit circuit head & 74 & 73 & 70 & 27\% \\
+Scripted teacher (reads private state) & -- & 84 & 84 & 16\% \\
+Random actions & -- & 0 & -- & 46\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+On E1M1, PPO with the same reward and encoder never left the early part of the level (route progress 0.15, against 0.21 for random actions). Three variants (reverse-start curriculum, uniform route starts, extra route-direction targets) all failed; fine-tuning the imitation student with PPO gave at most a small gain in exits (255 against 238 of 300 fresh seeds in greedy play, about 1.8 standard errors) and no gain in kills. The imitation students are the first screen-only policies in this project to complete E1M1.
+
+\subsection{Analysis of Convergence, Scalability, and Circuit Depth}
+\begin{itemize}
+    \item \textbf{Convergence Behavior:} The circuit learns more slowly than the classical heads in decisions: 1.79--2.56M against 0.77--1.28M decisions to pass 28/32 on My Way Home, and 4.35M against 1.79--2.82M on the corridor, where its selection score stayed at 0/32 for 2.56M decisions before jumping. The 91-parameter linear readout was also slow on the corridor ($1.79$M to beyond 3M decisions), so with one circuit seed the corridor gap cannot be separated from seed-to-seed variation. In wall-clock time the circuit is roughly ten times slower (about 165 against 1,450 decisions per second in a smoke test), because every forward and backward pass simulates the circuit. We did not diagnose barren plateaus; the circuit trained to the same final performance as the classical heads on all tasks.
+    \item \textbf{Effect of Circuit Depth:} We used $L=2$ in every experiment of the final pipeline and did not sweep the depth, so we have no depth--quality--runtime curve. The only related ablation is from an earlier hand-crafted-feature pipeline (a single seed, 32K frames, \texttt{basic.cfg}): a classical MLP scored 10.1 mean step reward, the entangled circuit 8.4 and the same circuit without CNOTs $-1.7$, consistent with entanglement being needed to combine inputs, but not controlled for learning rate.
+    \item \textbf{Shot Noise Impact:} All results use exact expectation values, so shot noise was not measured. As an estimate only: an expectation from $N$ shots has standard deviation $\sqrt{(1-\langle Z\rangle^2)/N}\le 1/\sqrt{N}$, i.e.\ up to about $0.03$ for $N=1000$. The logit gain of $16.7$ learned by our E1M1 circuit student would turn that into logit noise of up to about $0.5$, which could change close action choices.
+    \item \textbf{Does the circuit matter?} On every task the linear readout (52--104 parameters) matches the circuit and the classical MLP (Tables~\ref{tab:mwh}--\ref{tab:e1m1}); the CNN encoder does the perception and any small head can read it out. The circuit's 74 parameters are 0.015\% of the model.
+    \item \textbf{Does the E1M1 student generalise?} E1M1 is one fixed level, so held-out seeds change only monster behaviour. Perturbation tests without retraining (Table~\ref{tab:robust}) show that the students depend on level-specific cues: started at a random reachable position and heading, exits fall from about 75--82 to 25--30 while the teacher gets 92; blanking the HUD (health, ammo) takes every student to 0 exits, while the classical student tolerates noise and brightness changes. Run without retraining on the other tasks, the E1M1 students score at the random level on My Way Home (6--10 greedy exits against 10 for random) and 0--1 on the corridor, and the small-task specialists make no progress on E1M1 (0 exits). So the E1M1 result reflects learning one level, not general skills.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Memorisation tests on the E1M1 students: exits out of 100 (greedy), no retraining, episodes cut at 800 decisions.}
+\label{tab:robust}
+\begin{tabularx}{\textwidth}{Xrrr}
+\toprule
+\textbf{Condition} & \textbf{Classical} & \textbf{Linear} & \textbf{Circuit} \\
+\midrule
+Unmodified screens, real start (teacher: 82) & 76 & 82 & 73 \\
+HUD masked (bottom 10 of 60 rows set to 0) & 0 & 0 & 0 \\
+Four stacked frames replaced by the newest & 66 & 0 & 47 \\
+Brightness $\times0.6$ / $\times1.4$ & 68 / 75 & 79 / 72 & 0 / 58 \\
+Gaussian noise (std 25 of 255) & 77 & 73 & 65 \\
+Random off-route start (teacher: 92) & 25 & 30 & 30 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Critical Limitations and NISQ Feasibility}
+\begin{itemize}
+    \item \textbf{Where the learning happens.} The classical parts (encoder, bottleneck and auxiliary head) hold 99.985\% of the parameters, and a linear readout does as well as the circuit on all three tasks. Our results show a circuit can be trained end-to-end behind a CNN, and they show no benefit of doing so.
+    \item \textbf{Cost.} Simulation makes training about ten times slower per decision, and statevector memory doubles with every added qubit.
+    \item \textbf{E1M1 needed a privileged teacher.} Pure PPO scored 0 exits in three attempts. The students that clear E1M1 learn from a hand-written teacher that reads position, route and door geometry, so they measure how well a screen-only network can copy an expert, not whether reward alone finds the behaviour.
+    \item \textbf{Statistical strength.} E1M1, the corridor circuit and all selection decisions use one training seed; selection scores on 32 seeds fluctuate by several episodes between iterations. The differences between the heads on E1M1 (70--77 exits) are within noise.
+    \item \textbf{NISQ feasibility.} The circuit has 24 CNOTs in a serial chain (depth about 30) with a wrap-around gate that needs ring connectivity or SWAPs. At typical two-qubit error rates of 0.5--1\%, the CNOT errors alone would leave roughly 79--89\% of the ideal state fidelity ($0.99^{24}$ to $0.995^{24}$), before readout error and decoherence; this is a rough estimate, not a hardware measurement. Training on hardware would need 144 shifted circuits per sample per step, so the practical use is inference only, with one circuit execution per decision and enough shots to resolve the logits. Deeper entanglement-aware or noise-aware training was not tested.
+\end{itemize}
+
+\section{Conclusion and Future Directions}
+\label{sec:conclusion}
+We trained a hybrid quantum-classical agent, a CNN encoder feeding a 12-qubit data-re-uploading circuit, to play three ViZDoom tasks from screen pixels. The circuit matches a classical MLP head and a linear readout on My Way Home and Deadly Corridor, trained with PPO, and on E1M1, where a scripted teacher with access to private state was needed. It costs about ten times more wall-clock time and needs more decisions to learn, and a linear readout does equally well, so we find no evidence of a quantum benefit. The E1M1 students memorise the level and its HUD and do not transfer.
+
+Next steps, in the order we would run them: (i) more seeds for every head, and a statistical comparison of exits; (ii) DAgger with random off-route starts and HUD dropout, to test whether the failures away from the route are a coverage problem; (iii) a depth sweep ($L=1,2,3,4$) and a brickwork entangler of depth two per layer, which is closer to a hardware-efficient ansatz, with a depolarising-noise and finite-shot simulation to estimate the degradation on NISQ devices and zero-noise extrapolation as mitigation; (iv) multi-task distillation of specialists into one network, and training on several levels, to test generalisation across levels; and (v) a recurrent head (a classical GRU first, then a quantum recurrent cell such as QLSTM \cite{chen_qlstm_2020}) if memory proves to be the cause of the remaining door failures.
+
+\section{Group Member Contribution Breakdown}
+\label{sec:contributions}
+As required by the group project guidelines, detail each member's specific technical and editorial contributions:
+
+% TODO(team): fill in who did what and each member's role in the video. The rows below are placeholders only.
+\begin{table}[htbp]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Group Member Contributions and Task Allocation}
+\label{tab:contributions}
+\begin{tabularx}{\textwidth}{lXp{4.2cm}}
+\toprule
+\textbf{Member Name} & \textbf{Key Responsibilities and Deliverables} & \textbf{Presentation Video Role} \\
+\midrule
+Goh Zhen Rong & \texttt{[TODO]} & \texttt{[TODO]} \\
+Vannes Wijaya & \texttt{[TODO]} & \texttt{[TODO]} \\
+Borowski Michal & \texttt{[TODO]} & \texttt{[TODO]} \\
+Jayaraman Vijayaraghavan & \texttt{[TODO]} & \texttt{[TODO]} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\printbibliography
+\end{document}
