@@ -1,0 +1,37 @@
+{
+  "output": "/mnt/hdd2/zhengrong/Quantum_Doom/frozen_perception_runs/e1m1_gpu_full_20261103",
+  "device": "cuda",
+  "threads": 4,
+  "num_envs": 8,
+  "skill": 3,
+  "perception_seed": 42,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "heads": [
+    "linear",
+    "small_mlp",
+    "classical",
+    "quantum2",
+    "product2",
+    "quantum4"
+  ],
+  "perception_steps": 100000,
+  "validation_steps": 10000,
+  "perception_epochs": 20,
+  "perception_lr": 0.0003,
+  "initial_steps": 50000,
+  "iter_steps": 10000,
+  "iterations": 3,
+  "head_epochs": 6,
+  "beta": 0.3,
+  "capacity": 250000,
+  "max_episode": 1575,
+  "batch": 256,
+  "lr": 0.0003,
+  "quantum_lr": 0.003,
+  "eval_episodes": 32,
+  "final_episodes": 100
+}

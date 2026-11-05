@@ -1,0 +1,825 @@
+{
+  "completed_policy_seeds": [
+    0,
+    1,
+    2
+  ],
+  "all_requested_seeds_complete": true,
+  "args": {
+    "output": "/mnt/hdd2/zhengrong/Quantum_Doom/transfer_runs/gpu_full_20261103",
+    "device": "cuda",
+    "threads": 2,
+    "num_envs": 8,
+    "navigation_teacher": "pixel_nav_runs/classical_seed0/best.pt",
+    "corridor_teacher": "pixel_corridor_runs/classical_seed0/best.pt",
+    "conditions": [
+      "single",
+      "multi"
+    ],
+    "models": [
+      "gru",
+      "mlp"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "perception_seed": 42,
+    "perception_steps": 120000,
+    "validation_steps": 5000,
+    "perception_epochs": 20,
+    "perception_lr": 0.0003,
+    "initial_steps": 50000,
+    "iter_steps": 10000,
+    "iterations": 3,
+    "actor_epochs": 6,
+    "sequence_batch": 8,
+    "gru_hidden": 64,
+    "mlp_hidden": 411,
+    "lr": 0.0003,
+    "beta": 0.3,
+    "max_episode": 1575,
+    "eval_max_steps": 1575,
+    "batch": 256,
+    "eval_episodes": 32,
+    "final_episodes": 100,
+    "semantic_probe_every": 8
+  },
+  "train_maps": [
+    "navigation",
+    "corridor",
+    "e1m1"
+  ],
+  "held_out_map_variants": [
+    "e1m2_keys",
+    "e1m2"
+  ],
+  "perception_unchanged": true,
+  "seconds": 6636.132406745106,
+  "policies": {
+    "single_gru": {
+      "navigation": {
+        "successes_by_seed": [
+          1,
+          1,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.006666666666666667,
+        "seed_std": 0.005773502691896258,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.04415431650739783,
+            "enemy": 0.023354496788298474,
+            "goal": 0.8220377434290701,
+            "door": 5.690548635204917,
+            "hud": 0.04996770634254073
+          },
+          "multi": {
+            "depth": 0.011826203371941818,
+            "enemy": 0.00024178203754857767,
+            "goal": 0.023289873370132733,
+            "door": 9.14988010006283e-05,
+            "hud": 0.0018903302492950097
+          }
+        },
+        "perception_probe_states": 19580
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0,
+          2,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.006666666666666667,
+        "seed_std": 0.011547005383792516,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.0962946444183784,
+            "enemy": 0.6654634738435156,
+            "goal": 13.329882483790668,
+            "door": 7.996592205194715,
+            "hud": 0.031841014472110345
+          },
+          "multi": {
+            "depth": 0.00585490213572657,
+            "enemy": 0.13910378498443013,
+            "goal": 0.24696063512632488,
+            "door": 5.690930117226872e-06,
+            "hud": 0.005264516002131066
+          }
+        },
+        "perception_probe_states": 2927
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          1,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0033333333333333335,
+        "seed_std": 0.005773502691896258,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.032318597378792224,
+            "enemy": 0.029954068397516444,
+            "goal": 0.04139173174656058,
+            "door": 6.688806156303751,
+            "hud": 0.002313330511329207
+          },
+          "multi": {
+            "depth": 0.017132106563730317,
+            "enemy": 0.034908087507734366,
+            "goal": 0.10900456563405822,
+            "door": 8.067647682431936,
+            "hud": 0.0065074984391980915
+          }
+        },
+        "perception_probe_states": 44541
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.032139809032626976,
+            "enemy": 0.010810672251494275,
+            "goal": 0.027951901068526065,
+            "door": 6.287612474847466,
+            "hud": 0.0077217596031209776
+          },
+          "multi": {
+            "depth": 0.022939994861389822,
+            "enemy": 0.018189205624108643,
+            "goal": 0.15056102786696018,
+            "door": 4.415769301647359,
+            "hud": 0.013530441470090724
+          }
+        },
+        "perception_probe_states": 25860
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.0774089472067636,
+            "enemy": 0.026397811262774348,
+            "goal": 0.3392900435225671,
+            "door": 1.5444210469414208,
+            "hud": 0.006833681757052967
+          },
+          "multi": {
+            "depth": 0.0800177008034788,
+            "enemy": 0.0073203495049126,
+            "goal": 0.4628177222973222,
+            "door": 1.2738461524223037,
+            "hud": 0.026356286518092378
+          }
+        },
+        "perception_probe_states": 40573
+      }
+    },
+    "single_mlp": {
+      "navigation": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.03289054844859674,
+            "enemy": 0.014882048656630821,
+            "goal": 2.3034514488636844,
+            "door": 4.072488752513265,
+            "hud": 0.04946727313440092
+          },
+          "multi": {
+            "depth": 0.008205052506227018,
+            "enemy": 0.00011374640694077888,
+            "goal": 0.0269315761924723,
+            "door": 4.3293445322313205e-05,
+            "hud": 0.0012855072757059999
+          }
+        },
+        "perception_probe_states": 19704
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.099795204989228,
+            "enemy": 0.15194877042245447,
+            "goal": 9.782296595947779,
+            "door": 8.075305062605121,
+            "hud": 0.05142146521071815
+          },
+          "multi": {
+            "depth": 0.0054263694957103915,
+            "enemy": 0.050075257193777076,
+            "goal": 0.23201585801396762,
+            "door": 4.40117716741465e-05,
+            "hud": 0.017189605998038936
+          }
+        },
+        "perception_probe_states": 9757
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.009820584688308605,
+            "enemy": 0.0005067351130227986,
+            "goal": 0.058157890971011726,
+            "door": 0.06945963208245491,
+            "hud": 0.0020785668791986154
+          },
+          "multi": {
+            "depth": 0.01875406757809044,
+            "enemy": 0.01213614141904143,
+            "goal": 0.08410126782186433,
+            "door": 0.0329011893399931,
+            "hud": 0.007053969933051548
+          }
+        },
+        "perception_probe_states": 59076
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.016647988123769036,
+            "enemy": 0.010136718035366784,
+            "goal": 0.09716420315561201,
+            "door": 0.21051680029237654,
+            "hud": 0.0030478331765799354
+          },
+          "multi": {
+            "depth": 0.01538076076542884,
+            "enemy": 0.042597374805611925,
+            "goal": 0.1280556361698791,
+            "door": 0.3306090964307208,
+            "hud": 0.010678162124116701
+          }
+        },
+        "perception_probe_states": 59076
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.010768491558119285,
+            "enemy": 0.004165180684794611,
+            "goal": 0.0046567895092513405,
+            "door": 0.03671329413531803,
+            "hud": 0.0037773622182827628
+          },
+          "multi": {
+            "depth": 0.01576107533203433,
+            "enemy": 0.047738380499056536,
+            "goal": 0.014875226309237084,
+            "door": 0.05609894297487368,
+            "hud": 0.004397736411781474
+          }
+        },
+        "perception_probe_states": 57514
+      }
+    },
+    "multi_gru": {
+      "navigation": {
+        "successes_by_seed": [
+          17,
+          18,
+          17
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.17333333333333334,
+        "seed_std": 0.005773502691896247,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.04212507858096227,
+            "enemy": 0.03050993336364163,
+            "goal": 0.21630354882009,
+            "door": 3.8146261725026527,
+            "hud": 0.04965768037318076
+          },
+          "multi": {
+            "depth": 0.01207531219456024,
+            "enemy": 0.0010179681212229678,
+            "goal": 0.004920194554234945,
+            "door": 8.158861285986393e-06,
+            "hud": 0.001710005749519388
+          }
+        },
+        "perception_probe_states": 16467
+      },
+      "corridor": {
+        "successes_by_seed": [
+          86,
+          96,
+          68
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.8333333333333334,
+        "seed_std": 0.14189197769195172,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.10824091282266089,
+            "enemy": 1.0954506205705692,
+            "goal": 14.093773003384602,
+            "door": 9.453917697684405,
+            "hud": 0.02972266432605359
+          },
+          "multi": {
+            "depth": 0.0036726923061637406,
+            "enemy": 0.12637890702557714,
+            "goal": 0.07828411708012105,
+            "door": 2.4242908839657303e-05,
+            "hud": 0.0031286850838568516
+          }
+        },
+        "perception_probe_states": 3212
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.019125375629399734,
+            "enemy": 0.008206880073728287,
+            "goal": 0.014875973551800542,
+            "door": 0.9733812286738528,
+            "hud": 0.003439890259318603
+          },
+          "multi": {
+            "depth": 0.02081470799592517,
+            "enemy": 0.014624654672516774,
+            "goal": 0.020862309448181376,
+            "door": 1.7760544444668735,
+            "hud": 0.006780595170346331
+          }
+        },
+        "perception_probe_states": 59076
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.031233140433788522,
+            "enemy": 0.012614882655114384,
+            "goal": 0.01902260295127393,
+            "door": 0.7788521069117627,
+            "hud": 0.00521555319170164
+          },
+          "multi": {
+            "depth": 0.030410712195701548,
+            "enemy": 0.011974012693342877,
+            "goal": 0.052492505040937235,
+            "door": 0.9208954964885252,
+            "hud": 0.00755046208933013
+          }
+        },
+        "perception_probe_states": 33814
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.021768353325793705,
+            "enemy": 0.0018950838899081995,
+            "goal": 0.0021149236052596596,
+            "door": 0.9733425652618231,
+            "hud": 0.005271593972373771
+          },
+          "multi": {
+            "depth": 0.0718078066706642,
+            "enemy": 0.002932874234877235,
+            "goal": 0.035950575392669985,
+            "door": 3.658908195534671,
+            "hud": 0.007162481172714624
+          }
+        },
+        "perception_probe_states": 41239
+      }
+    },
+    "multi_mlp": {
+      "navigation": {
+        "successes_by_seed": [
+          15,
+          14,
+          15
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.1466666666666667,
+        "seed_std": 0.005773502691896247,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.04204109557690828,
+            "enemy": 0.036499443500446364,
+            "goal": 0.1480859309528679,
+            "door": 4.688057284410306,
+            "hud": 0.051042407544916506
+          },
+          "multi": {
+            "depth": 0.008756456918710808,
+            "enemy": 0.00035285746362989856,
+            "goal": 0.004868677398664703,
+            "door": 7.825401645119543e-06,
+            "hud": 0.001382992460590409
+          }
+        },
+        "perception_probe_states": 16949
+      },
+      "corridor": {
+        "successes_by_seed": [
+          2,
+          2,
+          1
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.016666666666666666,
+        "seed_std": 0.005773502691896258,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.1018637088031319,
+            "enemy": 1.3442398780075258,
+            "goal": 12.78530131574203,
+            "door": 8.301396121927851,
+            "hud": 0.029072402596632782
+          },
+          "multi": {
+            "depth": 0.0038505256568741224,
+            "enemy": 0.3158390565593048,
+            "goal": 0.1192057924643424,
+            "door": 5.280844258204622e-07,
+            "hud": 0.0030343456875725097
+          }
+        },
+        "perception_probe_states": 1405
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.0173794377105657,
+            "enemy": 0.00032570075950732173,
+            "goal": 0.002522888832055075,
+            "door": 14.77227806289583,
+            "hud": 0.004847509754517785
+          },
+          "multi": {
+            "depth": 0.009927673917284241,
+            "enemy": 0.008791315339480953,
+            "goal": 0.013786394872481131,
+            "door": 6.185836438909128,
+            "hud": 0.030096454119290746
+          }
+        },
+        "perception_probe_states": 59076
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.015761468142667337,
+            "enemy": 0.03128319748801914,
+            "goal": 0.0914763310734441,
+            "door": 2.0759853758240587,
+            "hud": 0.005920788814897819
+          },
+          "multi": {
+            "depth": 0.021652107375984664,
+            "enemy": 0.08447239893447007,
+            "goal": 0.12786528637369582,
+            "door": 1.137464693994491,
+            "hud": 0.01583662624820705
+          }
+        },
+        "perception_probe_states": 58874
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "episodes_by_seed": [
+          100,
+          100,
+          100
+        ],
+        "capped_episodes_by_seed": [
+          0,
+          0,
+          0
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": 0.0,
+        "paired_perception_losses": {
+          "single": {
+            "depth": 0.015543908289730736,
+            "enemy": 0.021303154713628814,
+            "goal": 0.10010220492900393,
+            "door": 3.601978927133467,
+            "hud": 0.006479259685938804
+          },
+          "multi": {
+            "depth": 0.021579402530827324,
+            "enemy": 0.0673546888974418,
+            "goal": 0.13497871305501322,
+            "door": 1.7799701918522992,
+            "hud": 0.017894764708964582
+          }
+        },
+        "perception_probe_states": 58752
+      }
+    }
+  },
+  "multi_minus_single": {
+    "gru": {
+      "navigation": 0.16666666666666666,
+      "corridor": 0.8266666666666667,
+      "e1m1": -0.0033333333333333335,
+      "e1m2_keys": 0.0,
+      "e1m2": 0.0
+    },
+    "mlp": {
+      "navigation": 0.14666666666666667,
+      "corridor": 0.016666666666666666,
+      "e1m1": 0.0,
+      "e1m2_keys": 0.0,
+      "e1m2": 0.0
+    }
+  },
+  "scope": "full",
+  "teacher_reference": {
+    "navigation": {
+      "successes": 99,
+      "episodes": 100,
+      "capped_episodes": 0
+    },
+    "corridor": {
+      "successes": 99,
+      "episodes": 100,
+      "capped_episodes": 0
+    },
+    "e1m1": {
+      "successes": 84,
+      "episodes": 100,
+      "capped_episodes": 0
+    }
+  },
+  "interpretation": "E1M2 is one held-out layout evaluated with and without granted keys. The keys variant controls for a mechanic absent from the training tasks. Pilot or capped evaluations validate the pipeline and do not establish transfer. Results are conditional on one perception initialization and the recorded teachers."
+}

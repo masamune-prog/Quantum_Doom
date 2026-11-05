@@ -1,0 +1,362 @@
+{
+  "policy_seeds": [
+    0
+  ],
+  "perception_unchanged": true,
+  "seconds": 1398.693294850178,
+  "heads": {
+    "linear": {
+      "parameters": 104,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.1295426691625885
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.29085568161718
+      },
+      "heldout_action_accuracy": 0.494140625,
+      "heldout_balanced_accuracy": 0.454918646812439
+    },
+    "small_mlp": {
+      "parameters": 71,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.0584072223017226
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.23848990701945544
+      },
+      "heldout_action_accuracy": 0.490234375,
+      "heldout_balanced_accuracy": 0.2673125475645065
+    },
+    "classical": {
+      "parameters": 1096,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.0951393952706528
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.34669467598254977
+      },
+      "heldout_action_accuracy": 0.4140625,
+      "heldout_balanced_accuracy": 0.4232363343238831
+    },
+    "quantum2": {
+      "parameters": 74,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.16542612455413977
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.18694958424894711
+      },
+      "heldout_action_accuracy": 0.310546875,
+      "heldout_balanced_accuracy": 0.3669451683759689
+    },
+    "product2": {
+      "parameters": 74,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.16464510778325678
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.17249400850613186
+      },
+      "heldout_action_accuracy": 0.525390625,
+      "heldout_balanced_accuracy": 0.2221751932054758
+    },
+    "quantum4": {
+      "parameters": 146,
+      "greedy": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.06769087510870447
+      },
+      "sampled": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          4
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null,
+        "mean_progress": 0.15622232589842616
+      },
+      "heldout_action_accuracy": 0.26953125,
+      "heldout_balanced_accuracy": 0.3351748466491699
+    }
+  },
+  "paired_differences": {
+    "quantum2_minus_linear": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum2_minus_small_mlp": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum2_minus_classical": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum2_minus_product2": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum2_minus_quantum4": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum4_minus_linear": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum4_minus_small_mlp": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum4_minus_classical": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum4_minus_quantum2": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    },
+    "quantum4_minus_product2": {
+      "greedy": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      },
+      "sampled": {
+        "mean_success_rate_difference": 0.0,
+        "paired_bootstrap_95_percent": null,
+        "interval_note": "Too few policy or episode seeds for an interval"
+      }
+    }
+  },
+  "budget": {
+    "perception_steps": 4096,
+    "validation_steps": 512,
+    "perception_epochs": 10,
+    "initial_steps": 2048,
+    "iter_steps": 256,
+    "iterations": 1,
+    "head_epochs": 6,
+    "eval_episodes": 2,
+    "final_episodes": 4
+  },
+  "geometry_validation": {
+    "depth": 0.050520957447588444,
+    "visibility_door": 0.4674563929438591,
+    "direction": 0.08969088667072356,
+    "progress": 0.04247106908587739,
+    "target_std": [
+      0.23105885088443756,
+      0.23107564449310303,
+      0.236028790473938,
+      0.24223783612251282,
+      0.23963932693004608,
+      0.2358747273683548,
+      0.23429515957832336,
+      0.2232712060213089,
+      0.131412073969841,
+      0.08804240077733994,
+      0.16863738000392914,
+      0.24206146597862244,
+      0.20713256299495697,
+      0.19832634925842285,
+      0.144992396235466,
+      0.10761701315641403,
+      0.43634167313575745,
+      0.3755693733692169,
+      0.21746985614299774,
+      0.2551176846027374
+    ]
+  },
+  "scope": "pilot",
+  "interpretation": "Small-budget pilot; success rates and intervals do not establish a head advantage.",
+  "audit": {
+    "perception_fingerprint_verified": true,
+    "teacher": {
+      "mode": "teacher",
+      "successes": 3,
+      "episodes": 4,
+      "successes_without_easy_seed": 3,
+      "episodes_without_easy_seed": 4,
+      "mean_steps": 323.5,
+      "mean_kills": 1.0,
+      "mean_health": 25.5,
+      "mean_dead": 0.25,
+      "mean_progress": 0.9935313309898396
+    },
+    "geometry_validation": {
+      "depth": 0.050520957447588444,
+      "visibility_door": 0.4674563929438591,
+      "direction": 0.08969088667072356,
+      "progress": 0.04247106908587739
+    },
+    "constant_geometry_validation": {
+      "depth": 0.05683296173810959,
+      "visibility_door": 0.5407612919807434,
+      "direction": 0.0941857248544693,
+      "progress": 0.06508706510066986
+    },
+    "validation_reproduced": true
+  }
+}

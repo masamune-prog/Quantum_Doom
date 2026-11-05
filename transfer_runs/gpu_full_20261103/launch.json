@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/tmp/quantum-doom-frozen-gpu/bin/python",
+    "-u",
+    "train_transfer.py",
+    "--device",
+    "cuda",
+    "--output",
+    "/mnt/hdd2/zhengrong/Quantum_Doom/transfer_runs/gpu_full_20261103"
+  ],
+  "cwd": "/mnt/hdd2/zhengrong/Quantum_Doom",
+  "physical_gpu": 3,
+  "started_utc": "2026-11-03T12:38:05.634484+00:00",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "3",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "supervisor_source": "import datetime,json,os,pathlib,subprocess,sys,time\nout=pathlib.Path(sys.argv[1]);launch=json.loads((out/'launch.json').read_text());start=time.time()\ndef status(state,**extra):\n data=dict(state=state,pid=os.getpid(),updated_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),elapsed_seconds=time.time()-start,**extra)\n temp=out/'status.tmp';temp.write_text(json.dumps(data,indent=2)+'\\n');temp.replace(out/'status.json')\nstatus('starting')\ntry:\n child=subprocess.Popen(launch['command'],cwd=launch['cwd'])\n while child.poll() is None:\n  status('running',trainer_pid=child.pid)\n  time.sleep(30)\n if child.returncode:\n  status('failed',returncode=child.returncode);sys.exit(child.returncode)\n summary=subprocess.run([launch['command'][0],'summarize_transfer.py',str(out/'results.json'),'--output',str(out/'summary.json')],cwd=launch['cwd'])\n status('complete' if summary.returncode==0 else 'summary_failed',returncode=summary.returncode)\nexcept BaseException as error:\n status('failed',error=repr(error));raise\n"
+}

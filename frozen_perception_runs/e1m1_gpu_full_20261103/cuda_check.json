@@ -1,0 +1,11 @@
+{
+  "batch": 256,
+  "head": "quantum4",
+  "device": "cuda:0",
+  "forward_backward_seconds": 0.54914656188339,
+  "peak_allocated_mib": 2384.65771484375,
+  "finite_loss": true,
+  "physical_gpu": 3,
+  "gpu_description": "GPU-9401eaa3-d009-607d-2f7b-3cb6d45e3c6c, NVIDIA RTX 6000 Ada Generation",
+  "torch": "2.7.1+cu128"
+}

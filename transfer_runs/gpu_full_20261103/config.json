@@ -1,0 +1,41 @@
+{
+  "output": "/mnt/hdd2/zhengrong/Quantum_Doom/transfer_runs/gpu_full_20261103",
+  "device": "cuda",
+  "threads": 2,
+  "num_envs": 8,
+  "navigation_teacher": "pixel_nav_runs/classical_seed0/best.pt",
+  "corridor_teacher": "pixel_corridor_runs/classical_seed0/best.pt",
+  "conditions": [
+    "single",
+    "multi"
+  ],
+  "models": [
+    "gru",
+    "mlp"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "perception_seed": 42,
+  "perception_steps": 120000,
+  "validation_steps": 5000,
+  "perception_epochs": 20,
+  "perception_lr": 0.0003,
+  "initial_steps": 50000,
+  "iter_steps": 10000,
+  "iterations": 3,
+  "actor_epochs": 6,
+  "sequence_batch": 8,
+  "gru_hidden": 64,
+  "mlp_hidden": 411,
+  "lr": 0.0003,
+  "beta": 0.3,
+  "max_episode": 1575,
+  "eval_max_steps": 1575,
+  "batch": 256,
+  "eval_episodes": 32,
+  "final_episodes": 100,
+  "semantic_probe_every": 8
+}

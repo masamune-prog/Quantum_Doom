@@ -122,7 +122,196 @@ The encoder is a Nature-DQN-style CNN. Its 256 features are squashed to 12 value
 The circuit's 74 parameters are 48 rotation angles, 24 input scales, a logit gain and a value
 gain. It is simulated with PennyLane `default.qubit` with torch backprop on the GPU.
 
-### Auxiliary losses (training only)
+### Frozen-perception experiment
+
+`train_frozen_perception.py` tests whether the heads differ when perception cannot adapt
+to the policy loss. It uses the existing E1M1 teacher and **DAgger**, rather than PPO.
+Perception starts from random weights, learns only geometric targets, and is then frozen
+once for all heads and all policy seeds. No action, value, reward, or success loss trains
+the perception model. This tests the frozen-feature hypothesis; the earlier end-to-end
+results alone do not establish why the linear head worked.
+
+The geometry decoder predicts the existing 20 targets: eight depth sectors, eight enemy
+visibility sectors, the door/switch ray, route sine/cosine, and route progress. Since these
+do not fit individually into 12 coordinates, a `256→11` bottleneck learns geometry-only
+latent angles. A twelfth angle records USE cooldown from the agent's **executed actions**,
+which cannot reliably be inferred from four frames. The decoder is discarded for action
+selection. Thus the inputs are compressed geometry predictions plus observable action
+history, not 12 individually named privileged features. Neither the actor nor evaluation
+receives the true geometry. Route information may be difficult to reconstruct from images;
+validation geometry losses must be examined before interpreting weak task results.
+
+| E1M1 head | Total actor/value parameters |
+|---|---:|
+| Linear, `12→8` | 104 |
+| Small shared MLP, `12→3→8`, tanh | 71 |
+| Existing classical MLP, separate actor/critic | 1,096 |
+| Circuit, two re-uploading layers | 74 |
+| Same circuit without CNOTs | 74 |
+| Circuit, four re-uploading layers | 146 |
+
+The 71-parameter MLP is a **near** parameter match to the two-layer circuit. Four layers
+double the rotation/input-scale budget; their result is a capacity/depth comparison, not
+an equal-parameter comparison. DAgger trains action logits only: value-only parameters
+are retained for compatibility and included in these totals, but receive no value loss.
+For example, E1M1 linear has 91 actor parameters plus 13 unused value parameters; the
+small MLP has 67 parameters on its actor path, and the classical MLP actor has 647.
+The earlier 91-parameter total is correct for the corridor's six-action actor/value head.
+Removing CNOTs also removes cross-feature mixing: its seven actor outputs use only seven
+input coordinates (43 actor-path parameters). It is a structural ablation, not a control
+with identical effective input access, and a win over it alone cannot establish a benefit
+specific to entanglement.
+
+Protocol:
+
+- Collect geometry pretraining and validation in separate episodes, using 75% teacher /
+  25% random actions and uniform route starts. Select perception by geometry validation
+  loss, then disable all its gradients and check its SHA-256 fingerprint after every fit.
+- Give every head the same initial demonstrations. Each DAgger round collects the same
+  state budget from **each** head, then adds their union to the dataset seen by **all**
+  heads. Each seed starts again from the common initial demonstrations. This controls
+  head-specific differences in visited training states within a seed.
+- Cache the common angles, use identical minibatch orders and epoch counts, and optimize
+  weighted action cross-entropy. Classical lr is `3e-4`, circuit lr is `3e-3`, following
+  existing runs; this is a fixed-setting comparison, not a tuned optimum for every head.
+- Select each head independently on real-start seeds 10000 onward. Test the selected
+  checkpoint on real-start seeds 20000 onward, greedy and sampled. Report per-action
+  accuracy on the separate geometry-validation trajectories as an additional diagnostic.
+  The teacher can use hidden state beyond these features, so its labels need not be
+  perfectly predictable by any head. This teacher does not label strafing actions, so this
+  DAgger experiment cannot test the proposed strafe-clearance conjunctions.
+
+The full preset uses policy seeds 0/1/2, 100k perception states, 10k validation states,
+50k initial demonstrations, three DAgger rounds adding 10k states per head per round,
+32 selection episodes and 100 final episodes per head/mode/seed. It needs roughly 6 GB
+of host memory for frame replay plus training tensors. Checkpoints and full episode rows
+are saved under the output directory; existing outputs are never overwritten.
+
+```bash
+# Requires torch, pennylane, vizdoom, gymnasium, numpy, opencv-python and matplotlib.
+# Small end-to-end validation run; use a new output path when repeating.
+PYTHON=python3 bash run_frozen_perception.sh pilot
+
+# Full experiment on an allocated GPU (this does not request a GPU allocation).
+PYTHON=python3 DEVICE=cuda bash run_frozen_perception.sh full
+
+python3 -m unittest -v test_frozen_perception
+
+python3 summarize_frozen_perception.py frozen_perception_runs/e1m1_full/results.json \
+  --output frozen_perception_runs/e1m1_full/summary.json
+
+# Recheck checkpoint integrity, teacher performance and geometry vs constant predictors.
+python3 audit_frozen_perception.py frozen_perception_runs/e1m1_full --recollect-geometry
+```
+
+**Completed CPU pilot, 2026-11-03:** one policy seed, 4,096 geometry training states,
+512 geometry-validation states, ten perception epochs, 2,048 initial demonstrations and
+one shared DAgger round (3,584 total labeled states). Each fit used six epochs. Selection
+used two episodes; final testing used four different real-start seeds in each mode.
+These completed results cover only the CPU pilot. A larger GPU run was launched on
+2026-11-03 with three policy seeds, all six heads, the full data/epoch budgets above,
+and batches of 256 for every head. It tests whether the failures persist with more training;
+its outcomes must be assessed separately from this pilot. See its
+[launch configuration](frozen_perception_runs/e1m1_gpu_full_20261103/launch.json),
+[completion status](frozen_perception_runs/e1m1_gpu_full_20261103/status.json), and
+[training log](frozen_perception_runs/e1m1_gpu_full_20261103/run.log). The job writes
+`summary.json` automatically after all three seeds finish.
+
+All six heads scored **0/4 exits in both greedy and sampled play**; the teacher scored
+**3/4** on those same final seeds. Selected-checkpoint action diagnostics on the 512
+separate validation states were:
+
+| Head | Action accuracy | Balanced action accuracy |
+|---|---:|---:|
+| Linear | 49.4% | 45.5% |
+| Small MLP | 49.0% | 26.7% |
+| Classical MLP | 41.4% | 42.3% |
+| Two-layer circuit | 31.1% | 36.7% |
+| Two-layer circuit without CNOTs | 52.5% | 22.2% |
+| Four-layer circuit | 27.0% | 33.5% |
+
+Balanced accuracy averages recall over the five action classes present in validation.
+None of the selected heads correctly predicted USE on the seven validation USE states.
+These low action scores and zero exits leave training and feature sufficiency unresolved;
+they do **not** establish a ranking of converged heads. In particular, the higher raw
+accuracy of the circuit without CNOTs is not an advantage in successful control.
+
+The perception fingerprint stayed identical during all head fits. Recollecting the
+geometry data reproduced validation losses exactly; perception beat constant training-mean
+predictors in all four loss groups, but route-direction MSE improved only from 0.0942 to
+0.0897. The pilot took 23.3 minutes on CPU. See the [summary and audit](frozen_perception_runs/e1m1_pilot/summary.json),
+[full episode results](frozen_perception_runs/e1m1_pilot/results.json), and
+[runtime versions](frozen_perception_runs/e1m1_pilot/versions.json).
+
+A linear head can express some conjunctions, including binary AND via a thresholded
+sum. The interesting question is whether the actual geometry-to-action boundaries need
+more nonlinear capacity. Beating linear alone would support nonlinear readout capacity;
+beating the small MLP and the circuit without CNOTs is needed to argue for a benefit from
+this entangled ansatz. These are classically simulated circuits throughout.
+
+### Multi-task perception and goal-conditioned imitation
+
+`train_transfer.py` tests whether broader perception training improves transfer, before
+revisiting quantum readouts. Its students use named semantic predictions and public
+objective/action-history context; no route direction, global position, or route progress
+is a perception target or policy input.
+
+- **Training maps:** My Way Home, Deadly Corridor, and E1M1. The existing classical
+  navigation/combat specialists label their own tasks; E1M1 uses the scripted teacher.
+  All seven actions have one canonical meaning across tasks; unavailable actions are masked.
+- **Shared perception:** 8 depth sectors, 8 enemy sectors, 8 goal sectors, an interaction
+  ray, health, and ammunition. Goal identity is public context: pickup versus exit.
+  Pickup targets use object-label buffers; exit targets use static wall-ray intersections,
+  a geometric visibility proxy that does not fully model dynamic door occlusion.
+- **Perception control:** `single` learns on 120k E1M1 states; `multi` learns on 40k states
+  from each training map. Both receive 120k total samples, equal epochs, matching initial
+  weights, and geometry-only losses. E1M1 multi-map samples are a random subset of the
+  single-map data. No policy loss updates either encoder.
+- **Policies:** a goal-conditioned GRU with 64 hidden units (21,767 parameters) and a
+  feed-forward MLP with 411 hidden units (21,790 parameters). They receive the same 27
+  semantic predictions, objective, available actions, executed USE cooldown, and previous
+  action. GRU state resets at episode boundaries; training backpropagates complete episodes.
+- **DAgger:** 50k initial teacher states per map, then three rounds. Each of the four
+  policies contributes 10k states per map per round to a common union. Every policy sees
+  identical labels and public context; only its frozen semantic predictions differ.
+  Full defaults use policy seeds 0/1/2, six actor epochs per round, and an 80% teacher /
+  20% random mixture during perception data collection.
+- **Selection:** 32 real-start episodes on each training map, using seeds 10000 onward.
+  Score is mean success rate plus 0.001 times mean held-out action accuracy on the training
+  maps. Actor training and validation accuracy are measured on fixed checkpoints, making
+  their gap interpretable. The E1M1 teacher tracks actual executed USE actions during DAgger.
+- **Final evaluation:** 100 episodes per policy seed on each training map, then E1M2,
+  using seeds 20000 onward. E1M2 supplies no training data or checkpoint-selection feedback.
+  Both encoders are probed on the **same evaluation frames** every eight decisions; their
+  paired semantic losses help separate representation errors from controller failures.
+
+E1M2 is **one held-out layout**, evaluated in two variants: normal play, and all keys
+granted at reset. The latter controls for key handling, which none of the training tasks
+requires. It is an altered task and is reported separately. These results cannot establish
+generalization across arbitrary Doom maps. The actor has no explicit map planner; the GRU
+tests whether learned memory helps. Teachers and perception initialization are fixed across
+policy seeds. This is a transfer experiment using classical controls, not a quantum comparison.
+
+```bash
+python3 -m unittest -v test_transfer
+
+# Use a fresh output directory; the script does not allocate a GPU itself.
+CUDA_VISIBLE_DEVICES=3 PYTHON=/path/to/cuda/python bash run_transfer.sh \
+  --output transfer_runs/my_run
+
+python3 summarize_transfer.py transfer_runs/my_run/results.json \
+  --output transfer_runs/my_run/summary.json
+```
+
+The capped [smoke-run summary](transfer_runs/smoke_20261103/summary.json) validates the
+training/evaluation flow only. Short smoke episodes do not measure successful transfer.
+The full GPU study launched on 2026-11-03 is recorded in its
+[configuration](transfer_runs/gpu_full_20261103/config.json),
+[live status](transfer_runs/gpu_full_20261103/status.json), and
+[training log](transfer_runs/gpu_full_20261103/run.log). Its supervisor writes a summary
+after all seeds and teacher-reference evaluations finish.
+
+### Auxiliary losses in the original end-to-end runs
 
 The auxiliary head predicts targets for 8 vertical sectors of the screen. The targets are
 computed from privileged buffers and never enter the policy:

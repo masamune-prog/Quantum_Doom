@@ -1,0 +1,1903 @@
+{
+  "protocol": "multitask_semantic_transfer_v1",
+  "args": {
+    "output": "transfer_runs/smoke_20261103",
+    "device": "cuda",
+    "threads": 2,
+    "num_envs": 2,
+    "navigation_teacher": "pixel_nav_runs/classical_seed0/best.pt",
+    "corridor_teacher": "pixel_corridor_runs/classical_seed0/best.pt",
+    "conditions": [
+      "single",
+      "multi"
+    ],
+    "models": [
+      "gru",
+      "mlp"
+    ],
+    "seeds": [
+      0
+    ],
+    "perception_seed": 42,
+    "perception_steps": 192,
+    "validation_steps": 32,
+    "perception_epochs": 2,
+    "perception_lr": 0.0003,
+    "initial_steps": 64,
+    "iter_steps": 16,
+    "iterations": 1,
+    "actor_epochs": 2,
+    "sequence_batch": 2,
+    "lr": 0.0003,
+    "beta": 0.3,
+    "max_episode": 32,
+    "eval_max_steps": 32,
+    "batch": 32,
+    "eval_episodes": 1,
+    "final_episodes": 1
+  },
+  "train_maps": [
+    "navigation",
+    "corridor",
+    "e1m1"
+  ],
+  "test_maps": [
+    "e1m2_keys",
+    "e1m2"
+  ],
+  "perception_hashes": {
+    "single": "4f7634d2b4c041626f969c5a71f7328e935e0dc41035b170d2258fdab405da10",
+    "multi": "5b7cb29af60aceb7b568a7d154768a20b067e804cf976b1bf4797ed281873eaf"
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "history": [
+        {
+          "seed": 0,
+          "iteration": 0,
+          "policies": {
+            "single_gru": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 0,
+              "policy": "single_gru",
+              "training": {
+                "navigation": {
+                  "ce": 1.0482540428638458,
+                  "accuracy": 0.453125,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    28.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    29.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.7709469199180603,
+                  "accuracy": 0.15625,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    13.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8072713613510132,
+                  "accuracy": 0.625,
+                  "recall": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.2222222238779068,
+                    0.0
+                  ],
+                  "class_counts": [
+                    40.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    18.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.1061370372772217,
+                  "accuracy": 0.375,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.7686837315559387,
+                  "accuracy": 0.1875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.873931348323822,
+                  "accuracy": 0.5,
+                  "recall": [
+                    0.6499999761581421,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.6000000238418579,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.0003541666666666667
+            },
+            "single_mlp": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 0,
+              "policy": "single_mlp",
+              "training": {
+                "navigation": {
+                  "ce": 1.1224666833877563,
+                  "accuracy": 0.078125,
+                  "recall": [
+                    0.1071428582072258,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.2857142984867096,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    28.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    29.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.791033923625946,
+                  "accuracy": 0.203125,
+                  "recall": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    13.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.9922677278518677,
+                  "accuracy": 0.0,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    40.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    18.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.0975853204727173,
+                  "accuracy": 0.125,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.25,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.8020849227905273,
+                  "accuracy": 0.1875,
+                  "recall": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 2.0042847394943237,
+                  "accuracy": 0.0,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.00010416666666666667
+            },
+            "multi_gru": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 0,
+              "policy": "multi_gru",
+              "training": {
+                "navigation": {
+                  "ce": 1.0562744736671448,
+                  "accuracy": 0.453125,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    28.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    29.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.767464518547058,
+                  "accuracy": 0.15625,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    13.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8132966756820679,
+                  "accuracy": 0.625,
+                  "recall": [
+                    0.949999988079071,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.1111111119389534,
+                    0.0
+                  ],
+                  "class_counts": [
+                    40.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    18.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.094508707523346,
+                  "accuracy": 0.375,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.767193615436554,
+                  "accuracy": 0.1875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8708082437515259,
+                  "accuracy": 0.59375,
+                  "recall": [
+                    0.800000011920929,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.6000000238418579,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.0003854166666666667
+            },
+            "multi_mlp": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 0,
+              "policy": "multi_mlp",
+              "training": {
+                "navigation": {
+                  "ce": 1.1140994429588318,
+                  "accuracy": 0.109375,
+                  "recall": [
+                    0.25,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    28.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    29.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.7939585447311401,
+                  "accuracy": 0.203125,
+                  "recall": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    13.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.9918172955513,
+                  "accuracy": 0.0,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    40.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    18.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.110548734664917,
+                  "accuracy": 0.0,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.807582139968872,
+                  "accuracy": 0.1875,
+                  "recall": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 2.004521131515503,
+                  "accuracy": 0.0,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 6.25e-05
+            }
+          }
+        },
+        {
+          "seed": 0,
+          "iteration": 1,
+          "policies": {
+            "single_gru": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 1,
+              "policy": "single_gru",
+              "training": {
+                "navigation": {
+                  "ce": 1.0444528870284557,
+                  "accuracy": 0.46875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    33.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    35.0,
+                    60.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6697435826063156,
+                  "accuracy": 0.078125,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    17.0,
+                    0.0,
+                    0.0,
+                    76.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.5608126744627953,
+                  "accuracy": 0.6640625,
+                  "recall": [
+                    0.9682539701461792,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.4444444477558136,
+                    0.0
+                  ],
+                  "class_counts": [
+                    63.0,
+                    5.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    54.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.1074662506580353,
+                  "accuracy": 0.375,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.604785144329071,
+                  "accuracy": 0.1875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.5957573056221008,
+                  "accuracy": 0.6875,
+                  "recall": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.800000011920929,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.0004166666666666667
+            },
+            "single_mlp": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 1,
+              "policy": "single_mlp",
+              "training": {
+                "navigation": {
+                  "ce": 1.0873995795845985,
+                  "accuracy": 0.2734375,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    33.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    35.0,
+                    60.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6565454304218292,
+                  "accuracy": 0.3984375,
+                  "recall": [
+                    0.0,
+                    0.3529411852359772,
+                    0.0,
+                    0.0,
+                    0.5921052694320679,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    17.0,
+                    0.0,
+                    0.0,
+                    76.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8182782083749771,
+                  "accuracy": 0.375,
+                  "recall": [
+                    0.6507936716079712,
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.07407407462596893,
+                    0.0
+                  ],
+                  "class_counts": [
+                    63.0,
+                    5.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    54.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.0716814994812012,
+                  "accuracy": 0.5,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6928051710128784,
+                  "accuracy": 0.3125,
+                  "recall": [
+                    0.0,
+                    0.3333333432674408,
+                    0.0,
+                    0.0,
+                    0.8888888955116272,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8345750570297241,
+                  "accuracy": 0.21875,
+                  "recall": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.20000000298023224,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.00034375
+            },
+            "multi_gru": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 1,
+              "policy": "multi_gru",
+              "training": {
+                "navigation": {
+                  "ce": 1.0464326441287994,
+                  "accuracy": 0.46875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    33.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    35.0,
+                    60.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6636601239442825,
+                  "accuracy": 0.0625,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.800000011920929,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    17.0,
+                    0.0,
+                    0.0,
+                    76.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.5664984285831451,
+                  "accuracy": 0.6328125,
+                  "recall": [
+                    0.9682539701461792,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.37037035822868347,
+                    0.0
+                  ],
+                  "class_counts": [
+                    63.0,
+                    5.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    54.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.096909999847412,
+                  "accuracy": 0.375,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.603684902191162,
+                  "accuracy": 0.15625,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.8333333134651184,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.5936046838760376,
+                  "accuracy": 0.6875,
+                  "recall": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.800000011920929,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.00040625000000000004
+            },
+            "multi_mlp": {
+              "stage": "policy_fit",
+              "seed": 0,
+              "iteration": 1,
+              "policy": "multi_mlp",
+              "training": {
+                "navigation": {
+                  "ce": 1.0874061733484268,
+                  "accuracy": 0.3828125,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.9142857193946838,
+                    0.28333333134651184,
+                    0.0
+                  ],
+                  "class_counts": [
+                    33.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    35.0,
+                    60.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6664213687181473,
+                  "accuracy": 0.328125,
+                  "recall": [
+                    0.0,
+                    0.7647058963775635,
+                    0.0,
+                    0.0,
+                    0.3815789520740509,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    25.0,
+                    17.0,
+                    0.0,
+                    0.0,
+                    76.0,
+                    10.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8226998522877693,
+                  "accuracy": 0.3984375,
+                  "recall": [
+                    0.761904776096344,
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    63.0,
+                    5.0,
+                    0.0,
+                    0.0,
+                    6.0,
+                    54.0,
+                    0.0
+                  ]
+                }
+              },
+              "validation": {
+                "navigation": {
+                  "ce": 1.079884648323059,
+                  "accuracy": 0.46875,
+                  "recall": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.8125,
+                    0.1666666716337204,
+                    0.0
+                  ],
+                  "class_counts": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    16.0,
+                    12.0,
+                    0.0
+                  ]
+                },
+                "corridor": {
+                  "ce": 1.6969338059425354,
+                  "accuracy": 0.25,
+                  "recall": [
+                    0.0,
+                    0.3333333432674408,
+                    0.0,
+                    0.0,
+                    0.6666666865348816,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    11.0,
+                    6.0,
+                    0.0,
+                    0.0,
+                    9.0,
+                    6.0,
+                    0.0
+                  ]
+                },
+                "e1m1": {
+                  "ce": 1.8370232582092285,
+                  "accuracy": 0.25,
+                  "recall": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "class_counts": [
+                    20.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    7.0,
+                    5.0,
+                    0.0
+                  ]
+                }
+              },
+              "selection": {
+                "navigation": {
+                  "task": "navigation",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "corridor": {
+                  "task": "corridor",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                },
+                "e1m1": {
+                  "task": "e1m1",
+                  "episodes": 1,
+                  "successes": 0,
+                  "capped_episodes": 1,
+                  "rows": [
+                    {
+                      "seed": 10000,
+                      "steps": 32,
+                      "success": false,
+                      "evaluation_capped": true
+                    }
+                  ]
+                }
+              },
+              "score": 0.0003229166666666667
+            }
+          }
+        }
+      ],
+      "policies": {
+        "single_gru": {
+          "navigation": {
+            "task": "navigation",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "corridor": {
+            "task": "corridor",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m1": {
+            "task": "e1m1",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2_keys": {
+            "task": "e1m2_keys",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2": {
+            "task": "e1m2",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          }
+        },
+        "single_mlp": {
+          "navigation": {
+            "task": "navigation",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "corridor": {
+            "task": "corridor",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m1": {
+            "task": "e1m1",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2_keys": {
+            "task": "e1m2_keys",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2": {
+            "task": "e1m2",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          }
+        },
+        "multi_gru": {
+          "navigation": {
+            "task": "navigation",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "corridor": {
+            "task": "corridor",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m1": {
+            "task": "e1m1",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2_keys": {
+            "task": "e1m2_keys",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2": {
+            "task": "e1m2",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          }
+        },
+        "multi_mlp": {
+          "navigation": {
+            "task": "navigation",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "corridor": {
+            "task": "corridor",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m1": {
+            "task": "e1m1",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2_keys": {
+            "task": "e1m2_keys",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          },
+          "e1m2": {
+            "task": "e1m2",
+            "episodes": 1,
+            "successes": 0,
+            "capped_episodes": 1,
+            "rows": [
+              {
+                "seed": 20000,
+                "steps": 32,
+                "success": false,
+                "evaluation_capped": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "perception_unchanged": true,
+  "seconds": 258.4491906138137,
+  "teacher_reference": {
+    "navigation": {
+      "task": "navigation",
+      "episodes": 1,
+      "successes": 0,
+      "capped_episodes": 1,
+      "rows": [
+        {
+          "seed": 20000,
+          "steps": 32,
+          "success": false,
+          "evaluation_capped": true
+        }
+      ]
+    },
+    "corridor": {
+      "task": "corridor",
+      "episodes": 1,
+      "successes": 0,
+      "capped_episodes": 1,
+      "rows": [
+        {
+          "seed": 20000,
+          "steps": 32,
+          "success": false,
+          "evaluation_capped": true
+        }
+      ]
+    },
+    "e1m1": {
+      "task": "e1m1",
+      "episodes": 1,
+      "successes": 0,
+      "capped_episodes": 1,
+      "rows": [
+        {
+          "seed": 20000,
+          "steps": 32,
+          "success": false,
+          "evaluation_capped": true
+        }
+      ]
+    }
+  }
+}

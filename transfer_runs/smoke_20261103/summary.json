@@ -1,0 +1,358 @@
+{
+  "completed_policy_seeds": [
+    0
+  ],
+  "all_requested_seeds_complete": true,
+  "args": {
+    "output": "transfer_runs/smoke_20261103",
+    "device": "cuda",
+    "threads": 2,
+    "num_envs": 2,
+    "navigation_teacher": "pixel_nav_runs/classical_seed0/best.pt",
+    "corridor_teacher": "pixel_corridor_runs/classical_seed0/best.pt",
+    "conditions": [
+      "single",
+      "multi"
+    ],
+    "models": [
+      "gru",
+      "mlp"
+    ],
+    "seeds": [
+      0
+    ],
+    "perception_seed": 42,
+    "perception_steps": 192,
+    "validation_steps": 32,
+    "perception_epochs": 2,
+    "perception_lr": 0.0003,
+    "initial_steps": 64,
+    "iter_steps": 16,
+    "iterations": 1,
+    "actor_epochs": 2,
+    "sequence_batch": 2,
+    "lr": 0.0003,
+    "beta": 0.3,
+    "max_episode": 32,
+    "eval_max_steps": 32,
+    "batch": 32,
+    "eval_episodes": 1,
+    "final_episodes": 1
+  },
+  "train_maps": [
+    "navigation",
+    "corridor",
+    "e1m1"
+  ],
+  "held_out_map_variants": [
+    "e1m2_keys",
+    "e1m2"
+  ],
+  "perception_unchanged": true,
+  "seconds": 258.4491906138137,
+  "policies": {
+    "single_gru": {
+      "navigation": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      }
+    },
+    "single_mlp": {
+      "navigation": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      }
+    },
+    "multi_gru": {
+      "navigation": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      }
+    },
+    "multi_mlp": {
+      "navigation": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "corridor": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m1": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2_keys": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      },
+      "e1m2": {
+        "successes_by_seed": [
+          0
+        ],
+        "episodes_by_seed": [
+          1
+        ],
+        "capped_episodes_by_seed": [
+          1
+        ],
+        "mean_success_rate": 0.0,
+        "seed_std": null
+      }
+    }
+  },
+  "multi_minus_single": {
+    "gru": {
+      "navigation": 0.0,
+      "corridor": 0.0,
+      "e1m1": 0.0,
+      "e1m2_keys": 0.0,
+      "e1m2": 0.0
+    },
+    "mlp": {
+      "navigation": 0.0,
+      "corridor": 0.0,
+      "e1m1": 0.0,
+      "e1m2_keys": 0.0,
+      "e1m2": 0.0
+    }
+  },
+  "scope": "pilot",
+  "teacher_reference": {
+    "navigation": {
+      "successes": 0,
+      "episodes": 1,
+      "capped_episodes": 1
+    },
+    "corridor": {
+      "successes": 0,
+      "episodes": 1,
+      "capped_episodes": 1
+    },
+    "e1m1": {
+      "successes": 0,
+      "episodes": 1,
+      "capped_episodes": 1
+    }
+  },
+  "interpretation": "E1M2 is one held-out layout evaluated with and without granted keys. The keys variant controls for a mechanic absent from the training tasks. Pilot or capped evaluations validate the pipeline and do not establish transfer. Results are conditional on one perception initialization and the recorded teachers."
+}

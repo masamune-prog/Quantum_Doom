@@ -1,0 +1,36 @@
+{
+  "output": "transfer_runs/smoke_20261103",
+  "device": "cuda",
+  "threads": 2,
+  "num_envs": 2,
+  "navigation_teacher": "pixel_nav_runs/classical_seed0/best.pt",
+  "corridor_teacher": "pixel_corridor_runs/classical_seed0/best.pt",
+  "conditions": [
+    "single",
+    "multi"
+  ],
+  "models": [
+    "gru",
+    "mlp"
+  ],
+  "seeds": [
+    0
+  ],
+  "perception_seed": 42,
+  "perception_steps": 192,
+  "validation_steps": 32,
+  "perception_epochs": 2,
+  "perception_lr": 0.0003,
+  "initial_steps": 64,
+  "iter_steps": 16,
+  "iterations": 1,
+  "actor_epochs": 2,
+  "sequence_batch": 2,
+  "lr": 0.0003,
+  "beta": 0.3,
+  "max_episode": 32,
+  "eval_max_steps": 32,
+  "batch": 32,
+  "eval_episodes": 1,
+  "final_episodes": 1
+}

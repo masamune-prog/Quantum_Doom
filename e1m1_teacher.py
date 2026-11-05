@@ -66,7 +66,7 @@ class RouteTeacher:
         if self.anchor is None or np.linalg.norm(position - self.anchor) > 4.0:
             self.anchor, self.anchor_step = position.copy(), self.step
         elif self.step - self.anchor_step > self.stuck_steps and self.step - self.last_use > 8:
-            self.escape, self.escape_turn = 6, int(np.random.choice([TURN_LEFT, TURN_RIGHT]))
+            self.escape, self.escape_turn = 6, int(env.np_random.choice([TURN_LEFT, TURN_RIGHT]))
             self.anchor_step = self.step
         if self.escape > 0:
             self.escape -= 1

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/tmp/quantum-doom-frozen-gpu/bin/python",
+    "-u",
+    "train_frozen_perception.py",
+    "--device",
+    "cuda",
+    "--batch",
+    "256",
+    "--output",
+    "/mnt/hdd2/zhengrong/Quantum_Doom/frozen_perception_runs/e1m1_gpu_full_20261103"
+  ],
+  "cwd": "/mnt/hdd2/zhengrong/Quantum_Doom",
+  "physical_gpu": 3,
+  "started_utc": "2026-11-03T02:04:15.424573+00:00",
+  "supervisor_source": "import datetime,json,pathlib,subprocess,sys,time\nout=pathlib.Path(sys.argv[1])\nlaunch=json.loads((out/'launch.json').read_text())\nstart=time.time()\ndef status(state,**kw):\n (out/'status.json').write_text(json.dumps(dict(state=state,pid=__import__('os').getpid(),updated_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),elapsed_seconds=time.time()-start,**kw),indent=2)+'\\n')\nstatus('running')\ntry:\n result=subprocess.run(launch['command'],cwd=launch['cwd'])\n if result.returncode:\n  status('failed',returncode=result.returncode)\n  sys.exit(result.returncode)\n summary=subprocess.run([launch['command'][0],'summarize_frozen_perception.py',str(out/'results.json'),'--output',str(out/'summary.json')],cwd=launch['cwd'])\n status('complete' if summary.returncode==0 else 'summary_failed',returncode=summary.returncode)\nexcept BaseException as exc:\n status('failed',error=repr(exc))\n raise\n",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "3",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  }
+}
