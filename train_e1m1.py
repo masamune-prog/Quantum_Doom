@@ -11,6 +11,7 @@ import torch
 
 from e1m1_env import QuantumE1M1Env
 from e1m1_quantum_model import QuantumE1M1Policy
+from ppo_common import gae_step_dones
 
 
 def reset_at(env, seed, start_wp):
@@ -49,8 +50,9 @@ def train(args):
     # PennyLane default.qubit creates its initial state using Torch's default
     # device; it must match the CUDA inputs and trainable gate parameters.
     torch.set_default_device(device)
-    envs = [QuantumE1M1Env(skill=args.skill, cheats=True) for _ in range(args.num_envs)]
-    eval_env = QuantumE1M1Env(skill=args.skill)
+    envs = [QuantumE1M1Env(skill=args.skill, cheats=True, depth_scale=args.depth_scale)
+            for _ in range(args.num_envs)]
+    eval_env = QuantumE1M1Env(skill=args.skill, depth_scale=args.depth_scale)
     model = QuantumE1M1Policy(n_layers=args.layers).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     os.makedirs(args.output, exist_ok=True)
@@ -124,15 +126,8 @@ def train(args):
             rewards = torch.stack(rw)
             dones = torch.stack(dn)
             values = torch.stack(va)
-            advantages = torch.zeros_like(rewards)
-            gae = torch.zeros(args.num_envs, device=device)
-            for t in reversed(range(args.steps)):
-                nonterminal = 1.0 - dones[t]
-                following = next_value if t == args.steps - 1 else values[t + 1]
-                delta = rewards[t] + args.gamma * following * nonterminal - values[t]
-                gae = delta + args.gamma * args.gae_lambda * nonterminal * gae
-                advantages[t] = gae
-            returns = advantages + values
+            advantages, returns = gae_step_dones(rewards, values, dones, next_value,
+                                                 args.gamma, args.gae_lambda)
             b_obs = torch.stack(ob).reshape(-1, 12)
             b_act = torch.stack(ac).reshape(-1)
             b_logp = torch.stack(lp).reshape(-1)
@@ -205,6 +200,8 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--skill", type=int, default=3)
+    p.add_argument("--depth-scale", choices=("log", "legacy"), default="log",
+                   help="legacy reproduces runs from before the depth fix")
     p.add_argument("--updates", type=int, default=200)
     p.add_argument("--num-envs", type=int, default=8)
     p.add_argument("--steps", type=int, default=32)

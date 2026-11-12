@@ -3,12 +3,14 @@
 import argparse
 import numpy as np
 
-from e1m1_env import QuantumE1M1Env
+from e1m1_env import DOOR_WAYPOINTS, QuantumE1M1Env
 from validate_e1m1_route import ScriptedFollower
 
 
 def run(env, start_wp, seed, max_steps):
     obs, _ = env.reset(seed=seed)
+    if start_wp in DOOR_WAYPOINTS:
+        raise ValueError(f"start {start_wp} is a door waypoint {DOOR_WAYPOINTS}")
     if start_wp:
         target = env.waypoints[start_wp]
         obs = env.warp(*target)

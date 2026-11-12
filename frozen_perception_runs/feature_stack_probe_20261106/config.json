@@ -1,0 +1,30 @@
+{
+  "output": "frozen_perception_runs/feature_stack_probe_20261106",
+  "device": "cuda",
+  "num_envs": 16,
+  "skill": 3,
+  "perception_seed": 42,
+  "perception_steps": 100000,
+  "validation_steps": 10000,
+  "head_steps": 100000,
+  "heldout_steps": 20000,
+  "perception_epochs": 20,
+  "perception_lr": 0.0003,
+  "random_probability": 0.25,
+  "max_episode": 1575,
+  "batch": 256,
+  "head_epochs": 15,
+  "head_lr": 0.001,
+  "ks": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "stride": 1,
+  "seeds": [
+    0,
+    1,
+    2
+  ]
+}

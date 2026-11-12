@@ -221,14 +221,20 @@ class QuantumNavigationEnv(gym.Env):
         return obs, {}
 
     def step(self, action: int):
-        raw_reward = self.game.make_action(self.actions[action], self.frame_skip)
-        terminated = self.game.is_episode_finished()
-        state = None if terminated else self.game.get_state()
+        self.game.make_action(self.actions[action], self.frame_skip)
+        ended = self.game.is_episode_finished()
+        # A time limit is a truncation, not a terminal state: PPO bootstraps through it.
+        truncated = bool(ended and self.game.is_episode_timeout_reached())
+        terminated = ended and not truncated
+        # The vest's +1 can land on the tic before the episode ends, so this step's own
+        # reward may be slightly negative; test the episode total instead.
+        success = bool(terminated and self.game.get_total_reward() > 0.5)
+        state = None if ended else self.game.get_state()
 
         reward = 0.0
         is_stuck = False
 
-        if not terminated and state is not None:
+        if not ended and state is not None:
             px = self.game.get_game_variable(vzd.GameVariable.POSITION_X)
             py = self.game.get_game_variable(vzd.GameVariable.POSITION_Y)
             curr_pos = np.array([px, py], dtype=np.float32)
@@ -252,11 +258,11 @@ class QuantumNavigationEnv(gym.Env):
             reward -= 0.01
 
         # Goal reward: Armor collected / level exit
-        if terminated and raw_reward > 0:
+        if success:
             reward += 100.0
 
         obs = self._extract_features(state, is_stuck=is_stuck)
-        return obs, reward, terminated, False, {}
+        return obs, reward, terminated, truncated, {"success": success}
 
     def close(self):
         self.game.close()

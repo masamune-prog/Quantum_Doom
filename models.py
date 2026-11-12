@@ -30,7 +30,11 @@ class DataReuploadingPQC(nn.Module):
                 for i in range(self.n_qubits):
                     qml.RX(inputs[..., i] * lmbda[l, i], wires=i)
                     qml.RY(theta[l, i, 0], wires=i)
-                    qml.RZ(theta[l, i, 1], wires=i)
+                    # The last layer's RZ is diagonal and only CNOTs (basis permutations)
+                    # follow it, so it cannot change any Z expectation. theta[-1, :, 1] stays
+                    # in the state dict for checkpoint compatibility but is unused.
+                    if l < self.n_layers - 1:
+                        qml.RZ(theta[l, i, 1], wires=i)
                 if self.entangle:
                     for i in range(self.n_qubits):
                         qml.CNOT(wires=[i, (i + 1) % self.n_qubits])

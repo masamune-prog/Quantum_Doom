@@ -4,6 +4,14 @@ import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Doom / Doom II monster classes. Everything else in the labels buffer (blood, bullet puffs,
+# projectiles, pickups, corpses, the player, the goal armour) is not an enemy.
+MONSTERS = frozenset({
+    "Zombieman", "ShotgunGuy", "ChaingunGuy", "WolfensteinSS", "DoomImp", "Demon", "Spectre",
+    "LostSoul", "Cacodemon", "HellKnight", "BaronOfHell", "Arachnotron", "PainElemental",
+    "Revenant", "Fatso", "Archvile", "Cyberdemon", "SpiderMastermind", "MarineChainsawVzd",
+})
+
 
 class QuantumDoomEnv(gym.Env):
     """
@@ -43,6 +51,13 @@ class QuantumDoomEnv(gym.Env):
             self.game.load_config(custom_cfg_path)
         else:
             self.game.load_config(os.path.join(vzd.scenarios_path, scenario))
+        # The repo's deadly_corridor.wad is a symlink into one machine's venv; fall back to
+        # ViZDoom's bundled copy of the same scenario when it does not resolve.
+        if custom_cfg_path and not os.path.exists(os.path.join(os.path.dirname(custom_cfg_path),
+                                                               "deadly_corridor.wad")):
+            bundled = os.path.join(vzd.scenarios_path, "deadly_corridor.wad")
+            if os.path.exists(bundled):
+                self.game.set_doom_scenario_path(bundled)
 
         self.game.set_screen_resolution(vzd.ScreenResolution.RES_320X240)
         self.game.set_screen_format(vzd.ScreenFormat.RGB24)
@@ -88,11 +103,8 @@ class QuantumDoomEnv(gym.Env):
         sector_w = w // self.n_qubits
         features = np.zeros(self.n_qubits, dtype=np.float32)
 
-        # Filter specifically for Monster/Enemy bounding pixels (exclude player and goal vest)
-        enemy_ids = {
-            l.value for l in state.labels
-            if l.object_name not in ("DoomPlayer", "GreenArmor") and "Marine" not in l.object_name
-        }
+        # Living monsters only; corpses are reported under "Dead<Class>" names.
+        enemy_ids = {l.value for l in state.labels if l.object_name in MONSTERS}
 
         for i in range(self.n_qubits):
             col = slice(i * sector_w, (i + 1) * sector_w)
@@ -126,8 +138,11 @@ class QuantumDoomEnv(gym.Env):
 
     def step(self, action: int):
         reward = self.game.make_action(self.actions[action], self.frame_skip)
-        terminated = self.game.is_episode_finished()
-        state = None if terminated else self.game.get_state()
+        ended = self.game.is_episode_finished()
+        # A time limit is a truncation, not a terminal state: PPO bootstraps through it.
+        truncated = bool(ended and self.game.is_episode_timeout_reached())
+        terminated = ended and not truncated
+        state = None if ended else self.game.get_state()
         obs = self._extract_radar(state)
 
         # For corridor: combat and survival reward shaping
@@ -164,7 +179,7 @@ class QuantumDoomEnv(gym.Env):
 
             self.last_pos_x = pos_x
 
-        return obs, float(reward), terminated, False, {}
+        return obs, float(reward), terminated, truncated, {}
 
     def close(self):
         self.game.close()

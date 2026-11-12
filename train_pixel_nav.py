@@ -16,8 +16,10 @@ import numpy as np
 import torch
 from torch.distributions import Categorical
 
+from e1m1_env import DOOR_WAYPOINTS
 from pixel_nav_env import EnvPool
 from pixel_nav_models import PixelNavPolicy
+from ppo_common import gae_step_dones
 
 EASY_SEED = 20017
 SELECTION_SEED = 10000
@@ -80,7 +82,7 @@ class UniformStarts:
     start, so the policy has to chain the segments.
     """
 
-    STARTS = tuple(k for k in range(22) if k not in (5, 17, 20))
+    STARTS = tuple(k for k in range(22) if k not in DOOR_WAYPOINTS)
     stage, finished = 0, False
 
     def __init__(self, real_fraction=0.25):
@@ -309,15 +311,8 @@ def train(args):
             with torch.no_grad():
                 _, next_value = model(torch.as_tensor(obs, device=device))
             rewards, dones, values = torch.stack(rw), torch.stack(dn), torch.stack(va)
-            advantages = torch.zeros_like(rewards)
-            gae = torch.zeros(args.num_envs, device=device)
-            for t in reversed(range(args.steps)):
-                nonterminal = 1.0 - dones[t]
-                following = next_value.float() if t == args.steps - 1 else values[t + 1]
-                delta = rewards[t] + args.gamma * following * nonterminal - values[t]
-                gae = delta + args.gamma * args.gae_lambda * nonterminal * gae
-                advantages[t] = gae
-            returns = advantages + values
+            advantages, returns = gae_step_dones(rewards, values, dones, next_value.float(),
+                                                 args.gamma, args.gae_lambda)
             b_obs = torch.stack(ob).flatten(0, 1)
             b_aux = torch.stack(ax).flatten(0, 1)
             b_act = torch.stack(ac).flatten()

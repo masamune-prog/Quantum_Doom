@@ -13,6 +13,7 @@ from e1m1_quantum_model import QuantumE1M1Policy
 from human_nav_env import HumanNavigationEnv
 from human_e1m1_env import HumanE1M1Env
 from human_nav_models import ClassicalNavPolicy
+from ppo_common import gae_step_dones
 
 ENVS = {"navigation": HumanNavigationEnv, "e1m1": HumanE1M1Env}
 
@@ -107,15 +108,8 @@ def train(args):
             with torch.no_grad():
                 _, next_value = model(torch.as_tensor(obs, dtype=torch.float32, device=device))
             rewards, dones, values = torch.stack(rw), torch.stack(dn), torch.stack(va)
-            advantages = torch.zeros_like(rewards)
-            gae = torch.zeros(args.num_envs, device=device)
-            for t in reversed(range(args.steps)):
-                nonterminal = 1.0 - dones[t]
-                following = next_value if t == args.steps - 1 else values[t + 1]
-                delta = rewards[t] + args.gamma * following * nonterminal - values[t]
-                gae = delta + args.gamma * args.gae_lambda * nonterminal * gae
-                advantages[t] = gae
-            returns = advantages + values
+            advantages, returns = gae_step_dones(rewards, values, dones, next_value,
+                                                 args.gamma, args.gae_lambda)
             b_obs = torch.stack(ob).reshape(-1, 12)
             b_act = torch.stack(ac).reshape(-1)
             b_logp = torch.stack(lp).reshape(-1)

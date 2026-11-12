@@ -11,6 +11,7 @@ import torch
 
 from models import DoomActorCritic
 from subtask_envs import TASKS
+from ppo_common import gae_step_dones
 
 
 @torch.no_grad()
@@ -162,15 +163,8 @@ def train(args):
             rewards = torch.stack(rw)
             dones = torch.stack(dn)
             values = torch.stack(va)
-            advantages = torch.zeros_like(rewards)
-            gae = torch.zeros(args.num_envs, device=device)
-            for t in reversed(range(args.steps)):
-                nonterminal = 1.0 - dones[t]
-                following = next_value if t == args.steps - 1 else values[t + 1]
-                delta = rewards[t] + args.gamma * following * nonterminal - values[t]
-                gae = delta + args.gamma * args.gae_lambda * nonterminal * gae
-                advantages[t] = gae
-            returns = advantages + values
+            advantages, returns = gae_step_dones(rewards, values, dones, next_value,
+                                                 args.gamma, args.gae_lambda)
             b_obs = torch.stack(ob).reshape(-1, n_obs)
             b_act = torch.stack(ac).reshape(-1)
             b_logp = torch.stack(lp).reshape(-1)

@@ -31,6 +31,7 @@ class Replay(Dataset):
     def __init__(self, capacity):
         super().__init__(capacity)
         self.cooldown = np.zeros(capacity, np.float32)
+        self.pose = np.zeros((capacity, 3), np.float32)  # probes only; never a policy input
 
     def append(self, episode):
         count = len(episode["actions"])
@@ -39,6 +40,8 @@ class Replay(Dataset):
         begin = self.size
         self.add_episode(episode["frames"], episode["actions"], episode["aux"])
         self.cooldown[begin:self.size] = episode["cooldown"]
+        if episode.get("pose"):
+            self.pose[begin:self.size] = episode["pose"]
 
     def tensors(self, indices, device):
         images, actions, geometry = self.batch(indices)
@@ -65,7 +68,7 @@ def collect(pool, replay, budget, rng, device, seed_base, max_episode, policy=No
         serial += 1
         observations[i], infos[i] = pool.reset(
             [i], [seed_base + serial], {"start_wp": starts.sample(rng)})[0]
-        buffers[i] = {key: [] for key in ("frames", "actions", "aux", "cooldown")}
+        buffers[i] = {key: [] for key in ("frames", "actions", "aux", "cooldown", "pose")}
         lengths[i], cooldowns[i] = 0, 0
 
     for i in range(pool.n):
@@ -87,6 +90,8 @@ def collect(pool, replay, budget, rng, device, seed_base, max_episode, policy=No
             buffers[i]["actions"].append(label)
             buffers[i]["aux"].append(infos[i]["aux"])
             buffers[i]["cooldown"].append(cooldowns[i])
+            if "pose" in infos[i]:
+                buffers[i]["pose"].append(infos[i]["pose"])
             if rng.random() < random_probability:
                 action = int(rng.integers(N_ACTIONS))
             elif policy is None or rng.random() < teacher_probability:

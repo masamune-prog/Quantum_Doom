@@ -999,22 +999,46 @@ than the policy model as the bottleneck. That led to the learned CNN encoder. Ou
 
 ## Known issues
 
-- **`doom_nav_env.py`** still uses the old `raw_reward > 0` success test (see the
-  success-detection bug above).
-- **`human_e1m1_env.py`:** the STRAFE_RIGHT entry in `HumanE1M1Env.ACTIONS` has 6 elements
-  instead of 7.
-- **Shared code:** the PPO loop is copied across several training scripts, so fixes must be
-  applied to each.
-- **Older trainers:**
-  - `clip_grad_norm_` covers actor and critic together, so critic gradients dominate.
-  - They select "best" checkpoints by mean step reward, which is noisy.
+Fixed on 2026-11-05. Results reported above for the older pipelines were produced before
+these fixes, so rerunning them will not reproduce the exact numbers.
+
+- **Success test in `doom_nav_env.py`:** it now uses the episode total
+  (`get_total_reward() > 0.5`), like the screen-only environments, and reports
+  `info["success"]`.
+- **STRAFE_RIGHT in `human_e1m1_env.py`:** it now has 7 elements and presses `MOVE_RIGHT`. It
+  used to have 6 elements, with the 1 in the ATTACK slot.
+- **Shared PPO code:** `ppo_common.py` now holds the GAE step for all seven PPO trainers, and
+  the rollout bookkeeping and PPO update for `train_navigation.py`, `train_corridor.py` and
+  `train_ablation.py`.
+- **Older trainers** (`train_navigation.py`, `train_corridor.py`, `train_ablation.py`):
+  - Actor and critic gradients are clipped separately.
+  - The "best" checkpoint is chosen by success rate over the last 100 episodes (navigation)
+    or mean return over the last 100 episodes (corridor), not by mean step reward.
 - **`doom_env.py` and `doom_nav_env.py`:**
-  - They mark time limits as `terminated`, so GAE does not bootstrap at timeouts.
-  - `doom_env.py` treats every non-player, non-armour object as an enemy.
-- **`DataReuploadingPQC`:** the final-layer RZ gates do not affect Z measurements, so 8–12
-  parameters are redundant.
+  - Time limits come back as `truncated`. The vector envs auto-reset on the same step, and
+    `ppo_common.timeout_bootstrap` adds γ·V(final_obs) at a truncation.
+  - `doom_env.py` counts only Doom monster classes as enemies. Before, blood, bullet puffs,
+    ammo clips, dropped weapons and corpses in Deadly Corridor all counted.
+- **`DataReuploadingPQC`:** the last layer's RZ gates are skipped. They could not change any
+  Z expectation. The parameters stay in the state dict so old checkpoints still load.
 - **`e1m1_env.py`:**
-  - It reuses the maze depth normalisation, which saturates beyond about 38 units.
-  - Warping onto door waypoint 17 stalls the scripted follower.
-- **`quantum_navigation_gameplay.mp4`** (earlier pipeline) is empty because of a device
-  mismatch during recording.
+  - Sector clearance is log-scaled over 3–120 depth units. The old linear 3–38 range
+    saturated on about 9% of sectors. `depth_scale="legacy"` (`train_e1m1.py
+    --depth-scale legacy`) restores the old features.
+  - Door waypoints (5, 17, 20, `e1m1_env.DOOR_WAYPOINTS`) are rejected as start points by
+    `PixelE1M1Env.reset` and `validate_e1m1_starts.py`.
+- **`quantum_navigation_gameplay.mp4`:** re-recorded from `checkpoint_nav_best.pt` (3
+  episodes, 2 vest pickups). `record_nav_agent.py` now refuses a missing or mismatched
+  checkpoint instead of recording a random policy.
+
+Still open:
+
+- The four EnvPool trainers (`train_pixel_nav.py`, `train_human_nav.py`,
+  `train_subtask_baseline.py`, `train_e1m1.py`) share only GAE. Their rollout and update
+  loops differ (auxiliary losses, encoders, evaluation) and are still separate.
+- `checkpoint_quantum_entangled_seed42.pt` and `checkpoint_quantum_product_seed42.pt` come
+  from an earlier `DataReuploadingPQC` (`actor.beta` in place of the linear readout) and do
+  not load into the current model.
+- `deadly_corridor.wad` and `my_way_home.wad` are symlinks into one machine's virtualenv.
+  `doom_env.py` and `doom_nav_env.py` fall back to ViZDoom's bundled copies when the links
+  do not resolve.

@@ -167,15 +167,11 @@ def record_nav_episodes(
         mode="quantum_entangled",
     ).to(dev)
 
-    if os.path.exists(checkpoint_path):
-        state_dict = torch.load(checkpoint_path, map_location=dev, weights_only=True)
-        try:
-            agent.load_state_dict(state_dict)
-        except Exception:
-            agent.load_state_dict(state_dict, strict=False)
-        print(f"Loaded checkpoint from: {checkpoint_path}")
-    else:
-        print(f"Checkpoint {checkpoint_path} not found! Recording with initialized weights.")
+    if not os.path.exists(checkpoint_path):
+        raise FileNotFoundError(f"Checkpoint {checkpoint_path} not found")
+    # Strict load: a mismatched checkpoint must fail rather than record a random policy.
+    agent.load_state_dict(torch.load(checkpoint_path, map_location=dev, weights_only=True))
+    print(f"Loaded checkpoint from: {checkpoint_path}")
 
     agent.eval()
 

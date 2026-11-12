@@ -24,6 +24,8 @@ import gymnasium as gym
 import matplotlib.pyplot as plt
 from doom_env import QuantumDoomEnv
 from models import DoomActorCritic
+from ppo_common import (EpisodeTracker, compute_gae, final_info, make_vector_env,
+                        ppo_update, timeout_bootstrap)
 
 
 def make_corridor_env(idx: int, seed: int = 0):
@@ -63,7 +65,7 @@ def train_corridor(
     torch.set_default_device(device)
 
     # Create vectorized environments across multiple processes to max out all CPU cores
-    envs = gym.vector.AsyncVectorEnv(
+    envs = make_vector_env(
         [make_corridor_env(i, seed) for i in range(num_envs)]
     )
 
@@ -102,86 +104,63 @@ def train_corridor(
     batch_size = num_envs * n_steps
     num_updates = total_steps // batch_size
     reward_history = []
-    best_reward = -float("inf")
+    success_history = []
+    tracker = EpisodeTracker(num_envs)
+    best_score = (-float("inf"), -float("inf"))
 
     print(f"  Batch size: {batch_size}, Updates: {num_updates}\n")
 
     for update in range(1, num_updates + 1):
-        # Rollout phase
-        episode_rewards = []
+        step_reward_sum = 0.0
         for step in range(n_steps):
             obs_buf[step] = next_obs
             done_buf[step] = next_done
 
             with torch.no_grad():
                 action, logprob, _, value = agent.get_action_and_value(next_obs)
-                val_buf[step] = value.flatten()
-
+            val_buf[step] = value.flatten()
             act_buf[step] = action
             logp_buf[step] = logprob
 
-            raw_obs, reward, terminated, truncated, _ = envs.step(action.cpu().numpy())
+            raw_obs, reward, terminated, truncated, infos = envs.step(action.cpu().numpy())
             done = np.logical_or(terminated, truncated)
+            tracker.step(reward, done)
+            step_reward_sum += float(np.sum(reward))
 
-            # Normalize rewards (death_penalty=100 is very large)
-            rew_buf[step] = torch.tensor(reward / 100.0, dtype=torch.float32, device=device)
+            rew_buf[step] = (torch.tensor(reward / 100.0, dtype=torch.float32, device=device)
+                             + timeout_bootstrap(agent, infos, terminated, truncated, gamma, device))
             next_obs = torch.tensor(raw_obs, dtype=torch.float32, device=device)
             next_done = torch.tensor(done, dtype=torch.float32, device=device)
 
-        # Compute GAE
         with torch.no_grad():
             next_value = agent.get_value(next_obs).reshape(1, -1)
-            advantages = torch.zeros_like(rew_buf, device=device)
-            lastgaelam = 0
-            for t in reversed(range(n_steps)):
-                nextnonterminal = 1.0 - (next_done if t == n_steps - 1 else done_buf[t + 1])
-                nextvalues = next_value if t == n_steps - 1 else val_buf[t + 1]
-                delta = rew_buf[t] + gamma * nextvalues * nextnonterminal - val_buf[t]
-                advantages[t] = lastgaelam = delta + gamma * gae_lambda * nextnonterminal * lastgaelam
-            returns = advantages + val_buf
+        advantages, returns = compute_gae(rew_buf, val_buf, done_buf, next_value, next_done,
+                                          gamma, gae_lambda)
+        losses = ppo_update(agent, optimizer, obs_buf, act_buf, logp_buf, advantages, returns,
+                            n_epochs=n_epochs, minibatch_size=minibatch_size,
+                            clip_coef=clip_coef, ent_coef=ent_coef, vf_coef=vf_coef,
+                            max_grad_norm=max_grad_norm)
 
-        # PPO update phase
-        b_obs = obs_buf.reshape((-1, 8))
-        b_act = act_buf.reshape(-1)
-        b_logp = logp_buf.reshape(-1)
-        b_adv = advantages.reshape(-1)
-        b_ret = returns.reshape(-1)
-
-        b_inds = np.arange(batch_size)
-        for epoch in range(n_epochs):
-            np.random.shuffle(b_inds)
-            for start in range(0, batch_size, minibatch_size):
-                mb = b_inds[start:start + minibatch_size]
-                _, newlogprob, entropy, newval = agent.get_action_and_value(b_obs[mb], b_act[mb])
-                ratio = (newlogprob - b_logp[mb]).exp()
-
-                mb_adv = (b_adv[mb] - b_adv[mb].mean()) / (b_adv[mb].std() + 1e-8)
-                pg_loss1 = -mb_adv * ratio
-                pg_loss2 = -mb_adv * torch.clamp(ratio, 1.0 - clip_coef, 1.0 + clip_coef)
-                pg_loss = torch.max(pg_loss1, pg_loss2).mean()
-                v_loss = 0.5 * ((newval.view(-1) - b_ret[mb]) ** 2).mean()
-                loss = pg_loss - ent_coef * entropy.mean() + vf_coef * v_loss
-
-                optimizer.zero_grad()
-                loss.backward()
-                nn.utils.clip_grad_norm_(agent.parameters(), max_grad_norm)
-                optimizer.step()
-
-        mean_step_rew = rew_buf.mean().item() * 100.0
+        mean_step_rew = step_reward_sum / batch_size
+        success_rate = 100.0 * tracker.success_rate()
         reward_history.append(mean_step_rew)
+        success_history.append(success_rate)
 
-        if mean_step_rew > best_reward:
-            best_reward = mean_step_rew
-            torch.save(agent.state_dict(), "checkpoint_corridor_best.pt")
+        # Best = highest mean return over the last 100 completed episodes.
+        if tracker.returns:
+            score = (tracker.mean_return(), 0.0)
+            if score > best_score:
+                best_score = score
+                torch.save(agent.state_dict(), "checkpoint_corridor_best.pt")
 
         if update % 2 == 0 or update == 1:
             print(
                 f"Update {update:03d}/{num_updates} | "
-                f"Mean R: {mean_step_rew:+7.2f} | "
-                f"Best R: {best_reward:+7.2f} | "
-                f"PG: {pg_loss.item():.4f} | "
-                f"VF: {v_loss.item():.4f} | "
-                f"Ent: {entropy.mean().item():.4f}"
+                f"Mean step R: {mean_step_rew:+7.2f} | "
+                f"Episode R (last 100): {tracker.mean_return():+8.2f} | "
+                f"PG: {losses['pg_loss']:.4f} | "
+                f"VF: {losses['v_loss']:.4f} | "
+                f"Ent: {losses['entropy']:.4f}"
             )
 
     envs.close()

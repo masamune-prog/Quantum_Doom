@@ -123,6 +123,15 @@ def make_pixel_env(task="navigation", **kwargs):
     if task == "corridor":
         from pixel_corridor_env import PixelCorridorEnv
         return PixelCorridorEnv(**kwargs)
+    if task == "corridor_canny_enemy":
+        from canny_corridor_env import CannyEnemyCorridorEnv
+        return CannyEnemyCorridorEnv(**kwargs)
+    if task == "corridor_canny":
+        from canny_corridor_env import CannyCorridorEnv
+        return CannyCorridorEnv(**kwargs)
+    if task == "e1m1_canny":
+        from canny_e1m1_env import CannyE1M1Env
+        return CannyE1M1Env(**kwargs)
     if task == "e1m1":
         from pixel_e1m1_env import PixelE1M1Env
         return PixelE1M1Env(**kwargs)

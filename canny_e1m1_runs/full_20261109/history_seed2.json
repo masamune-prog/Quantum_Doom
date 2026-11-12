@@ -1,0 +1,5534 @@
+[
+  {
+    "seed": 2,
+    "iteration": 0,
+    "dataset_size": 50000,
+    "training": {
+      "quantum2": {
+        "training_ce": 1.629948219312032,
+        "training_accuracy": 0.40439
+      },
+      "quantum4": {
+        "training_ce": 1.5495758826764425,
+        "training_accuracy": 0.47423333333333334
+      },
+      "linear": {
+        "training_ce": 1.5489925779088338,
+        "training_accuracy": 0.45055
+      },
+      "classical": {
+        "training_ce": 1.3783647691663106,
+        "training_accuracy": 0.53768
+      }
+    },
+    "heldout_actions": {
+      "quantum2": {
+        "ce": 1.460507869720459,
+        "accuracy": 0.4530999958515167,
+        "balanced_accuracy": 0.23638797104358672,
+        "per_action_accuracy": {
+          "0": 0.7536367177963257,
+          "1": 0.18264839053153992,
+          "4": 0.10532475262880325,
+          "5": 0.0944584384560585,
+          "6": 0.0458715558052063
+        }
+      },
+      "quantum4": {
+        "ce": 1.3366507291793823,
+        "accuracy": 0.4657000005245209,
+        "balanced_accuracy": 0.3109585016965866,
+        "per_action_accuracy": {
+          "0": 0.6943305134773254,
+          "1": 0.5228310227394104,
+          "4": 0.1474546492099762,
+          "5": 0.190176323056221,
+          "6": 0.0
+        }
+      },
+      "linear": {
+        "ce": 1.3103687763214111,
+        "accuracy": 0.48899999260902405,
+        "balanced_accuracy": 0.2236470840871334,
+        "per_action_accuracy": {
+          "0": 0.783103346824646,
+          "1": 0.02054794505238533,
+          "4": 0.10005851835012436,
+          "5": 0.21452561020851135,
+          "6": 0.0
+        }
+      },
+      "classical": {
+        "ce": 1.2037453651428223,
+        "accuracy": 0.5210999846458435,
+        "balanced_accuracy": 0.2637320727109909,
+        "per_action_accuracy": {
+          "0": 0.846512496471405,
+          "1": 0.189497709274292,
+          "4": 0.1252194344997406,
+          "5": 0.1574307233095169,
+          "6": 0.0
+        }
+      }
+    },
+    "selection": {
+      "quantum2": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12102963831774385,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103808356616619
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102936589037538
+          }
+        ]
+      },
+      "quantum4": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12102415908487424,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102855160197734
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102855160197734
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102862345095355
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12099260316416927
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210076674995334
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101097255244286
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12099260316416927
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12099849478022595
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102788101153183
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102855160197734
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102855160197734
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103674238527529
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102862345095355
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103255119499123
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102855160197734
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210076674995334
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103070707126629
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210304436250198
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210076674995334
+          }
+        ]
+      },
+      "linear": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11351053845260684,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11351053845260684
+          }
+        ]
+      },
+      "classical": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "iteration": 1,
+    "dataset_size": 90000,
+    "training": {
+      "quantum2": {
+        "training_ce": 1.5088664255036248,
+        "training_accuracy": 0.4549888888888889
+      },
+      "quantum4": {
+        "training_ce": 1.3893314104433412,
+        "training_accuracy": 0.47857037037037037
+      },
+      "linear": {
+        "training_ce": 1.4266467531840006,
+        "training_accuracy": 0.4951388888888889
+      },
+      "classical": {
+        "training_ce": 1.3437942131536977,
+        "training_accuracy": 0.49934074074074075
+      }
+    },
+    "heldout_actions": {
+      "quantum2": {
+        "ce": 1.261432409286499,
+        "accuracy": 0.5054999589920044,
+        "balanced_accuracy": 0.22976972609758378,
+        "per_action_accuracy": {
+          "0": 0.8515479564666748,
+          "1": 0.0890410915017128,
+          "4": 0.0684610903263092,
+          "5": 0.13979849219322205,
+          "6": 0.0
+        }
+      },
+      "quantum4": {
+        "ce": 1.2332929372787476,
+        "accuracy": 0.49609997868537903,
+        "balanced_accuracy": 0.27024173736572266,
+        "per_action_accuracy": {
+          "0": 0.7646400928497314,
+          "1": 0.20776255428791046,
+          "4": 0.19660620391368866,
+          "5": 0.18219983577728271,
+          "6": 0.0
+        }
+      },
+      "linear": {
+        "ce": 1.2418183088302612,
+        "accuracy": 0.5325999855995178,
+        "balanced_accuracy": 0.21176135949790478,
+        "per_action_accuracy": {
+          "0": 0.9574785828590393,
+          "1": 0.011415524408221245,
+          "4": 0.04037448763847351,
+          "5": 0.049538202583789825,
+          "6": 0.0
+        }
+      },
+      "classical": {
+        "ce": 1.1836856603622437,
+        "accuracy": 0.5144000053405762,
+        "balanced_accuracy": 0.29207552373409273,
+        "per_action_accuracy": {
+          "0": 0.7868332862854004,
+          "1": 0.2716894745826721,
+          "4": 0.22469280660152435,
+          "5": 0.1771620512008667,
+          "6": 0.0
+        }
+      }
+    },
+    "selection": {
+      "quantum2": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12101291247480295,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101291247480295
+          }
+        ]
+      },
+      "quantum4": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      },
+      "linear": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      },
+      "classical": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "iteration": 2,
+    "dataset_size": 130000,
+    "training": {
+      "quantum2": {
+        "training_ce": 1.3889172229448954,
+        "training_accuracy": 0.4840307692307692
+      },
+      "quantum4": {
+        "training_ce": 1.361320434611883,
+        "training_accuracy": 0.48338589743589744
+      },
+      "linear": {
+        "training_ce": 1.4060560740128543,
+        "training_accuracy": 0.48878076923076924
+      },
+      "classical": {
+        "training_ce": 1.328590752635858,
+        "training_accuracy": 0.49835
+      }
+    },
+    "heldout_actions": {
+      "quantum2": {
+        "ce": 1.2167836427688599,
+        "accuracy": 0.5194000005722046,
+        "balanced_accuracy": 0.22232634350657463,
+        "per_action_accuracy": {
+          "0": 0.8770980834960938,
+          "1": 0.006849315017461777,
+          "4": 0.08074897527694702,
+          "5": 0.1469353437423706,
+          "6": 0.0
+        }
+      },
+      "quantum4": {
+        "ce": 1.1979048252105713,
+        "accuracy": 0.5130999684333801,
+        "balanced_accuracy": 0.24705315716564655,
+        "per_action_accuracy": {
+          "0": 0.8226408362388611,
+          "1": 0.06392693519592285,
+          "4": 0.17495611310005188,
+          "5": 0.16456758975982666,
+          "6": 0.00917431153357029
+        }
+      },
+      "linear": {
+        "ce": 1.2285478115081787,
+        "accuracy": 0.5361999869346619,
+        "balanced_accuracy": 0.22132417038083077,
+        "per_action_accuracy": {
+          "0": 0.9252144694328308,
+          "1": 0.0,
+          "4": 0.04622586444020271,
+          "5": 0.1351805180311203,
+          "6": 0.0
+        }
+      },
+      "classical": {
+        "ce": 1.1696357727050781,
+        "accuracy": 0.5153999924659729,
+        "balanced_accuracy": 0.29120010137557983,
+        "per_action_accuracy": {
+          "0": 0.7644535899162292,
+          "1": 0.21917808055877686,
+          "4": 0.24692803621292114,
+          "5": 0.22544080018997192,
+          "6": 0.0
+        }
+      }
+    },
+    "selection": {
+      "quantum2": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.10677148872989217,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10677148872989217
+          }
+        ]
+      },
+      "quantum4": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11702610259121522,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12100788304646204
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102560579394905
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102852765231853
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210324314466974
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102687512586363
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12103317388611912
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210324314466974
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102852765231853
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102560579394905
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210324314466974
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210361196941474
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102852765231853
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11428588442123722
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1210324314466974
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11431879125238176
+          }
+        ]
+      },
+      "linear": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      },
+      "classical": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12005515222347575,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11585006098180017
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12102555789463165
+          }
+        ]
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "iteration": 3,
+    "dataset_size": 170000,
+    "training": {
+      "quantum2": {
+        "training_ce": 1.3793997517567056,
+        "training_accuracy": 0.47890490196078433
+      },
+      "quantum4": {
+        "training_ce": 1.3517345475065943,
+        "training_accuracy": 0.48009705882352943
+      },
+      "linear": {
+        "training_ce": 1.3983250055182215,
+        "training_accuracy": 0.4741078431372549
+      },
+      "classical": {
+        "training_ce": 1.3145710461710014,
+        "training_accuracy": 0.4955980392156863
+      }
+    },
+    "heldout_actions": {
+      "quantum2": {
+        "ce": 1.2231550216674805,
+        "accuracy": 0.5155999660491943,
+        "balanced_accuracy": 0.2216983680613339,
+        "per_action_accuracy": {
+          "0": 0.857702374458313,
+          "1": 0.004566209856420755,
+          "4": 0.046810999512672424,
+          "5": 0.1994122564792633,
+          "6": 0.0
+        }
+      },
+      "quantum4": {
+        "ce": 1.209754228591919,
+        "accuracy": 0.49379998445510864,
+        "balanced_accuracy": 0.24557321034371854,
+        "per_action_accuracy": {
+          "0": 0.7484147548675537,
+          "1": 0.052511412650346756,
+          "4": 0.13984785974025726,
+          "5": 0.2779177129268646,
+          "6": 0.00917431153357029
+        }
+      },
+      "linear": {
+        "ce": 1.2306839227676392,
+        "accuracy": 0.5108000040054321,
+        "balanced_accuracy": 0.2179035574197769,
+        "per_action_accuracy": {
+          "0": 0.8632972836494446,
+          "1": 0.0,
+          "4": 0.08894090354442596,
+          "5": 0.13727959990501404,
+          "6": 0.0
+        }
+      },
+      "classical": {
+        "ce": 1.1719720363616943,
+        "accuracy": 0.5094000101089478,
+        "balanced_accuracy": 0.28123398423194884,
+        "per_action_accuracy": {
+          "0": 0.762588620185852,
+          "1": 0.2009132355451584,
+          "4": 0.2042129933834076,
+          "5": 0.23845507204532623,
+          "6": 0.0
+        }
+      }
+    },
+    "selection": {
+      "quantum2": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12098410103530721,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12098410103530721
+          }
+        ]
+      },
+      "quantum4": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.12120085291965482,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.12101188263947604
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.1213478298042383
+          }
+        ]
+      },
+      "linear": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.11134552782198415,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.11134552782198415
+          }
+        ]
+      },
+      "classical": {
+        "successes": 0,
+        "episodes": 32,
+        "mean_progress": 0.10400256331714308,
+        "rows": [
+          {
+            "seed": 10000,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10001,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10002,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10003,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10004,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10005,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10006,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10007,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10008,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10009,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10010,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10011,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10012,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10013,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10014,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10015,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10016,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10017,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10018,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10019,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10020,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10021,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10022,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10023,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10024,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10025,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10026,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10027,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10028,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10029,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10030,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          },
+          {
+            "seed": 10031,
+            "steps": 1575,
+            "success": false,
+            "kills": 0.0,
+            "health": 100.0,
+            "dead": false,
+            "start_progress": 0.0,
+            "progress": 0.10400256331714308
+          }
+        ]
+      }
+    }
+  }
+]
