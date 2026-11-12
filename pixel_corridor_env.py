@@ -35,12 +35,21 @@ class PixelCorridorEnv(PixelNavigationEnv):
     )
 
     def __init__(self, frame_skip=4, frames=4, skill=3, progress_weight=30.0,
-                 death_penalty=30.0):
+                 death_penalty=30.0, timeout_penalty=0.0, progress_mode="potential"):
         gym.Env.__init__(self)
         # Job 71183 used 5 and 50: the agent camped at the start, killing nearby
         # enemies and never advancing. A blind charge still scores below camping.
+        # "potential" progress is potential-based shaping that returns to zero at episode
+        # end, so it sums to ~0 per episode and never changes which policy is best.
+        # "max" pays progress_weight times each new furthest fraction of the start-to-vest
+        # distance and keeps it, so advancing is worth reward even if the agent dies.
+        # timeout_penalty makes camping until the time limit cost as much as dying.
+        if progress_mode not in ("potential", "max"):
+            raise ValueError(progress_mode)
         self.progress_weight = progress_weight
         self.death_penalty = death_penalty
+        self.timeout_penalty = timeout_penalty
+        self.progress_mode = progress_mode
         self.frame_skip = frame_skip
         self.frames = deque(maxlen=frames)
         self.game = vzd.DoomGame()
@@ -90,6 +99,7 @@ class PixelCorridorEnv(PixelNavigationEnv):
         self.health = self._var(vzd.GameVariable.HEALTH)
         self.kills = self._var(vzd.GameVariable.KILLCOUNT)
         self.start_kills = self.kills
+        self.best_progress = 0.0
         frame = self._frame(state.screen_buffer)
         for _ in range(self.frames.maxlen):
             self.frames.append(frame)
@@ -106,11 +116,20 @@ class PixelCorridorEnv(PixelNavigationEnv):
         health = self._var(vzd.GameVariable.HEALTH)
         kills = self._var(vzd.GameVariable.KILLCOUNT)
         reward = -0.01 + (100.0 if success else 0.0) - (self.death_penalty if dead else 0.0)
+        reward -= self.timeout_penalty if timeout else 0.0
         reward -= 0.05 * max(0.0, self.health - health)
         reward += kill_reward(self.kills, kills)
-        reward += progress_reward(self.last_reward_position, position, self.goal_pos,
-                                  distance_scale=1500.0, weight=self.progress_weight,
-                                  terminal=ended)
+        if self.progress_mode == "max":
+            start = np.linalg.norm(self.start_pos - self.goal_pos)
+            progress = float(np.clip(1 - np.linalg.norm(position - self.goal_pos) / start, 0, 1))
+            if success:
+                progress = 1.0
+            reward += self.progress_weight * max(0.0, progress - self.best_progress)
+            self.best_progress = max(self.best_progress, progress)
+        else:
+            reward += progress_reward(self.last_reward_position, position, self.goal_pos,
+                                      distance_scale=1500.0, weight=self.progress_weight,
+                                      terminal=ended)
         self.last_reward_position, self.health, self.kills = position, health, kills
         info = {"success": success}
         if ended:

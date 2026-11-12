@@ -1,3 +1,0 @@
-quantum         head params 74, trainable 74; logits that change when only z[5] changes: [0, 1, 2, 3, 4, 5, 6]
-quantum_noent   head params 74, trainable 74; logits that change when only z[5] changes: [5]
-quantum_frozen  head params 74, trainable 2; logits that change when only z[5] changes: [0, 1, 2, 3, 4, 5, 6]

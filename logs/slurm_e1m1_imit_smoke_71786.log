@@ -1,6 +1,0 @@
-imitation model=classical skill=3 envs=4 device=cpu parameters=497160
-{"iteration": 0, "beta": 1.0, "dataset": 3092, "collected": 3092, "agreement": null, "labels": {"FORWARD": 2028, "ATTACK": 250, "TURN_LEFT": 467, "TURN_RIGHT": 692, "USE": 51}, "ce": 1.7387, "route": 0.3239, "accuracy": 0.585, "selection": "greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.11", "score": 0.0011, "seconds": 8.5}
-{"iteration": 1, "beta": 0.3, "dataset": 5291, "collected": 2199, "agreement": 0.35973597359735976, "labels": {"FORWARD": 872, "ATTACK": 84, "TURN_LEFT": 564, "TURN_RIGHT": 882, "USE": 22}, "ce": 1.5597, "route": 0.2077, "accuracy": 0.4945, "selection": "greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.11", "score": 0.0011, "seconds": 18.9}
-FINAL imitation classical best_iteration=1 greedy 0/4 (excluding 20017: 0/4) mean_kills=0.00 mean_dead=0.00 mean_progress=0.11
-FINAL imitation classical best_iteration=1 sampled 0/4 (excluding 20017: 0/4) mean_kills=0.25 mean_dead=0.50 mean_progress=0.19
-FINAL imitation classical best_iteration=1 teacher 4/4 (excluding 20017: 4/4) mean_kills=1.50 mean_dead=0.00 mean_progress=1.00

@@ -1,4 +1,0 @@
-skill 3 start None: exits 84/100, died 16, timeouts 0, mean steps 323, kills 1.11, health 35, progress 0.98
-actions {'TURN_RIGHT': 7290, 'FORWARD': 18340, 'TURN_LEFT': 4605, 'USE': 373, 'ATTACK': 1703}
-skill 1 start None: exits 29/30, died 1, timeouts 0, mean steps 323, kills 0.53, health 75, progress 0.99
-actions {'TURN_RIGHT': 2201, 'FORWARD': 5484, 'TURN_LEFT': 1351, 'USE': 118, 'ATTACK': 535}

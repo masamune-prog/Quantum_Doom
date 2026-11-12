@@ -1,3 +1,0 @@
-e1m1_classical_warm_seed0_real {'seed': 20000, 'success': False, 'steps': 500}
-e1m1_classical_warm_seed0_wp12 {'seed': 1, 'success': False, 'steps': 337, 'kills': 1.0, 'health': 0.0, 'dead': True, 'progress': 0.621679786626971}
-e1m1_classical_warm_seed0_wp8 {'seed': 1, 'success': False, 'steps': 468, 'kills': 1.0, 'health': 0.0, 'dead': True, 'progress': 0.5228149790221108}

@@ -1,8 +1,0 @@
-task=combat device=cuda obs=10 actions=7 actor_params=259 critic_params=385 updates=8 envs=4 steps=32
-{"update": 1, "step_reward": -0.3240624666213989, "episodes": 2, "successes": 0, "episode_kills": 2.0, "seconds": 4.2}
-eval update=8 score=-0.023 summary={'mean_kills': 0.0, 'mean_damage': 114.0, 'survival_rate': 0.0, 'kill_and_survive_rate': 0.0}
-FINAL task=combat best_update=8 summaries={"greedy": {"mean_kills": 0.5, "mean_damage": 105.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "sampled": {"mean_kills": 0.5, "mean_damage": 111.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "random": {"mean_kills": 0.5, "mean_damage": 117.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "forward": {"mean_kills": 0.0, "mean_damage": 114.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "attack": {"mean_kills": 0.0, "mean_damage": 108.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}, "forward_attack": {"mean_kills": 0.0, "mean_damage": 114.0, "survival_rate": 0.0, "kill_and_survive_rate": 0.0}}
-task=navigation device=cuda obs=10 actions=3 actor_params=199 critic_params=385 updates=8 envs=4 steps=32
-{"update": 1, "step_reward": 0.11031249165534973, "episodes": 0, "successes": 0, "episode_kills": 0.0, "seconds": 0.7}
-eval update=8 score=0.500 summary={'success_rate': 0.5, 'mean_steps': 306.5}
-FINAL task=navigation best_update=8 summaries={"greedy": {"success_rate": 0.5, "mean_steps": 440.5}, "sampled": {"success_rate": 0.0, "mean_steps": 525.0}, "random": {"success_rate": 0.0, "mean_steps": 525.0}, "forward": {"success_rate": 0.0, "mean_steps": 525.0}}

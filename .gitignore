@@ -1,5 +1,4 @@
-__pycache__
-frozen_perception_runs/**/*.pt
-frozen_perception_runs/**/*.log
-transfer_runs/**/*.pt
-transfer_runs/**/*.log
+runs/
+_vizdoom/
+_vizdoom.ini
+__pycache__/

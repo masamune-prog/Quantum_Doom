@@ -63,8 +63,11 @@ def caption(frame, lines):
 def record(path, task, head, name, seeds, out_dir, start_wp=None, any_outcome=False,
            max_steps=None, sampled=False):
     checkpoint = torch.load(path, map_location="cpu", weights_only=False)
+    # E1M1 runs without route auxiliary targets (PPO attempts 1-2) have a 17-wide aux head.
+    aux_size = checkpoint["model"]["aux.weight"].shape[0]
     model = PixelNavPolicy(head=head, n_actions=N_ACTIONS[task],
-                           **({"aux_size": 20, "aux_route": 3} if task == "e1m1" else {}))
+                           **({"aux_size": aux_size, "aux_route": aux_size - 17}
+                              if task == "e1m1" else {}))
     model.load_state_dict(checkpoint["model"])
     model.eval()
     env = make_pixel_env(task)

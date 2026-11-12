@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/tc1home/UG/zgoh033/quantum_doom/diagnose_pixel_corridor.py", line 10, in <module>
-    obs, info = env.reset(seed=1)
-                ^^^^^^^^^^^^^^^^^
-  File "/tc1home/UG/zgoh033/quantum_doom/pixel_corridor_env.py", line 82, in reset
-    self.goal_pos = PixelNavigationEnv._goal_from_objects(state)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'PixelNavigationEnv' has no attribute '_goal_from_objects'

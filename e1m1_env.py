@@ -6,7 +6,8 @@ Goal: reach and press the exit switch without dying.
 12-qubit observation, all angles in [-pi, pi]:
   - Qubits 0-7:  8 horizontal FOV sectors.
                  * Positive [0.3*pi, pi]: a monster is visible in that sector.
-                 * Negative [-pi, 0]:     wall clearance (-pi = wall at face, 0 = open).
+                 * Negative [-pi, 0]:     wall clearance (-pi = wall at face, 0 = open),
+                   log-scaled over 3-120 depth units (depth_scale="legacy": linear 3-38).
   - Qubit 8:     Bearing to the next route waypoint relative to view direction
                  (0 = straight ahead, +/- = turn left / right).
   - Qubit 9:     Proximity to the next waypoint (0 = far, pi = on top of it).
@@ -33,6 +34,9 @@ from e1m1_map import DoomMap, WAD_PATH, MONSTERS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CFG_PATH = os.path.join(HERE, "e1m1_quantum.cfg")
+# Route waypoints inside door sectors. Teleporting onto one while the door is shut traps
+# the player in the door sector, so they are never valid start points.
+DOOR_WAYPOINTS = (5, 17, 20)
 WAYPOINTS_PATH = os.path.join(HERE, "e1m1_waypoints.json")
 
 MONSTER_NAMES = set(MONSTERS.values())
@@ -71,8 +75,14 @@ class QuantumE1M1Env(gym.Env):
         interact_range: float = 96.0,
         render_rgb: bool = False,
         cheats: bool = False,
+        depth_scale: str = "log",
     ):
         super().__init__()
+        if depth_scale not in ("log", "legacy"):
+            raise ValueError(f"depth_scale must be 'log' or 'legacy', not {depth_scale!r}")
+        # "legacy" is the original linear 3-38 unit range (saturated on ~9% of E1M1 sectors);
+        # keep it only to reproduce runs trained with it.
+        self.depth_scale = depth_scale
         self.n_qubits = 12
         self.frame_skip = frame_skip
         self.waypoint_radius = waypoint_radius
@@ -150,7 +160,7 @@ class QuantumE1M1Env(gym.Env):
             if monster_ratio > 0.02:
                 features[i] = np.pi * np.clip(0.3 + 2.0 * monster_ratio, 0.3, 1.0)
             else:
-                clearance = np.clip((float(np.mean(depth[mid_band, col])) - 3.0) / 35.0, 0.0, 1.0)
+                clearance = self._clearance(float(np.mean(depth[mid_band, col])))
                 features[i] = -np.pi * (1.0 - clearance)
 
         pos, angle = self._player()
@@ -171,6 +181,13 @@ class QuantumE1M1Env(gym.Env):
             features[11] = np.pi / 2
 
         return features
+
+    def _clearance(self, depth: float) -> float:
+        """Sector clearance in [0, 1] from mean depth-buffer value."""
+        if self.depth_scale == "legacy":
+            return float(np.clip((depth - 3.0) / 35.0, 0.0, 1.0))
+        # Log scale up to 120 units (~max seen in E1M1): fine near walls, unsaturated far away.
+        return float(np.clip(np.log1p(max(depth - 3.0, 0.0)) / np.log1p(117.0), 0.0, 1.0))
 
     def warp(self, x: float, y: float):
         """Teleport the player (requires cheats=True). Resets waypoint tracking to the new spot."""

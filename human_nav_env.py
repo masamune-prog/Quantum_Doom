@@ -209,7 +209,12 @@ class HumanNavigationEnv(gym.Env):
 
     @staticmethod
     def _visual_features(rgb):
-        view = HumanNavigationEnv._view(rgb)
+        return HumanNavigationEnv._view_features(HumanNavigationEnv._view(rgb))
+
+    @staticmethod
+    def _view_features(view):
+        """Eight sector values in [-pi, pi] from an 80x40 RGB view: brightness and Canny edge
+        density blended to [-1, 1], overridden by a green-pixel cue."""
         gray = cv2.cvtColor(view, cv2.COLOR_RGB2GRAY)
         edges = cv2.Canny(gray, 35, 95)
         features = []

@@ -1,8 +1,0 @@
-start=18 seed=0 warp_error=0.0 steps=23 waypoint=19/22 exit=False dead=True
-start=18 seed=1 warp_error=0.0 steps=130 waypoint=21/22 exit=False dead=True
-start=12 seed=0 warp_error=0.0 steps=145 waypoint=18/22 exit=False dead=True
-start=12 seed=1 warp_error=0.0 steps=219 waypoint=22/22 exit=True dead=False
-start= 6 seed=0 warp_error=0.0 steps=427 waypoint=21/22 exit=False dead=True
-start= 6 seed=1 warp_error=0.0 steps=607 waypoint=18/22 exit=False dead=True
-start= 0 seed=0 warp_error=0.0 steps=441 waypoint=22/22 exit=True dead=False
-start= 0 seed=1 warp_error=0.0 steps=308 waypoint=18/22 exit=False dead=True

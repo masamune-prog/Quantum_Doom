@@ -1,4 +1,0 @@
-task=e1m1 memory=on device=cuda envs=2 steps=8 updates=1 parameters=74
-{"update": 1, "episodes": 0, "successes": 0, "reward": -0.033938148990273476, "seconds": 0.9}
-eval memory=on update=1 score=0.000
-FINAL memory=on success=0/1 sampled=0/1 best_update=1

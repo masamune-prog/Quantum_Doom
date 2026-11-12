@@ -1,6 +1,0 @@
-loaded encoder from pixel_corridor_runs/classical_seed0/best.pt
-imitation model=classical skill=3 envs=8 device=cuda parameters=497160
-{"iteration": 0, "beta": 1.0, "dataset": 200077, "collected": 200077, "agreement": null, "labels": {"FORWARD": 112509, "ATTACK": 15080, "TURN_LEFT": 26963, "TURN_RIGHT": 43499, "USE": 2989}, "ce": 0.2105, "route": 0.0126, "accuracy": 0.9005, "selection": "greedy 14/32 (excluding 20017: 14/32) mean_kills=1.72 mean_dead=0.56 mean_progress=0.94", "score": 0.4469, "seconds": 155.4}
-FINAL imitation classical best_iteration=0 greedy 48/100 (excluding 20017: 48/99) mean_kills=1.48 mean_dead=0.52 mean_progress=0.95
-FINAL imitation classical best_iteration=0 sampled 63/100 (excluding 20017: 62/99) mean_kills=1.13 mean_dead=0.32 mean_progress=0.89
-FINAL imitation classical best_iteration=0 teacher 84/100 (excluding 20017: 83/99) mean_kills=1.11 mean_dead=0.16 mean_progress=0.98

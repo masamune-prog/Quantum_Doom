@@ -1,6 +1,0 @@
-device=cuda parameters=74 updates=4 envs=8 steps=32 curriculum=[19]
-{"update": 1, "stage": 19, "mean_step_reward": 0.06440305709838867, "episodes": 0, "exits": 0, "max_waypoint": 20, "seconds": 3.9}
-{"update": 2, "stage": 19, "mean_step_reward": -0.2929263114929199, "episodes": 1, "exits": 0, "max_waypoint": 20, "seconds": 6.6}
-{"update": 3, "stage": 19, "mean_step_reward": -0.43687358498573303, "episodes": 2, "exits": 0, "max_waypoint": 20, "seconds": 9.2}
-{"update": 4, "stage": 19, "mean_step_reward": -0.6305798292160034, "episodes": 3, "exits": 0, "max_waypoint": 20, "seconds": 11.8}
-Full-start greedy wins: 0/2

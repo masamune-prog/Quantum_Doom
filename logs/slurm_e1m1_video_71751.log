@@ -1,3 +1,0 @@
-e1m1_classical_warm_uniform_route_seed0st_real {'seed': 20000, 'success': False, 'steps': 500}
-e1m1_classical_warm_uniform_route_seed0st_wp12 {'seed': 1, 'success': False, 'steps': 312, 'kills': 0.0, 'health': 0.0, 'dead': True, 'start_progress': 0.621679786626971, 'progress': 0.6222766938299507}
-e1m1_classical_warm_uniform_route_seed0st_wp8 {'seed': 1, 'success': False, 'steps': 500}

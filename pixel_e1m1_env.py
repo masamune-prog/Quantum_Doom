@@ -21,7 +21,7 @@ import numpy as np
 import vizdoom as vzd
 
 from e1m1_distance import DistanceField, WAYPOINTS_PATH
-from e1m1_env import _wrap_angle
+from e1m1_env import DOOR_WAYPOINTS, _wrap_angle
 from e1m1_map import MONSTERS, WAD_PATH, DoomMap
 from human_nav_env import HERE
 from pixel_corridor_env import PixelCorridorEnv
@@ -94,6 +94,11 @@ class PixelE1M1Env(PixelCorridorEnv):
     def _pose(self):
         return (self._reward_position(),
                 float(np.deg2rad(self._var(vzd.GameVariable.ANGLE))))
+
+    def _pose_vector(self):
+        """Training/probe only: (x, y, angle in radians); never part of the observation."""
+        position, angle = self._pose()
+        return np.array([position[0], position[1], angle], dtype=np.float32)
 
     def _route_cost(self, position):
         """Walking distance to the exit; keeps the last value if the map has no cell here."""
@@ -172,6 +177,8 @@ class PixelE1M1Env(PixelCorridorEnv):
         if start_xy is not None:
             self._warp_xy(start_xy[0], start_xy[1], (options or {})["start_heading"])
         elif start_wp is not None and start_wp >= 0:
+            if int(start_wp) in DOOR_WAYPOINTS:
+                raise ValueError(f"start_wp {start_wp} is a door waypoint {DOOR_WAYPOINTS}")
             self._warp_to(int(start_wp), np.random.default_rng(seed))
         state = self.game.get_state()
         position, _ = self._pose()
@@ -187,7 +194,7 @@ class PixelE1M1Env(PixelCorridorEnv):
         frame = self._frame(state.screen_buffer)
         for _ in range(self.frames.maxlen):
             self.frames.append(frame)
-        info = {"aux": self._aux(state)}
+        info = {"aux": self._aux(state), "pose": self._pose_vector()}
         if self.teacher is not None:
             self.teacher.reset()
             info["teacher"] = self.teacher.action(state)
@@ -216,6 +223,7 @@ class PixelE1M1Env(PixelCorridorEnv):
         if ended:
             obs = np.zeros(self.observation_space.shape, dtype=np.uint8)
             info["aux"] = np.zeros(AUX_SIZE_E1M1, dtype=np.float32)
+            info["pose"] = np.zeros(3, dtype=np.float32)
             # progress is the furthest route progress reached, relative to the real start
             info["episode"] = {
                 "kills": kills - self.start_kills, "health": max(0.0, health), "dead": dead,
@@ -226,6 +234,7 @@ class PixelE1M1Env(PixelCorridorEnv):
             state = self.game.get_state()
             self.frames.append(self._frame(state.screen_buffer))
             obs, info["aux"] = self._observe(), self._aux(state)
+            info["pose"] = self._pose_vector()
             if self.teacher is not None:
                 info["teacher"] = self.teacher.action(state)
         return obs, reward, ended and not timeout, timeout, info
