@@ -1,8 +1,10 @@
 # Training Quantum Neural Networks to play Doom: replication package
 
-This directory has everything needed to reproduce the main experiment of the SC4055 report
-(Sections 1–4): a CNN encoder followed by a 12-qubit data-re-uploading circuit (74 parameters),
-compared with a classical MLP head and a linear readout on ViZDoom.
+This repository has the code for the SC4055 report. The repository root reproduces the main
+experiment (Sections 1–4): a CNN encoder followed by a 12-qubit data-re-uploading circuit
+(74 parameters), compared with a classical MLP head and a linear readout on ViZDoom.
+[`privileged_navigation/`](privileged_navigation/) holds the complementary experiment of
+Section 5 (see [below](#section-5-hybrid-qnn-with-privileged-information)).
 
 It covers:
 
@@ -16,11 +18,31 @@ It covers:
 | §4.4 | Zero-shot transfer between E1M1 and the pilot scenarios | `08_transfer.sh` |
 | Figures 1–2 | RL process diagram and circuit drawing; gameplay videos | `09_figures_and_videos.sh` |
 
-Section 5 (the complementary six-qubit hybrid with explicit navigation and privileged features)
-is a separate code base and is **not** included here.
-
 All circuits are simulated exactly (PennyLane `default.qubit`, statevector, no shots, no noise).
 Nothing runs on quantum hardware.
+
+---
+
+### Section 5: hybrid QNN with privileged information
+
+The complementary experiment (report Section 5, Tables 6–7) was developed by a teammate in
+**[atMiaobo/quantum-playing-doom](https://github.com/atMiaobo/quantum-playing-doom)**. It uses a
+six-qubit circuit with a classical residual pathway, privileged game-state features and a
+geometry-aware route planner. It is included in [`privileged_navigation/`](privileged_navigation/)
+with its full commit history (imported with `git subtree` from commit `ea93380`). It is a
+separate Python package with its own dependencies (a custom PyTorch statevector simulator, no
+PennyLane) and a container/Nix launcher. See
+[`privileged_navigation/README.md`](privileged_navigation/README.md) for setup and commands, and
+its `docs/` for the Deadly Corridor, full-game and MAP01 navigation results.
+
+To pull later updates from the teammate's repository:
+
+```bash
+git subtree pull --prefix=privileged_navigation https://github.com/atMiaobo/quantum-playing-doom.git main
+```
+
+The upstream repository currently documents the Deadly Corridor and Freedoom MAP01 results. The
+E1M1–E1M3 numbers in Tables 6–7 are not yet documented there.
 
 ---
 
@@ -200,6 +222,7 @@ is used only for rewards, auxiliary targets and the teacher's labels. It is neve
 | `summarize.py` | Prints Tables 2–5 from `runs/` or `pretrained/` |
 | `scripts/` | One script per experiment (above) |
 | `pretrained/` | Checkpoints, results and logs behind the report's numbers |
+| `privileged_navigation/` | Section 5 experiment, from [atMiaobo/quantum-playing-doom](https://github.com/atMiaobo/quantum-playing-doom) |
 
 `e1m1_waypoints.json` and `e1m1_distance.npz` are included. To regenerate them, run
 `python e1m1_planner.py && python e1m1_distance.py`.
